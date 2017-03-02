@@ -1,0 +1,459 @@
+
+/* LANDING PAGE */
+
+.landingStream h3 {
+    padding-bottom: 14px;
+    border-bottom: 7px solid #373737;
+}
+.landingStream .pullout {
+    margin: 45px 0;
+    font-size: 38px;
+    line-height: 1;
+}
+.landingStream p {
+    font-size: 18px;
+}
+
+/* Header */
+
+.landingStream #header {
+    background: none;
+}
+.landingHeader {
+    padding: 70px 0;
+}
+#slogan {
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #FFF;
+    line-height: 1;
+}
+
+#homeJoin {
+    padding: 50px;
+    height: 510px;
+    text-align: center;
+    background: rgba(195,195,195,.8);
+}
+
+
+/* HOME PAGE JOIN FORM */
+
+#homeJoin p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+/* Compensate for hidden message fields under input in form */
+#homeJoin .listInline li {
+    margin-bottom: -30px;
+}
+/* Move prompt text high enough to make room for bigger input text */
+#homeJoin md-input-container.md-input-focused label:not(.md-no-float),
+#homeJoin md-input-container.md-input-has-placeholder label:not(.md-no-float),
+#homeJoin md-input-container.md-input-has-value label:not(.md-no-float) {
+    transform: translate3d(2px,4px,0) scale(.65);
+}
+/* Input bottom border and text */
+#homeJoin md-input-container.md-default-theme .md-input,
+#homeJoin md-input-container .md-input {
+    padding-bottom: 16px;
+    font-size: 16px;
+}
+#homeJoin .btn {
+    padding: 15px 40px;
+}
+
+
+#introVideo {
+    margin-bottom: 55px;
+}
+
+#homeActionArea {
+    padding: 30px 8%;
+    background: #F4F4F4;
+}
+#homeActionBtns {
+    margin: 40px 0;
+    text-align: center;
+}
+#homeActionBtns .btn {
+    display: inline-block;
+    margin: 0 3px;
+}
+#homeActionArea ul {
+    margin-top: 30px;
+}
+#homeActionArea ul li {
+    position: relative;
+    padding: 0 0 12px 16px;
+    font-weight: bold;
+}
+#homeActionArea ul li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #222;
+}
+
+/* PRESS LOGOS */
+
+#pressLogos {
+    margin: 0 -.15%;
+    padding-top: 0;
+}
+#pressLogos ul {
+    width: 100%;
+    display: block;
+}
+#pressLogos a {
+    transition: all .2s ease-out;
+    display: block;
+    text-align: center;
+}
+#pressLogos a:hover {
+    opacity: .8;
+}
+.pressLogo {
+    float: left;
+    vertical-align: middle;
+    padding: 0 2.2% !important;
+}
+
+/* section one */
+#WaPO {
+    width: 25%;
+}
+#WSJ {
+    width: 11%;
+}
+#Wired {
+    width: 17%;
+}
+#HuffPo {
+    width: 23%;
+}
+#Beast {
+    width: 11%;
+}
+#Slate {
+    width: 12%;
+}
+
+/* section two */
+#Nation {
+    width: 17%;
+}
+#Frisky {
+    width: 18%;
+}
+#Salon {
+    width: 16%;
+}
+#Bustle {
+    width: 13%;
+}
+#Boing {
+    width: 18%;
+}
+#RollCall {
+    width: 18%;
+}
+
+
+
+
+
+
+/* CANDIDATES SECTION */
+
+
+/* Intro paragraph */
+
+#homeCandidates h1 {
+    margin-bottom: 50px;
+}
+#homeCandidates h4 {
+    margin-top: 30px;
+}
+#homeCandidates p.intro {
+    margin: 20px 0 40px;
+    padding: 0;
+    font-size: 15px;
+}
+#homeCandidates p.intro a {
+    color: #333;
+    text-decoration: underline;
+}
+#homeCandidates p.intro a:hover {
+    color: #7932AC;
+    text-decoration: none;
+}
+
+
+/* Candidate Grid */
+
+.candidateColumn {
+    transition: all 400ms ease-out 50ms;
+}
+.candidateContainer {
+    margin: 35px 3px 15px 3px;
+}
+.candidateContainer .borderDashed {
+    margin-top: 18px;
+    padding: 24px;
+    background-size: 5px;
+}
+/* text overlay */
+.candidateInfo {
+    transition: all .2s ease-out;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 6%;
+    padding: 0 12%;
+    width: 100%;
+    text-align: center;
+}
+.candidateInfo p {
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-weight: bold;
+    color: #FFF;
+}
+.candidateInfo .name {
+    font-size: 12px;
+}
+.candidateInfo .title {
+    font-size: 9px;
+}
+/* image */
+.candidateImage {
+    transition: all .2s ease-out;
+}
+.candidateImage img {
+    width: 100%;
+}
+
+/* district info below photo */
+.candidateDistrict p {
+    margin-bottom: 4px;
+    padding: 0 20px;
+    font-size: 18px;
+    letter-spacing: .08em;
+}
+
+/* hover reveals bio */
+.candidateImageCover {
+    transition: all .2s ease-out;
+    opacity: 0;
+}
+.candidateContainer:hover .candidateImageCover {
+    opacity: .9;
+    background: rgba(20,20,20,.96);
+}
+.candidateContainer:hover .candidateInfo {
+    transform: translateY(50%);
+    bottom: 50%;
+}
+.candidateBio {
+    display: none;
+    transition: all .4s ease-out .2s;
+    margin-top: 20px;
+    opacity: 0;
+    color: #CCC;
+}
+.candidateContainer:hover .candidateBio {
+    display: block;
+    opacity: 1;
+}
+
+
+@media (min-width: 600px) and (max-width:1100px) {
+    .candidateInfo .name {
+        font-size: 11px;
+    }
+    .candidateInfo .title {
+        font-size: 8px;
+    }
+    .candidateDistrict p {
+        font-size: 15px;
+    }
+    .candidateBio {
+        font-size: 13px;
+    }
+}
+
+/* Temporary nominate area to fill empty candidate slot */
+
+.tempCandidateAsk .candidateImage img {
+    transition: all .2s ease-out;
+    opacity: .34;
+}
+.tempCandidateAsk a:hover .candidateImage img {
+    opacity: .15;
+}
+.tempCandidateAsk .candidateInfo,
+.tempCandidateAsk:hover .candidateInfo {
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    top: 50%;
+    bottom: inherit;
+}
+.tempCandidateAsk .candidateInfo p {
+    transition: all .2s ease-out;
+    margin: 0 0 4px 0;
+    padding: 0 22%;
+    text-transform: none;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+/*
+.tempCandidateAsk a:hover .candidateInfo .adText {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}*/
+.tempCandidateAsk .candidateInfo .title {
+    transition: all .2s ease-out;
+    margin: 50px auto 0 auto;
+    display: table;
+}
+.tempCandidateAsk .candidateInfo .title p {
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/*
+.tempCandidateAsk a:hover .candidateInfo .title {
+    transform: translateY(-60px);
+}*/
+.tempCandidateAsk .starRight,
+.tempCandidateAsk .starLeft {
+    background-image: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starWhite.png');
+}
+.tempCandidateAsk .starLeft {
+    background-position: left 3px;
+}
+.tempCandidateAsk .starRight {
+    background-position: right 3px;
+}
+.tempCandidateAsk .animatedUnderline {
+    transform: scaleX(0);
+    margin-top: 4px;
+    border-bottom: 2px solid #FFF;
+}
+.tempCandidateAsk a:hover .animatedUnderline {
+    transition: all .2s ease-out;
+    transform: scaleX(1);
+}
+@media (max-width:1100px) {
+    .tempCandidateAsk .candidateInfo p {
+        font-size: 14px;
+    }
+    .tempCandidateAsk .candidateInfo .title p {
+        font-size: 10px;
+    }
+}
+
+
+#candidatesAction {
+    padding: 45px 0;
+}
+#candidatesAction .btn {
+    margin-top: 22px;
+}
+
+
+
+/* SPECIFICS IMAGE LINKS */
+
+
+#homeImageLinks {
+    margin: 0 -1.333%;
+}
+#homeImageLinks a {
+    display: block;
+    margin: 0 4%;
+    width: 92%;
+    line-height: .5;
+}
+#homeImageLinks a:hover img {
+    opacity: .8;
+}
+@media (max-width:600px) {
+    #homeImageLinks a {
+        margin: 0 0 8px 0;
+        width: 100%;
+    }
+}
+
+
+/* CURRENT MEDIA AND FACEBOOK FEED */
+
+
+#homeCurrent .mediaHeader {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #999;
+}
+#homeCurrent h1 {
+    padding: 10px 0;
+    font-size: 30px;
+}
+
+
+#currentMedia {
+    margin-right: 5%;
+}
+#currentMedia h1 {
+    padding-left: 55px;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/mediaTitleIcon.png') no-repeat left center;
+    background-size: 40px;
+}
+#currentMedia .borderDashedBold {
+    padding-top: 28px;
+}
+#currentMedia h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 300;
+}
+#currentMedia .date {
+    margin-top: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.mediaHeader {
+    margin-bottom: 18px;
+}
+
+
+#currentSocial {
+    margin-left: 5%;
+}
+#FB-feedParent h1 {
+    padding-left: 55px;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/facebookTitleIcon.png') no-repeat left center;
+    background-size: 40px;
+}
+#facebookPageContainer {
+    padding-top: 55px;
+}
+@media (max-width:600px) {
+    #currentMedia {
+        margin-right: 0;
+    }
+    #currentSocial {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,1020 @@
+/* LOAD FONTS */
+@import '//fonts.googleapis.com/css?family=Alfa+Slab+One|Roboto+Condensed:700|Roboto:300,400,700';
+
+@font-face {
+    font-family: 'u.s._101regular';
+    src: url('fonts/us101-webfont.woff2') format('woff2'),
+    url('fonts/us101-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* BODY */
+
+body {
+    position: relative;
+    background: #111;
+}
+body, p {
+    font-size: 15px;
+    color: #3E3E3E;
+}
+
+/* LINKS & BUTTONS */
+
+a:link, a:visited, a:active{
+    color: #5b919f;
+}
+a:hover {
+    color: #222;
+}
+.btn,
+.btn:link,
+.btn:visited,
+.btn:active {
+    padding: 12px 28px;
+    font-size: 16px;
+    color: #FFF;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    background-color: #5B919F;
+}
+.btn:hover {
+    background-color: #222;
+}
+.btnBig {
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+
+/* TITLES & HEADERS */
+
+h1 {
+    color: #141414;
+    font-size: 46px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+h2 {
+    margin-top: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #323232;
+    font-size: 20px;
+    font-weight: bold;
+}
+h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+h4 {
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+@media (max-width:768px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+/* STANDARD TEXT STYLES */
+
+.pullout {
+    color: #2E2E2E;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.5;
+}
+.pullout:first-child {
+    margin-top: -5px;
+}
+.smallLabel {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+.bodyLarge,
+.bodyLarge p {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+@media (max-width:959px) {
+    .bodyLarge {
+        font-size: 22px;
+    }
+}
+
+.hint {
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* ASSIGN FONTS */
+
+/* .primaryFont will be used for the site's typographical logo and some site headers. It must also be legible at small sizes.  */
+
+h1,
+.fontPrimary,
+.fontPrimary p,
+.btn {
+    font-family: 'Roboto Condensed';
+}
+h2,
+.fontSecondary,
+.fontSecondary p,
+.fontBody,
+.fontBody p,
+.pullout,
+.moduleContainer h2,
+p,
+.smallLabel {
+    font-family: 'Roboto', serif;
+}
+.fontTertiary,
+h3,
+h4 {
+    font-family: 'Alfa Slab One', sans-serif;
+}
+
+
+/* SOCIAL */
+
+.socialMedia a {
+    margin-right: 2px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #565656;
+    border-radius: 50%;
+}
+.socialMedia a svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    width: 20px;
+    height: 20px;
+}
+.socialMedia a:hover {
+    background: #598089;
+    border: 2px solid #598089;
+}
+.socialMedia a:hover svg g {
+    fill: #FFF;
+}
+
+
+/* BACKGROUNDS */
+
+#siteBackground {
+    background: #FFF;
+}
+
+/* This color is used for header bars and date boxes and must be dark enough to read reversed text in. */
+.backgroundAccentColor {
+    background-color: #F94E54;
+}
+.backgroundDark {
+    background: #141414;
+}
+.backgroundDark a:hover {
+    color: #FFF;
+}
+.backgroundPriority {
+    background: #FE7C57;
+}
+
+
+/* BORDERS */
+
+hr {
+    margin-top: 26px;
+    padding-top: 26px;
+    border: none;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedBold.png') repeat-x;
+    background-size: 8px;
+}
+.borderDashed {
+    margin-top: 20px;
+    padding-top: 20px;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashed.png') repeat-x;
+    background-size: 6px;
+}
+.borderDashedLight {
+    margin-top: 20px;
+    padding-top: 20px;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedLight.png') repeat-x;
+    background-size: 6px;
+}
+.borderDashedBold {
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedBold.png') repeat-x;
+    background-size: 8px;
+}
+
+
+/* COLORS (In order of most to least commonly used) */
+
+.purple {
+    background: #7932AC;
+}
+.purpleText {
+    color: #7932AC;
+}
+.blue {
+    background: #598089;
+}
+.blueText {
+    color: #598089;
+}
+.salmon {
+    background: #FF7A65;
+}
+.salmonText {
+    color: #FF7A65;
+}
+.green {
+    background: #8C8B02;
+}
+.greenText {
+    color: #8C8B02;
+}
+.yellow {
+    background: #FFFE00;
+}
+.yellowText {
+    color: #FFFE00;
+}
+
+/* LOADER */
+@keyframes pulse {
+    50% {
+        background: rgb(121,50,172);
+    }
+}
+.loader {
+    background: rgba(121,50,172, 0.2);
+}
+.loader:before, .loader:after {
+    background: rgba(121,50,172, 0.2);
+}
+
+
+/* SITE STRUCTURE */
+
+.shellVerticalPadding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.siteMaxWidth {
+    max-width: 1350px;
+}
+.siteSidePadding {
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+
+/* HEADER */
+
+#header {
+    padding: 40px 0;
+    background: #0A4A55;
+}
+.siteLogo {
+    margin-left: 40px;
+    max-width: 256px;
+}
+#navHeader {
+    padding: 0 10px;
+    background: #1E1E1E;
+}
+#navHeader ul li {
+    padding: 0;
+}
+.navMainLink a {
+    transition: all .2s ease-out;
+    display: block;
+    padding: 8px 10px 5px;
+    color: #FFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+}
+.navMainLink a:hover {
+    color: #91C5D2;
+}
+.navMainLink a .animatedBorder {
+    transition: all .2s ease-out;
+    -webki-ttransition: all .2s ease-out;
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    height: 3px;
+    opacity: 0;
+    background: #91C5D2;
+}
+.navMainLink a:hover .animatedBorder {
+    transform: translateY(12px);
+    -webkit-transform: translateY(12px);
+    opacity: 1;
+    background: #FFF;
+}
+#navHelp {
+    margin-right: -4px;
+}
+#headerSocial {
+    right: 20px;
+}
+#headerSocial .socialMedia {
+    margin: 4px 0 0 0;
+}
+
+
+.headerImageBackground,
+.headerImageFixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    height: 850px;
+}
+.headerImageBackground {
+    background: #444;
+}
+.headerImageFixed {
+    opacity: .85;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+body.preview .headerImageBackground,
+body.preview .headerImageFixed {
+    top: 56px;
+}
+
+
+
+
+
+
+@media (max-width:959px) {
+    #navHeader {
+        display: none;
+    }
+    #sidebarToggleContainer .sidebarToggle {
+        top: 0;
+        right: 0;
+        left: inherit;
+    }
+    #sidebarToggleContainer.offScreen.scrollUp.siteSidePadding,
+    .headerIsMini #sidebarToggleContainer.siteSidePadding {
+        padding: 0;
+    }
+    #sidebarToggleContainer.offScreen.scrollUp .sidebarToggle,
+    .headerIsMini #sidebarToggleContainer .sidebarToggle {
+        top: 25px;
+        right: 40px;
+    }
+    .sidebarContact {
+        margin: 30px 0 0;
+        padding-top: 30px;
+    }
+    .sidebarContact a {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    #shellSidebar .socialMedia a {
+        border-color: #555;
+    }
+    #shellSidebar .socialMedia a:hover {
+        border-color: #598089;
+    }
+    #shellSidebar .socialMedia svg g {
+        fill: #666;
+    }
+    #shellSidebar  .socialMedia a:hover svg g {
+        fill: #FFF;
+    }
+}
+@media (max-width:959px) {
+    #headerContent {
+        margin: 40px 0 0 0;
+        padding-bottom: 36px;
+        border-bottom: 3px solid #222;
+    }
+    #planGraphic,
+    #starLinkRight {
+        display: none;
+    }
+    #headerExtraLinks {
+        top: 0;
+        right: inherit;
+        left: 0;
+        bottom: inherit;
+    }
+    .btn.btnContribute {
+        margin-top: 0;
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+    #navHeader .delimiter {
+        width: 30px;
+        text-align: center;
+    }
+    #navHeader .delimiter img {
+        margin-top: 13px;
+        width: 10px;
+    }
+    .navMainLink a {
+        font-size: 30px;
+    }
+    #header2 {
+        display: none;
+    }
+}
+@media (max-width:600px) {
+    .btn.btnContribute {
+        transform: translateY(-10px);
+        padding: 3px 4px;
+        font-size: 9px;
+    }
+}
+@media (max-width:480px) {
+    #logoHeader img {
+        margin-top: 22px;
+    }
+    .headerOrnament,
+    .headerOrnament.centerLeft {
+        display: none;
+    }
+}
+
+
+
+/* RETRACTING HEADER */
+
+
+/* MAIN */
+
+#shellContent {
+    position: relative;
+    z-index: 10;
+    background: #FFF;
+}
+
+/* SHELL SIDEBAR */
+
+#shellSidebar .sidebarBorder {
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    opacity: .5;
+}
+h2.sectionName {
+    margin: 0 0 28px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* Temporary classes - remove when links are dynamic */
+#siteNavigationSidebar ul {
+    padding: 28px 0;
+}
+/* End temporary classes */
+
+
+.siteNavLink[data-level="2"] {
+    padding: 6px 0;
+}
+.siteNavLink a.navLevel2 {
+    transition: all .28s ease-out;
+    transform: translateX(-18px);
+    display: table;
+    padding: 2px 5px 2px 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starPurple.png') no-repeat left 16px;
+    background-size: 0;
+}
+.siteNavLink a.navLevel2:hover {
+    transform: translateX(0);
+    color: #7932AC;
+    background-size: 10px;
+    background-position: left 10px;
+}
+.siteNavLink a.navLevel2.active {
+    transform: translateX(0);
+    margin-bottom: 3px;
+    padding: 2px 5px;
+    font-weight: bold;
+    color: #FFF;
+    background: #7932AC;
+}
+.siteNavLink a.navLevel2.active:hover {
+    color: #FFF;
+}
+#sidebarPromoArea a {
+    display: block;
+    margin-top: 24px;
+}
+#sidebarPromoArea a .imageContainer {
+    transition: all .2s ease-out;
+}
+#sidebarPromoArea a:hover .imageContainer {
+    opacity: .9;
+}
+@media (max-width:959px) {
+    .mobileDrawer.mobileBackgroundDark {
+        background: #111;
+    }
+    #shellSidebar .sidebarBorder {
+        display: none;
+    }
+    h2.sectionName {
+        color: #555;
+    }
+    #siteNavigationSidebar ul {
+        padding: 10px 0;
+    }
+    .siteNavLink[data-level="1"] {
+        padding: 20px 0 0;
+    }
+    .siteNavLink a.navLevel1 {
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: .01em;
+        color: #FFF;
+    }
+    .siteNavLink a.navLevel1:hover {
+        color: #CCC;
+    }
+    .siteNavLink[data-level="2"] {
+        padding: 4px 0;
+    }
+    .siteNavLink a.navLevel2 {
+        font-size: 15px;
+    }
+    #sidebarPromoArea a {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+}
+
+
+
+/* SHELL BODY */
+
+#shellContent.shellVerticalPadding {
+    padding-top: 50px;
+}
+.mainColumnGutter {
+    padding-left: 9%;
+}
+h1.pageTitle {
+    margin: 50px 0 36px;
+    padding: 6px 20px;
+    text-align: center;
+    color: #FFF;
+    font-size: 45px;
+    background: #171717;
+}
+.pageTitle .starLeft,
+.pageTitle .starRight {
+    display: block;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starWhite.png') no-repeat left 17px;
+    background-size: 11px;
+}
+.pageTitle .starRight {
+    background-position: right 17px;
+}
+@media (max-width: 959px) {
+    .mainColumnGutter {
+        padding-left: 0;
+    }
+}
+@media (max-width:840px) {
+    .headerImage {
+        margin-top: 10px;
+    }
+    h1#pageTitle {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* JOIN FORMS */
+form .sending {
+    opacity: .5
+}
+
+md-input-container.md-default-theme .md-input,
+md-input-container .md-input {
+    border-color: #333;
+}
+/* Prompt text */
+md-input-container .md-placeholder,
+md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+    font-size: 16px;
+    color: #333;
+}
+/* Prompt text turns purple on click */
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused label,
+md-input-container:not(.md-input-invalid).md-input-focused label,
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused md-icon
+md-input-container:not(.md-input-invalid).md-input-focused md-icon {
+    color: #7932AC;
+}
+/* Input bottom border changes to purple on click */
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input,
+md-input-container:not(.md-input-invalid).md-input-focused .md-input,
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-resized .md-input,
+md-input-container:not(.md-input-invalid).md-input-resized .md-input {
+    border-color: #7932AC;
+}
+
+
+md-input-container.md-input-invalid .required {
+    color: rgb(221,44,0);
+}
+md-input-container.md-input-has-placeholder label.noFloat,
+md-input-container.md-input-has-placeholder md-select-label.noFloat {
+    transform: scale(1);
+    font-weight: bold;
+    white-space: initial !important;
+}
+
+
+.whiteframePadding {
+    padding: 34px 6%;
+    margin-bottom: 26px;
+}
+
+.joinForm .listInline li {
+    margin: 0 8px;
+    vertical-align: top;
+}
+/* Make input containers wider */
+.joinForm md-input-container {
+    width: 260px;
+}
+/* Position circular progress bar in the middle of form */
+.joinForm md-progress-circular {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+/* Make progress bar purple */
+md-progress-circular path {
+    stroke: #7932AC;
+}
+/* Fade in progress bar when form starts sending */
+.joinForm .sending md-progress-circular {
+    animation: itemsFadeIn .2s ease-out forwards;
+    opacity: 1;
+}
+
+/* Fade form out when sending */
+.joinForm .sending .listInline {
+    transition: all .2s ease-out .1s;
+    transform: scale(1);
+    opacity: 1;
+}
+/* Keep form faded on success */
+.joinForm .sending .listInline,
+.joinForm .success .listInline {
+    transform: scale(.5);
+    opacity: 0;
+}
+/* Success message */
+.joinForm form .message {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    color: #7932AC;
+}
+@media (max-width:959px) {
+    .joinForm .listInline li {
+        display: block;
+    }
+    .joinForm .btn {
+        display: table;
+        margin: 20px auto 0 auto;
+    }
+}
+
+
+
+/* FOOTER */
+
+
+#siteMapBackground,
+#footer {
+    background: #111;
+}
+
+
+/* Remove when fixed in core */
+
+#siteMapNew {
+    text-align: center;
+    font-size: 12px;
+}
+#siteMapNew li {
+    vertical-align: top;
+}
+#siteMapNew .siteMapHeader {
+    margin: 0 0 18px 0;
+    padding-bottom: 18px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+#siteMapNew .siteMapColumn ul {
+    padding: 0 5%;
+}
+#siteMapNew .siteMapColumn a {
+    display: inline-block;
+    padding-bottom: 12px;
+    color: #999;
+}
+/* Must come after .siteMapColumn a */
+#siteMapNew .siteMapHeader a {
+    color: #888;
+}
+#siteMapNew .siteMapColumn a:hover {
+    color: #333;
+}
+.dark #siteMapNew .siteMapHeader {
+    border-bottom: 1px dashed rgba(255,255,255,.15);
+}
+.dark #siteMapNew .siteMapColumn a {
+    color: #666;
+}
+/* Must come after .dark .siteMapColumn a */
+.dark #siteMapNew .siteMapHeader a {
+    color: #999;
+}
+.dark #siteMapNew .siteMapColumn a:hover {
+    color: #CCC;
+}
+
+
+
+
+
+
+/* FOOTER SITE MAP */
+
+#siteMapNew {
+    padding: 110px 0 100px;
+}
+.siteMapColumn {
+    padding: 0 8%;
+}
+.siteMapColumn a {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 11px;
+}
+#siteMapNew .siteMapHeader {
+    font-size: 11px;
+    font-weight: bold;
+    color: #999;
+}
+#siteMapNew .siteMapHeader a {
+    margin-left: -18px;
+    padding: 0 0 0 18px;
+    font-weight: bold;
+    color: #999;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starPurple.png') no-repeat left 2px;
+    background-size: 9px;
+}
+.siteMapColumn a:hover {
+    color: #FFF;
+}
+.siteMapColumn .socialMedia a {
+    border: none;
+    background: #5F2787;
+}
+.siteMapColumn .socialMedia a:hover {
+    background: #FFF;
+    border: none;
+}
+.dark .siteMapColumn .socialMedia svg g,
+.dark .siteMapColumn .socialMedia a:hover svg g {
+    fill: #111;
+}
+#footer {
+    position: relative;
+    z-index: 10;
+    padding-top: 65px;
+    background: #111;
+}
+#footer p {
+    font-weight: 400;
+    color: #6D6D6D;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+#footer p a {
+    color: #999;
+}
+#footer p a:hover {
+    color: #FFF;
+}
+#footerLogo img {
+    margin: 0 0 30px;
+    width: 100px;
+}
+#footerCredit {
+    margin: 22px 0 60px;
+}
+#footerCredit p,
+#footerCredit a {
+    margin-top: 10px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #555;
+}
+#footerCredit a {
+    margin-top: 55px;
+}
+#footerCredit a:hover {
+    color: #FFF;
+}
+
+
+/* CUSTOM PAGES */
+
+.customArticle ol li,
+.customArticle ul li {
+    padding-bottom: 12px;
+}
+
+/* About Us */
+#aboutUs img {
+    width: 100%;
+}
+#aboutUs h4 {
+    margin-bottom: 26px;
+    letter-spacing: .1em;
+}
+
+
+/* Nominate */
+#Nominate #districtInfo h3 {
+    margin: 45px 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DDD;
+}
+#Nominate #districtInfo a {
+    transition: all .2s ease-out;
+    display: inline-block;
+    margin: 0 1px 5px 0;
+    padding: 2px 4px;
+    color: #FFF;
+    background: #7932AC;
+}
+#Nominate #districtInfo a:hover {
+    background: #111;
+}
+
+/* FAQ */
+#FAQ p.bodyLarge {
+    margin-bottom: 26px;
+}
+#FAQ .FAQLinks {
+    margin-bottom: 50px;
+}
+#FAQ .FAQLinks li {
+    padding: 12px 0;
+    line-height: 1.2;
+    border-bottom: 1px solid #DDD;
+}
+#FAQ .FAQLinks h4 {
+    margin: 38px 0 22px;
+}
+#FAQ .FAQLinks li:first-child h4 {
+    margin-top: 0;
+}
+#FAQ #FAQbody h2 {
+    margin: 80px 0 50px;
+}
+#FAQ #FAQbody h2:first-child {
+    margin-top: 0;
+}
+#FAQ #FAQbody hr {
+    margin: 40px 0;
+    padding: 0;
+    height: 6px;
+}
+
+
+/* JOIN A CALL */
+
+#JoinCall .bodyLarge {
+    margin-bottom: 50px;
+}
+#callList.layout-padding,
+#callList .layout-padding {
+    padding: 0;
+}
+#callList h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+#callList .md-button.md-default-theme.md-primary.md-raised,
+#callList .md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab,
+#callList .md-button.md-primary.md-fab {
+    transition: all .2s ease-out;
+    background: #FF7A65;
+}
+#callList .md-button.md-default-theme.md-primary.md-raised:hover,
+#callList .md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab:hover,
+#callList .md-button.md-primary.md-fab:hover {
+    background: #7932AC;
+}
+#callList md-list-item {
+    border-bottom: 1px solid #DDD;
+}
+@media (max-width:959px) {
+    #callList {
+        font-size: 14px;
+    }
+    #callList h2 {
+        font-size: 14px;
+    }
+}
+@media (max-width:600px) {
+    #callList {
+        line-height: 1.8;
+    }
+    #callList h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    md-list-item .md-list-item-inner:before,
+    md-list-item:before {
+        content: normal;
+    }
+    #callList .md-button.md-default-theme.md-primary.md-raised,
+    #callList .md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab,
+    #callList .md-button.md-primary.md-fab {
+        margin-bottom: 14px;
+    }
+}
+
+
+
+/* SUBMIT NOMINEE */
+
+
+#submitNominee {
+    position: relative;
+}
+#submitNominee md-input-container .md-placeholder,
+#submitNominee md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+    font-size: 15px;
+}
+#submitNominee h2 {
+    color: #7932AC;
+    text-transform: none;
+    font-weight: 300;
+    font-size: 34px;
+}
+#submitNominee p.message {
+    color: #FF7A65;
+}
+md-input-container.md-default-theme .md-input,
+md-input-container .md-input {
+    border-color: #999;
+}
+.submitArea .btn[disabled="disabled"],
+.submitArea .btn[disabled="disabled"]:hover {
+    background: #999;
+}
+#submitNominee md-progress-circular {
+    /* Move above the form */
+    transform: translateY(-140%);
+    /* Center and place at top of form */
+    position: absolute;
+    right: 50%;
+    top: 0;
+}

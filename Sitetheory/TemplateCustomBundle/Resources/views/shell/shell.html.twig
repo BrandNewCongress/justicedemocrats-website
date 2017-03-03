@@ -8,12 +8,16 @@ SETTINGS
 
 {# Remove padding on header and sidebarToggle so mini header can go full width #}
 {% set headerStructure = '' %}
+{% set headerRetractingStructure = '' %}
 
 {% block headerImageInsideHeader %}
 {% endblock headerImageInsideHeader %}
 
 {# Make mobile drawer slide in from right #}
 {% set mobileDrawerDirection = 'mobileDrawerRight' %}
+
+{# Make mobile drawer slide in from right #}
+{% set sidebarToggleColor = 'light' %}
 
 {# Hide Sidebar Login until it's dynamically hidden for users with no membership feature #}
 {% block sidebarLogin %}
@@ -522,11 +526,16 @@ LAYOUT
 
 {% block siteLogo %}
     <div class="siteLogo">
-        <a href="/">
-            <img src="{{ asset('bundles/sitetheorytemplatecustom/images/JusticeDemocratsSiteLogo.png') }}" alt="">
-        </a>
+        <a href="/"><img src="{{ asset('bundles/sitetheorytemplatecustom/images/JDLogo.png') }}" alt=""></a>
     </div>
 {% endblock siteLogo %}
+
+{% block retractingHeaderContent %}
+    <div class="siteLogo">
+        <a href="/"><img src="{{ asset('bundles/sitetheorytemplatecustom/images/JDLogoColor.png') }}" alt=""></a>
+    </div>
+    {{ block('navHeader') }}
+{% endblock retractingHeaderContent %}
 
 
 {% block navMain %}
@@ -754,10 +763,10 @@ LAYOUT
 
 {# Temporary hard coded footer site map #}
 {% block footerSiteMap %}
-    {#
+
     <div id="siteMapBackground">
 
-        <div id="siteMapContainer" class="siteMaxWidth siteSidePadding fontSecondary dark">
+        <div ng-cloak id="siteMapContainer" class="siteMaxWidth siteSidePadding fontSecondary dark">
 
             <div id="siteMapNew" layout="row" layout-wrap class="hide-xs hide-sm">
                 <div flex="25">
@@ -840,10 +849,31 @@ LAYOUT
                                 <a href="/privacy">Privacy Policy</a>
                             </li>
                             <li>
-                                {# Social Media
-                                {% block footerSocialMedia %}
-                                    {{ block('socialMedia') }}
-                                {% endblock footerSocialMedia %}
+                                {# Social Media #}
+                                {% block socialMedia %}
+                                    <div class="socialMedia {{ socialStyle|default('basicStyle') }}">
+                                        <ul class="listInline">
+                                            <li class="twitter">
+                                                <a class="positionAnchor" href="https://twitter.com/justicedems"
+                                                   title="Share on Twitter" target="_blank" data-reactid="123" target="_blank">
+                                                    {% embed '@SitetheoryCoreBundle/Resources/public/images/icons/social/twitter.svg' %}{% block id %}footerTwitterIcon{% endblock %}{% endembed %}
+                                                </a>
+                                            </li>
+                                            <li class="facebook">
+                                                <a class="positionAnchor" href="https://www.facebook.com/justicedemocrats/"
+                                                   title="Facebook" data-reactid="125" target="_blank">
+                                                    {% embed '@SitetheoryCoreBundle/Resources/public/images/icons/social/facebook.svg' %}{% block id %}footerFacebookIcon{% endblock %}{% endembed %}
+                                                </a>
+                                            </li>
+                                            <li class="reddit">
+                                                <a class="positionAnchor" href=""
+                                                   target="_blank">
+                                                    {% embed '@SitetheoryCoreBundle/Resources/public/images/icons/social/reddit.svg' %}{% block id %}footerRedditIcon{% endblock %}{% endembed %}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                {% endblock socialMedia %}
                             </li>
                         </ul>
                     </div>
@@ -853,29 +883,47 @@ LAYOUT
 
         </div>
     </div>
-    #}
+
 {% endblock footerSiteMap %}
 {# End temporary hard coded footer site map #}
 
 
 {# FOOTER #}
 
-
 {% block viewFooter %}
+
+    {% block footerImage %}
+
+        <div ng-cloak class="footerImageFixed" style="background-image: url('{{ asset('bundles/sitetheorytemplatecustom/images/headerImageHome.jpg') }}');">
+        </div>
+
+    {% endblock footerImage %}
+
     <div id="footerBackground">
-        <div id="footer" class="siteMaxWidth siteSidePadding dark">
+        <div id="footer" class="siteMaxWidth siteSidePadding textCenter fontBody dark">
+
             <div id="footerLogo" class="textCenter">
-                <img src="{{ asset('bundles/sitetheorytemplatecustom/images/BNClogoFooter.png') }}" alt="">
+                <img src="{{ asset('bundles/sitetheorytemplatecustom/images/JDlogoMark.png') }}" alt="">
             </div>
-            <p class="smallLabel textCenter">Send questions to <a href="mailto:us@brandnewcongress.org">us@brandnewcongress.org</a>
-            </p>
-            <div id="footerCredit" class="textCenter">
-                <p class="smallLabel">©2016 Brand New Congress. All rights reserved. P.O. Box 610563, North Miami, FL 33261
-                <br>Paid for by Brand New Congress, brandnewcongress.org, not authorized by any candidate or candidate's committee.</p>
-                <a class="smallLabel" href="http://www.sitetheory.io" target="_blank">
+
+            <div id="footerContact">Press contact <a href="mailto:us@brandnewcongress.org">press@justicedemocrats.com</a><span hide-xs hide-sm >&nbsp;&nbsp;|&nbsp;&nbsp;</span><br hide-gt-sm >General contact <a href="mailto:us@brandnewcongress.org">us@justicedemocrats.com</a>
+            </div>
+
+            <div id="footerCredit">
+                <div>
+                    ©2017 Justice Democrats. All rights reserved. Paid for by Justice Democrats, justicedemocrats.com. Not authorized by any candidate or candidate's committee.
+                </div>
+                <div>
+                    6230 Wilshire Blvd, #1209 | Los Angeles, CA 90048
+                </div>
+            </div>
+
+            <div id="footerPlatform">
+                <a href="http://www.sitetheory.io" target="_blank">
                     Website powered by Sitetheory
                 </a>
             </div>
+
         </div>
     </div>
 

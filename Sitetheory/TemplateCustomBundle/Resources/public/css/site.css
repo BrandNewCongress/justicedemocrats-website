@@ -97,12 +97,6 @@ h4 {
 .pullout:first-child {
     margin-top: -5px;
 }
-.smallLabel {
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: .1em;
-}
 .bodyLarge,
 .bodyLarge p {
     font-size: 26px;
@@ -152,25 +146,26 @@ h4 {
 /* SOCIAL */
 
 .socialMedia a {
-    margin-right: 2px;
-    width: 38px;
-    height: 38px;
-    border: 1px solid #565656;
-    border-radius: 50%;
+    margin: 0 1px;
+    width: 30px;
+    height: 30px;
+    background: #000;
 }
 .socialMedia a svg {
+    transform: translate(-50%,-50%);
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -10px 0 0 -10px;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
 }
-.socialMedia a:hover {
+.dark .socialMedia a svg g {
+    fill: #FFFE00;
+}
+.dark .socialMedia a:hover {
     background: #598089;
-    border: 2px solid #598089;
 }
-.socialMedia a:hover svg g {
+.dark .socialMedia a:hover svg g {
     fill: #FFF;
 }
 
@@ -178,12 +173,12 @@ h4 {
 /* BACKGROUNDS */
 
 #siteBackground {
-    background: #FFF;
+    background: none;
 }
 
 /* This color is used for header bars and date boxes and must be dark enough to read reversed text in. */
 .backgroundAccentColor {
-    background-color: #F94E54;
+    background-color: #185661;
 }
 .backgroundDark {
     background: #141414;
@@ -202,24 +197,13 @@ hr {
     margin-top: 26px;
     padding-top: 26px;
     border: none;
-    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedBold.png') repeat-x;
-    background-size: 8px;
+    border-top: 1px solid #999;
 }
 .borderDashed {
     margin-top: 20px;
     padding-top: 20px;
     background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashed.png') repeat-x;
     background-size: 6px;
-}
-.borderDashedLight {
-    margin-top: 20px;
-    padding-top: 20px;
-    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedLight.png') repeat-x;
-    background-size: 6px;
-}
-.borderDashedBold {
-    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashedBold.png') repeat-x;
-    background-size: 8px;
 }
 
 
@@ -259,14 +243,13 @@ hr {
 /* LOADER */
 @keyframes pulse {
     50% {
-        background: rgb(121,50,172);
+        background: rgb(0,0,0);
     }
 }
-.loader {
-    background: rgba(121,50,172, 0.2);
-}
-.loader:before, .loader:after {
-    background: rgba(121,50,172, 0.2);
+.loader,
+.loader:before,
+.loader:after {
+    background: rgba(0,0,0, 0.2);
 }
 
 
@@ -277,7 +260,7 @@ hr {
     padding-bottom: 70px;
 }
 .siteMaxWidth {
-    max-width: 1350px;
+    max-width: 1550px;
 }
 .siteSidePadding {
     padding-right: 8%;
@@ -285,15 +268,72 @@ hr {
 }
 
 
+/* FIXED IMAGES FOR HEADER AND FOOTER */
+
+
+.headerImageContainer {
+    transition: all .15s ease-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    height: 850px;
+    background: #444;
+}
+body.preview .headerImageContainer {
+    top: 56px;
+}
+.headerImageContainer.offScreen {
+    opacity: 0;
+}
+.headerImageFixed {
+    opacity: .8;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#darkenHeaderImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* layer above #headerImageBackground and above #footerImage */
+    z-index: 3;
+    height: 650px;
+    opacity: .33;
+    background: linear-gradient(rgba(88,112,109,1), rgba(32,69,88,0));
+    background: -webkit-linear-gradient(rgba(88,112,109,1), rgba(32,69,88,0));
+}
+.footerImageFixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 950px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+
 /* HEADER */
 
 #header {
+    position: relative;
+    z-index: 5;
     padding: 40px 0;
     background: #0A4A55;
 }
 .siteLogo {
     margin-left: 40px;
     max-width: 256px;
+}
+.siteLogo a {
+    display: inline-block;
 }
 #navHeader {
     padding: 0 10px;
@@ -329,146 +369,40 @@ hr {
     opacity: 1;
     background: #FFF;
 }
-#navHelp {
-    margin-right: -4px;
-}
-#headerSocial {
-    right: 20px;
-}
-#headerSocial .socialMedia {
-    margin: 4px 0 0 0;
-}
-
-
-.headerImageBackground,
-.headerImageFixed {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
-    height: 850px;
-}
-.headerImageBackground {
-    background: #444;
-}
-.headerImageFixed {
-    opacity: .85;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-body.preview .headerImageBackground,
-body.preview .headerImageFixed {
-    top: 56px;
-}
-
-
-
-
-
 
 @media (max-width:959px) {
-    #navHeader {
-        display: none;
-    }
-    #sidebarToggleContainer .sidebarToggle {
-        top: 0;
-        right: 0;
-        left: inherit;
-    }
-    #sidebarToggleContainer.offScreen.scrollUp.siteSidePadding,
-    .headerIsMini #sidebarToggleContainer.siteSidePadding {
-        padding: 0;
-    }
-    #sidebarToggleContainer.offScreen.scrollUp .sidebarToggle,
-    .headerIsMini #sidebarToggleContainer .sidebarToggle {
-        top: 25px;
-        right: 40px;
-    }
-    .sidebarContact {
-        margin: 30px 0 0;
-        padding-top: 30px;
-    }
-    .sidebarContact a {
-        font-size: 13px;
-        font-weight: bold;
-    }
-
-    #shellSidebar .socialMedia a {
-        border-color: #555;
-    }
-    #shellSidebar .socialMedia a:hover {
-        border-color: #598089;
-    }
-    #shellSidebar .socialMedia svg g {
-        fill: #666;
-    }
-    #shellSidebar  .socialMedia a:hover svg g {
-        fill: #FFF;
+    .siteLogo {
+        max-width: 180px;
     }
 }
-@media (max-width:959px) {
-    #headerContent {
-        margin: 40px 0 0 0;
-        padding-bottom: 36px;
-        border-bottom: 3px solid #222;
-    }
-    #planGraphic,
-    #starLinkRight {
-        display: none;
-    }
-    #headerExtraLinks {
-        top: 0;
-        right: inherit;
-        left: 0;
-        bottom: inherit;
-    }
-    .btn.btnContribute {
-        margin-top: 0;
-        padding: 5px 8px;
-        font-size: 11px;
-    }
-    #navHeader .delimiter {
-        width: 30px;
-        text-align: center;
-    }
-    #navHeader .delimiter img {
-        margin-top: 13px;
-        width: 10px;
-    }
-    .navMainLink a {
-        font-size: 30px;
-    }
-    #header2 {
-        display: none;
-    }
-}
-@media (max-width:600px) {
-    .btn.btnContribute {
-        transform: translateY(-10px);
-        padding: 3px 4px;
-        font-size: 9px;
-    }
-}
-@media (max-width:480px) {
-    #logoHeader img {
-        margin-top: 22px;
-    }
-    .headerOrnament,
-    .headerOrnament.centerLeft {
-        display: none;
-    }
-}
-
 
 
 /* RETRACTING HEADER */
 
+#headerRetracting {
+    padding: 18px 0 2px 0;
+    background: rgba(255,255,255,.9);
+}
+#headerRetracting .siteLogo {
+    max-width: 210px;
+}
+#headerRetracting #navHeader {
+    top: 16px;
+    right: 40px;
+}
+@media (max-width:959px) {
+    #headerRetracting {
+        padding: 14px 0 0 0;
+    }
+    #headerRetracting .siteLogo {
+        max-width: 170px;
+    }
+}
+
 
 /* MAIN */
 
-#shellContent {
+#shellContentBackground {
     position: relative;
     z-index: 10;
     background: #FFF;
@@ -537,6 +471,43 @@ h2.sectionName {
     opacity: .9;
 }
 @media (max-width:959px) {
+    #sidebarToggleContainer .sidebarToggle {
+        top: 40px;
+        right: 40px;
+        left: inherit;
+        padding: 6px;
+        background: #111;
+    }
+    #sidebarToggleContainer.siteSidePadding  {
+        padding: 0;
+    }
+    #sidebarToggleContainer.offScreen.scrollUp .sidebarToggle,
+    .headerIsMini #sidebarToggleContainer .sidebarToggle {
+        top: 16px;
+    }
+    .sidebarContact {
+        margin: 30px 0 0;
+        padding-top: 30px;
+    }
+    .sidebarContact a {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    #shellSidebar .socialMedia a {
+        border-color: #555;
+    }
+    #shellSidebar .socialMedia a:hover {
+        border-color: #598089;
+    }
+    #shellSidebar .socialMedia svg g {
+        fill: #666;
+    }
+    #shellSidebar  .socialMedia a:hover svg g {
+        fill: #FFF;
+    }
+}
+@media (max-width:959px) {
     .mobileDrawer.mobileBackgroundDark {
         background: #111;
     }
@@ -591,24 +562,12 @@ h1.pageTitle {
     font-size: 45px;
     background: #171717;
 }
-.pageTitle .starLeft,
-.pageTitle .starRight {
-    display: block;
-    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starWhite.png') no-repeat left 17px;
-    background-size: 11px;
-}
-.pageTitle .starRight {
-    background-position: right 17px;
-}
 @media (max-width: 959px) {
     .mainColumnGutter {
         padding-left: 0;
     }
 }
 @media (max-width:840px) {
-    .headerImage {
-        margin-top: 10px;
-    }
     h1#pageTitle {
         margin-bottom: 30px;
     }
@@ -722,9 +681,10 @@ md-progress-circular path {
 /* FOOTER */
 
 
-#siteMapBackground,
-#footer {
-    background: #111;
+#siteMapBackground {
+    position: relative;
+    z-index: 10;
+    background: rgba(51,51,51,.8);
 }
 
 
@@ -732,7 +692,6 @@ md-progress-circular path {
 
 #siteMapNew {
     text-align: center;
-    font-size: 12px;
 }
 #siteMapNew li {
     vertical-align: top;
@@ -740,10 +699,8 @@ md-progress-circular path {
 #siteMapNew .siteMapHeader {
     margin: 0 0 18px 0;
     padding-bottom: 18px;
-    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 1px solid rgba(0,0,0,.15);
 }
 #siteMapNew .siteMapColumn ul {
     padding: 0 5%;
@@ -751,27 +708,22 @@ md-progress-circular path {
 #siteMapNew .siteMapColumn a {
     display: inline-block;
     padding-bottom: 12px;
-    color: #999;
-}
-/* Must come after .siteMapColumn a */
-#siteMapNew .siteMapHeader a {
-    color: #888;
-}
-#siteMapNew .siteMapColumn a:hover {
-    color: #333;
 }
 .dark #siteMapNew .siteMapHeader {
-    border-bottom: 1px dashed rgba(255,255,255,.15);
+    border-bottom: 1px solid rgba(255,255,255,.3);
 }
 .dark #siteMapNew .siteMapColumn a {
-    color: #666;
+    color: #CDCDCD;
+    font-size: 11px;
 }
 /* Must come after .dark .siteMapColumn a */
 .dark #siteMapNew .siteMapHeader a {
-    color: #999;
+    color: #6BA2AE;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
 }
 .dark #siteMapNew .siteMapColumn a:hover {
-    color: #CCC;
+    color: #FFF;
 }
 
 
@@ -782,7 +734,7 @@ md-progress-circular path {
 /* FOOTER SITE MAP */
 
 #siteMapNew {
-    padding: 110px 0 100px;
+    padding: 80px 0;
 }
 .siteMapColumn {
     padding: 0 8%;
@@ -792,74 +744,63 @@ md-progress-circular path {
     letter-spacing: .1em;
     font-size: 11px;
 }
-#siteMapNew .siteMapHeader {
-    font-size: 11px;
-    font-weight: bold;
-    color: #999;
-}
-#siteMapNew .siteMapHeader a {
-    margin-left: -18px;
-    padding: 0 0 0 18px;
-    font-weight: bold;
-    color: #999;
-    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starPurple.png') no-repeat left 2px;
-    background-size: 9px;
-}
+
 .siteMapColumn a:hover {
     color: #FFF;
 }
-.siteMapColumn .socialMedia a {
-    border: none;
-    background: #5F2787;
-}
-.siteMapColumn .socialMedia a:hover {
-    background: #FFF;
-    border: none;
-}
-.dark .siteMapColumn .socialMedia svg g,
-.dark .siteMapColumn .socialMedia a:hover svg g {
-    fill: #111;
-}
-#footer {
+
+
+
+
+
+#footerBackground {
     position: relative;
     z-index: 10;
-    padding-top: 65px;
     background: #111;
 }
-#footer p {
-    font-weight: 400;
+#footer {
+    padding: 60px 0 70px;
     color: #6D6D6D;
-    letter-spacing: 2px;
-    line-height: 1.8;
+    text-transform: none;
 }
-#footer p a {
-    color: #999;
-}
-#footer p a:hover {
+#footer a:hover {
     color: #FFF;
 }
 #footerLogo img {
     margin: 0 0 30px;
-    width: 100px;
+    opacity: .4;
+    width: 40px;
+}
+#footerContact {
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: normal;
 }
 #footerCredit {
-    margin: 22px 0 60px;
-}
-#footerCredit p,
-#footerCredit a {
-    margin-top: 10px;
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #555;
+    margin: 30px auto;
+    max-width: 600px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #777;
+    line-height: 2.4;
 }
 #footerCredit a {
-    margin-top: 55px;
+    color: #777;
 }
 #footerCredit a:hover {
     color: #FFF;
 }
-
+#footerPlatform a {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #777;
+}
+#footerPlatform a:hover {
+    color: #FFF;
+}
 
 /* CUSTOM PAGES */
 

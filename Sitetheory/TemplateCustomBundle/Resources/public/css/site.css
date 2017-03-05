@@ -73,7 +73,7 @@ h3 {
     text-transform: uppercase;
 }
 h4 {
-    color: #000;
+    color: #222;
     font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
@@ -81,7 +81,7 @@ h4 {
 }
 @media (max-width:768px) {
     h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -194,8 +194,6 @@ h2.sectionName {
 /* BORDERS */
 
 hr {
-    margin-top: 26px;
-    padding-top: 26px;
     border: none;
     border-top: 1px solid #999;
 }
@@ -278,7 +276,8 @@ hr {
     right: 0;
     left: 0;
     z-index: 2;
-    height: 400px;
+    /* Needs to match .hasHeaderImage #header at all responsive sizes */
+    height: 350px;
     background: #444;
 }
 body.preview .headerImageContainer {
@@ -288,7 +287,7 @@ body.preview .headerImageContainer {
     opacity: 0;
 }
 .headerImageFixed {
-    opacity: .8;
+    opacity: 1;
     background-color: #2a5058;
     background-repeat: no-repeat;
     background-position: center center;
@@ -301,7 +300,7 @@ body.preview .headerImageContainer {
     left: 0;
     /* layer above #headerImageBackground and above #footerImage */
     z-index: 3;
-    height: 650px;
+    height: 380px;
     opacity: .33;
     background: linear-gradient(rgba(88,112,109,1), rgba(32,69,88,0));
     background: -webkit-linear-gradient(rgba(88,112,109,1), rgba(32,69,88,0));
@@ -320,7 +319,12 @@ body.preview .headerImageContainer {
 @media (max-width: 1050px) {
     .headerImageContainer {
         /* Needs to match #header height at all repsonsive sizes */
-        height: 300px;
+        height: 280px;
+    }
+}
+@media (max-width: 959px) {
+    .footerImageFixed {
+        display: none;
     }
 }
 @media (max-width: 768px) {
@@ -340,7 +344,7 @@ body.preview .headerImageContainer {
     padding: 30px 0 24px;
 }
 .hasHeaderImage #header {
-    height: 400px;
+    height: 350px;
 }
 .siteLogo {
     margin-left: 40px;
@@ -386,11 +390,12 @@ body.preview .headerImageContainer {
 }
 @media (max-width: 1050px)  {
     .hasHeaderImage #header {
-        height: 300px;
+        height: 280px;
     }
 }
 @media (max-width:959px) {
     .siteLogo {
+        margin-top: 6px;
         max-width: 200px;
     }
 }
@@ -443,23 +448,23 @@ body.preview .headerImageContainer {
     border-top: 3px solid #292929;
 }
 h2.sectionName {
-    margin: 0;
-    padding-bottom: 30px;
+    margin: 8px 0 0;
+    padding-bottom: 12px;
     font-size: 18px;
     font-weight: 400;
     color: #111;
-    border-bottom: 3px solid #111;
+    border-bottom: 7px solid #111;
 }
 
 /* Temporary classes - remove when links are dynamic */
 #siteNavigationSidebar ul {
-    padding: 28px 0;
+    padding: 20px 0;
 }
 /* End temporary classes */
 
 
 .siteNavLink[data-level="2"] {
-    padding: 6px 0;
+    padding: 2px 0;
 }
 .siteNavLink a.navLevel2 {
     transition: all .1s ease-out;
@@ -480,7 +485,7 @@ h2.sectionName {
     color: #5B919F;
 }
 #sidebarSocial {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 #sidebarPromoArea a {
     display: block;
@@ -567,14 +572,13 @@ h2.sectionName {
     padding-bottom: 110px;
 }
 .mainColumnGutter {
-    padding-left: 12%;
+    padding-left: 10%;
 }
 h1.pageTitle {
-    display: table;
     margin: 0 0 50px;
-    padding: 12px 14px 10px;
+    padding-bottom: 14px;
     line-height: .8;
-    border: 3px solid #111;
+    border-bottom: 7px solid #111;
 }
 @media (max-width: 959px) {
     .mainColumnGutter {
@@ -745,6 +749,7 @@ md-progress-circular path {
 /* Remove when fixed in core */
 
 #siteMapNew {
+    margin: 0 -3%;
     text-align: center;
 }
 #siteMapNew li {
@@ -803,6 +808,11 @@ md-progress-circular path {
 .siteMapColumn a:hover {
     color: #FFF;
 }
+#siteMapNew #btnJoin {
+    display: block;
+    margin: 4px auto;
+    max-width: 136px;
+}
 
 
 
@@ -814,7 +824,8 @@ md-progress-circular path {
     background: #111;
 }
 #footer {
-    padding: 60px 0 70px;
+    padding-top: 60px;
+    padding-bottom: 70px;
     color: #6D6D6D;
     text-transform: none;
 }
@@ -857,3 +868,91 @@ md-progress-circular path {
     color: #FFF;
 }
 
+
+/* CUSTOM ARTICLE STYLING */
+
+.pullout.pulloutYellow {
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 30px;
+    line-height: 1.2;
+    background: #FFFE00;
+}
+@media (min-width:959px) {
+    .pullout.pulloutYellow {
+        float: left;
+        margin: 0 8% 30px 0;
+        max-width: 35%;
+    }
+    .noSidebarManual .pullout.pulloutYellow {
+        margin: 0 5% 30px 0;
+        max-width: 25%;
+    }
+}
+
+/* FAQ */
+
+#faqPage h4 {
+    margin-bottom: 30px;
+    font-size: 13px;
+    letter-spacing: .07em;
+}
+#faqMain {
+    margin-right: 12%;
+}
+#faqMain h2 {
+    margin: 0 0 50px;
+    padding: 4px 10px;
+    font-size: 26px;
+    color: #FFF;
+    background: #6259FC;
+}
+
+/* Creating the special caps */
+.faqQuestion,
+.faqAnswer {
+    position: relative;
+    padding-left: 70px;
+}
+.faqQuestion::before,
+.faqAnswer::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "Q.";
+    font-size: 40px;
+    font-family: 'Alfa Slab One';
+    color: #6259FC;
+    line-height: 1;
+}
+.faqAnswer::before {
+    content: "A.";
+    color: #383838;
+}
+
+/* General styling */
+.faqQuestion {
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #2A5058;
+}
+
+
+/* Quick Links */
+#faqQuickLinks {
+    padding: 20px 8%;
+    background: #F6F6F6;
+}
+#faqQuickLinks h3 {
+    margin: 0 0 22px;
+    font-size: 15px;
+    color: #6259FC;
+    line-height: 1.1;
+}
+#faqQuickLinks a {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}

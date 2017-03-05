@@ -23,6 +23,9 @@
 .landingStream #header {
     background: none;
 }
+.landingStream .headerImageFixed {
+    opacity: .8;
+}
 .landingHeader {
     padding: 70px 0;
 }

@@ -25,7 +25,7 @@ SETTINGS
 {# Hide sidebar and make main column full width #}
 {% if columnSidebar is not defined %}
     {% set columnSidebar = 'stGrid column20' %}
-    {% set bcolumnMain = 'stGrid column80' %}
+    {% set columnMain = 'stGrid column80' %}
 {% endif %}
 
 {# Make sure sidebar variables are empty to prevent errors #}
@@ -552,7 +552,7 @@ LAYOUT
     <div id="navHeader" class="navMainContainer positionRightTop">
         <ul class="listInline fontPrimary">
             <li id="navJoin" class="navMainLink">
-                <a href="/#joinForm">
+                <a href="/#homeJoin">
                     Sign Up
                     <div class="animatedBorder"></div>
                 </a>
@@ -642,6 +642,11 @@ LAYOUT
                 Platform
             </a>
         </li>
+        <li class="siteNavLink" data-level="2">
+            <a href="/FAQ" class="navLevel2 {% if sectionMenuActive == 'faqActive' %}active{% endif %}">
+                FAQ
+            </a>
+        </li>
     </ul>
 {% endblock menuSection3 %}
 
@@ -724,13 +729,13 @@ LAYOUT
 {# Add social media & border to bottom of sidebar #}
 {% block sidebarContent %}
     {{ parent() }}
-    <div class="sidebarBorder"></div>
-    <div id="sidebarSocial" class="clearfix">
+    <div hide-gt-sm class="sidebarBorder"></div>
+    <div hide-gt-sm id="sidebarSocial" class="clearfix">
         {{ block('socialMedia') }}
     </div>
     {#
     <div id="sidebarPromoArea">
-        <a href="https://shop.brandnewcongress.org" target="_blank" class="backgroundDark">
+        <a href="https://shop.justicedemocrats.com/" target="_blank" class="backgroundDark">
             <div class="imageContainer">
                 <img src="{{ asset('bundles/sitetheorytemplatecustom/images/sidebarButtonStore.png') }}" alt="">
             </div>
@@ -751,7 +756,10 @@ LAYOUT
         <div ng-cloak id="siteMapContainer" class="siteMaxWidth siteSidePadding fontSecondary dark">
 
             <div id="siteMapNew" layout="row" layout-wrap class="hide-xs hide-sm">
-                <div flex="25">
+                <div flex="20">
+                    <a id="btnJoin" class="btn btnYellow" href="/#homeJoin">Sign Up</a>
+                </div>
+                <div flex="20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
@@ -763,28 +771,28 @@ LAYOUT
                         </ul>
                     </div>
                 </div>
-                <div flex="25">
+                <div flex="20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
                                 <a class="fontTertiary" href="/Overview">Get Involved</a>
                             </li>
                             <li>
-                                <a href="/Nominate">Nominate</a>
+                                <a href="/Volunteer">Volunteer</a>
                             </li>
                             <li>
-                                <a href="/Volunteer">Volunteer</a>
+                                <a href="/Nominate">Nominate</a>
                             </li>
                             <li>
                                 <a href="https://secure.actblue.com/contribute/page/justicedemocrats?refcode=justicedemocrats.com" target="_blank">Donate</a>
                             </li>
                             <li>
-                                <a href="https://shop.justicedemocrats.com/" target="_blank">Justice Democrats Store</a>
+                                <a href="https://shop.justicedemocrats.com/" target="_blank">JD Store</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div flex="25">
+                <div flex="20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
@@ -793,10 +801,16 @@ LAYOUT
                             <li>
                                 <a href="/Platform">Platform</a>
                             </li>
+                            <li>
+                                <a href="/FAQ">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/Privacy-Policy">Privacy Policy</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div flex="25">
+                <div flex="20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
@@ -804,9 +818,6 @@ LAYOUT
                             </li>
                             <li>
                                 <a href="mailto:us@justicedemocrats.com">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="/Privacy-Policy">Privacy Policy</a>
                             </li>
                             <li>
                                 {# Social Media #}
@@ -871,10 +882,10 @@ LAYOUT
 
             <div id="footerCredit">
                 <div>
-                    ©2017 Justice Democrats. All rights reserved. Paid for by Justice Democrats, justicedemocrats.com. Not authorized by any candidate or candidate's committee.
+                    6230 Wilshire Blvd, #1209 | Los Angeles, CA 90048
                 </div>
                 <div>
-                    6230 Wilshire Blvd, #1209 | Los Angeles, CA 90048
+                    ©2017 Justice Democrats. All rights reserved. Paid for by Justice Democrats, justicedemocrats.com. Not authorized by any candidate or candidate's committee.
                 </div>
             </div>
 

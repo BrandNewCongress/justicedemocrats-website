@@ -1,0 +1,17 @@
+{% extends 'SitetheoryArticleBundle::Article.html.twig' %}
+
+{% block appClass %}
+    hasHeaderImage
+    {{ parent() }}
+{% endblock appClass %}
+
+{# TODO: make CMS manage image #}
+{% block headerImage %}
+    style="background-image: url('{{ asset('bundles/sitetheorytemplatecustom/images/headerImageFlagTools.jpg') }}');">
+{% endblock headerImage %}
+
+
+{# TODO: make CMS manage menu #}
+{% set sectionNameHardCoded = 'Get Involved' %}
+{% set sectionMenuHardCoded = '2' %}
+{% set sectionMenuActive = 'nominateActive' %}

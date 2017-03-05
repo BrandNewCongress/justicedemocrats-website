@@ -10,11 +10,10 @@ SETTINGS
 {% set headerStructure = '' %}
 {% set headerRetractingStructure = '' %}
 
-{% block headerImageInsideHeader %}
-{% endblock headerImageInsideHeader %}
-
 {# Make mobile drawer slide in from right #}
 {% set mobileDrawerDirection = 'mobileDrawerRight' %}
+
+
 
 {# Make mobile drawer slide in from right #}
 {% set sidebarToggleColor = 'light' %}
@@ -41,9 +40,6 @@ SETTINGS
 {% set navLevel1Font = 'fontPrimary' %}
 {% set navLevel2Font = 'fontSecondary' %}
 
-{# Hide page title in main column so it can be placed up by header #}
-{% block pageTitleMainColumn %}
-{% endblock pageTitleMainColumn %}
 
 {# Set Footer Brightness #}
 {% set footerBrightness = 'dark' %}
@@ -82,7 +78,7 @@ JAVASCRIPT
 
 
 
-    {# SIGNUP FORM
+    {# SIGNUP FORM #}
     <script>
         (function (root, factory) {
             if (typeof require === 'function') {
@@ -429,8 +425,6 @@ JAVASCRIPT
     </script>
     <!-- End Google Analytics  -->
 
-     #}
-
 
 
 {% endblock script %}
@@ -464,7 +458,7 @@ SIGNUP FORM
 #}
 
 {% block registrationForm %}
-    {#
+
     <form name="Signup" ng-submit="send('Signup') && customMethods.trackSignup('SignupButton', 'click')" ng-controller="CustomApi"
           ng-sanitize="true"
           options='{"controller": "/people", "redirect":{"url":"https://secure.actblue.com/contribute/page/bncsignup", "popup":false}}'
@@ -475,7 +469,7 @@ SIGNUP FORM
         <md-progress-circular md-mode="indeterminate" ng-show="status === 'sending'"></md-progress-circular>
         <p class="message" ng-show="response.length" ng-bind-html="response"></p>
 
-        <ul class="listInline divCenter fontSecondary" ng-show="status !== 'success'">
+        <ul class="listUnstyled fontPrimary" ng-show="status !== 'success'">
 
             {{ registrationFormBefore|default('')|raw }}
 
@@ -504,15 +498,15 @@ SIGNUP FORM
         </li>
         {% endverbatim %}
             <li>
-                <button type="submit" class="btn formSubmit"
-                        ng-disabled="Signup.$invalid">{{ textSubmit|default('Count Me In') }}</button>
+                <button type="submit" class="btn btnYellow formSubmit"
+                        ng-disabled="Signup.$invalid">{{ textSubmit|default('Sign Me Up') }}</button>
             </li>
 
             {{ registrationFormAfter|default('')|raw }}
 
         </ul>
     </form>
-    #}
+
 {% endblock registrationForm %}
 
 
@@ -523,6 +517,22 @@ SIGNUP FORM
 LAYOUT
 ######
 #}
+
+
+{# This is empty and has a background color unless an image is added page by page #}
+{% block headerImage %}
+{% endblock headerImage %}
+
+{% block headerImageInsideHeader %}
+    <div class="headerImageContainer" data-plugin="OnScreen" data-spy="#header">
+        <div class="headerImageFixed positionAll" {{ block('headerImage') }}>
+
+
+        </div>
+        <div id="darkenHeaderImage"></div>
+    </div>
+{% endblock headerImageInsideHeader %}
+
 
 {% block siteLogo %}
     <div class="siteLogo">
@@ -577,7 +587,6 @@ LAYOUT
 {# Temporary hard coded menu #}
 {% block sectionName %}
     <h2 class="sectionName fontPrimary">{{ sectionNameHardCoded|default('') }}</h2>
-    <div class="borderDashed sidebarBorder"></div>
 {% endblock sectionName %}
 
 
@@ -587,7 +596,7 @@ LAYOUT
     <ul id="listLevel2" class="listUnstyled {{ navLevel2Font|default('fontSecondary') }}">
         <li class="siteNavLink" data-level="2">
             <a href="/Nominate" class="navLevel2 {% if sectionMenuActive == 'nominateActive' %}active{% endif %}">
-                Nominate a Candidate
+                Nominate
             </a>
         </li>
     </ul>
@@ -599,52 +608,25 @@ LAYOUT
     <!-- Level 2 Links -->
     <ul id="listLevel2" class="listUnstyled {{ navLevel2Font|default('fontSecondary') }}">
         <li class="siteNavLink" data-level="2">
-            <a href="/support" class="navLevel2 {% if sectionMenuActive == 'supportActive' %}active{% endif %}">
-                Overview
-            </a>
-        </li>
-        <li class="siteNavLink" data-level="2">
-            <a href="/nominate" class="navLevel2 {% if sectionMenuActive == 'nominateActive' %}active{% endif %}">
+            <a href="/Nominate" class="navLevel2 {% if sectionMenuActive == 'nominateActive' %}active{% endif %}">
                 Nominate
             </a>
         </li>
         <li class="siteNavLink" data-level="2">
-            <a href="/volunteer" class="navLevel2 {% if sectionMenuActive == 'volunteerSkillsActive' %}active{% endif %}">
-                How Can You Help
+            <a href="/Volunteer" class="navLevel2 {% if sectionMenuActive == 'volunteerSkillsActive' %}active{% endif %}">
+                Volunteer
             </a>
         </li>
         <li class="siteNavLink" data-level="2">
-            <a href="/candidate-research" class="navLevel2 {% if sectionMenuActive == 'researchActive' %}active{% endif %}">
-                Candidate Research
-            </a>
-        </li>
-        <li class="siteNavLink" data-level="2">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8CfK0gUULEVpYFm9Eb4iyGOL-_iDl395qB0z4hny7ek4iNw/viewform" target="_blank" class="navLevel2">
-                District Research
-            </a>
-        </li>
-
-        <li class="siteNavLink" data-level="2">
-            <a href="https://docs.google.com/document/d/1Op0OaZNuykCJckSCn4vABDEr4VEdTrMeTsPCZFNSJo4/edit"
-               target="_blank" class="navLevel2 {% if sectionMenuActive == 'organizeLocallyActive' %}active{% endif %}">
-                Organize Locally
-            </a>
-        </li>
-        <li class="siteNavLink" data-level="2">
-            <a href="/call" class="navLevel2 {% if sectionMenuActive == 'callActive' %}active{% endif %}">
-                Join a Call
-            </a>
-        </li>
-        <li class="siteNavLink" data-level="2">
-            <a href="https://secure.actblue.com/contribute/page/brandnewcongress" target="_blank"
+            <a href="https://secure.actblue.com/contribute/page/justicedemocrats?refcode=justicedemocrats.com" target="_blank"
                class="navLevel2 {% if sectionMenuActive == 'contributeActive' %}active{% endif %}">
                 Donate
             </a>
         </li>
         <li class="siteNavLink" data-level="2">
-            <a href="https://shop.brandnewcongress.org" target="_blank"
+            <a href="https://shop.justicedemocrats.com" target="_blank"
                class="navLevel2">
-                BNC Store
+                JD Store
             </a>
         </li>
     </ul>
@@ -656,18 +638,8 @@ LAYOUT
     <!-- Level 2 Links -->
     <ul id="listLevel2" class="listUnstyled {{ navLevel2Font|default('fontSecondary') }}">
         <li class="siteNavLink" data-level="2">
-            <a href="/plan" class="navLevel2 {% if sectionMenuActive == 'planActive' %}active{% endif %}">
-                Our Plan
-            </a>
-        </li>
-        <li class="siteNavLink" data-level="2">
-            <a href="/about" class="navLevel2 {% if sectionMenuActive == 'aboutActive' %}active{% endif %}">
-                About Us
-            </a>
-        </li>
-        <li class="siteNavLink" data-level="2">
-            <a href="/faq" class="navLevel2 {% if sectionMenuActive == 'faqActive' %}active{% endif %}">
-                FAQ
+            <a href="/Platform" class="navLevel2 {% if sectionMenuActive == 'platformActive' %}active{% endif %}">
+                Platform
             </a>
         </li>
     </ul>
@@ -694,15 +666,15 @@ LAYOUT
     <div class="hide-gt-sm">
         <ul id="listLevel1" class="listUnstyled">
             <li data-level="1">
-                <div class="siteNavLink " data-level="1">
-                    <a href="#joinForm" class="navLevel1 fontPrimary">
-                        Join
+                <div id="sidebarJoin" class="siteNavLink " data-level="1">
+                    <a href="#joinForm" class="navLevel1 fontTertiary">
+                        Sign Up
                     </a>
                 </div>
             </li>
             <li data-level="1">
                 <div class="siteNavLink" data-level="1">
-                    <a href="/submit-nominee" class="navLevel1 fontPrimary">
+                    <a href="/submit-nominee" class="navLevel1 fontTertiary">
                         Candidates
                     </a>
                 </div>
@@ -710,25 +682,34 @@ LAYOUT
             </li>
             <li data-level="1">
                 <div class="siteNavLink" data-level="1">
-                    <a href="/support" class="navLevel1 fontPrimary">
-                        Work With Us
+                    <a href="/support" class="navLevel1 fontTertiary">
+                        Get Involved
                     </a>
                 </div>
                 {{ block('menuSection2') }}
             </li>
             <li data-level="1">
-                <div class="siteNavLink {{ navLevel1Font|default('fontPrimary') }}" data-level="1">
-                    <a href="/plan" class="navLevel1 fontPrimary">
-                        Learn
+                <div class="siteNavLink" data-level="1">
+                    <a href="/plan" class="navLevel1 fontTertiary">
+                        About
                     </a>
                 </div>
                 {{ block('menuSection3') }}
             </li>
             <li>
-                <div class="sidebarContact borderDashed">
-                    <a href="mailto:mailto:us@brandnewcongress.org" class="fontSecondary">
-                        us@brandnewcongress.org
-                    </a>
+                <div class="sidebarContact">
+                    <div>
+                        <span class="fontBody smallLabel">Press:  </span>
+                        <a href="mailto:mailto:press@justicedemocrats.com" class="fontBody">
+                            press@justicedemocrats.com
+                        </a>
+                    </div>
+                    <div>
+                        <span class="fontBody smallLabel">General:  </span>
+                        <a href="mailto:mailto:us@justicedemocrats.com" class="fontBody">
+                            us@justicedemocrats.com
+                        </a>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -743,11 +724,11 @@ LAYOUT
 {# Add social media & border to bottom of sidebar #}
 {% block sidebarContent %}
     {{ parent() }}
-    <div hide-gt-sm>
+    <div class="sidebarBorder"></div>
+    <div id="sidebarSocial" class="clearfix">
         {{ block('socialMedia') }}
     </div>
-    <div class="borderDashed sidebarBorder"></div>
-
+    {#
     <div id="sidebarPromoArea">
         <a href="https://shop.brandnewcongress.org" target="_blank" class="backgroundDark">
             <div class="imageContainer">
@@ -755,6 +736,7 @@ LAYOUT
             </div>
         </a>
     </div>
+    #}
 {% endblock sidebarContent %}
 
 
@@ -773,10 +755,10 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="/submit-nominee">Candidates</a>
+                                <a class="fontTertiary" href="/Nominate">Candidates</a>
                             </li>
                             <li>
-                                <a href="/Nominate">Nominate a Candidate</a>
+                                <a href="/Nominate">Nominate</a>
                             </li>
                         </ul>
                     </div>
@@ -785,35 +767,19 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="/support">Support</a>
+                                <a class="fontTertiary" href="/Overview">Get Involved</a>
                             </li>
                             <li>
-                                <a href="/support">Support</a>
+                                <a href="/Nominate">Nominate</a>
                             </li>
                             <li>
-                                <a href="/nominate">Nominate a Candidate</a>
+                                <a href="/Volunteer">Volunteer</a>
                             </li>
                             <li>
-                                <a href="/volunteer">How Can You Help</a>
+                                <a href="https://secure.actblue.com/contribute/page/justicedemocrats?refcode=justicedemocrats.com" target="_blank">Donate</a>
                             </li>
                             <li>
-                                <a href="/candidate-research">Candidate Research</a>
-                            </li>
-                            <li>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8CfK0gUULEVpYFm9Eb4iyGOL-_iDl395qB0z4hny7ek4iNw/viewform" target="_blank">District Research</a>
-                            </li>
-                            <li>
-                                <a href="https://docs.google.com/document/d/1Op0OaZNuykCJckSCn4vABDEr4VEdTrMeTsPCZFNSJo4/edit"
-                                   target="_blank">Organize Locally</a>
-                            </li>
-                            <li>
-                                <a href="/call">Join a Call</a>
-                            </li>
-                            <li>
-                                <a href="https://secure.actblue.com/contribute/page/brandnewcongress" target="_blank">Donate</a>
-                            </li>
-                            <li>
-                                <a href="https://shop.brandnewcongress.org/" target="_blank">BNC Store</a>
+                                <a href="https://shop.justicedemocrats.com/" target="_blank">Justice Democrats Store</a>
                             </li>
                         </ul>
                     </div>
@@ -822,16 +788,10 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="/plan">Learn</a>
+                                <a class="fontTertiary" href="/plan">About</a>
                             </li>
                             <li>
-                                <a href="/plan">Our Plan</a>
-                            </li>
-                            <li>
-                                <a href="/about">About Us</a>
-                            </li>
-                            <li>
-                                <a href="/faq">FAQ</a>
+                                <a href="/Platform">Platform</a>
                             </li>
                         </ul>
                     </div>
@@ -840,10 +800,10 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="mailto:us@brandnewcongress.org">Contact</a>
+                                <a class="fontTertiary" href="mailto:us@justicedemocrats.com">Contact</a>
                             </li>
                             <li>
-                                <a href="mailto:us@brandnewcongress.org">Contact Us</a>
+                                <a href="mailto:us@justicedemocrats.com">Contact Us</a>
                             </li>
                             <li>
                                 <a href="/privacy">Privacy Policy</a>

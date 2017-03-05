@@ -61,14 +61,23 @@ LAYOUT
 ######
 #}
 
+{% block headerImage %} style="background-image: url('{{ asset('bundles/sitetheorytemplatecustom/images/headerImageHome.jpg') }}');"
+{% endblock headerImage %}
+
+
 {% block header %}
 
-    <div class="headerImageContainer" data-plugin="OnScreen" data-spy="#header">
-        <div class="headerImageFixed positionAll"  style="background-image: url('{{ asset('bundles/sitetheorytemplatecustom/images/headerImageHome.jpg') }}');">
+
+    {% block headerImageInsideHeader %}
+        <div class="headerImageContainer" data-plugin="OnScreen" data-spy="#header">
+            <div class="headerImageFixed positionAll" {{ block('headerImage') }}>
+
+
+            </div>
+            <div id="darkenHeaderImage"></div>
         </div>
-        <div id="darkenHeaderImage">
-        </div>
-    </div>
+    {% endblock headerImageInsideHeader %}
+
 
     <div id="header">
 
@@ -92,7 +101,12 @@ LAYOUT
                     <div flex="100" flex-gt-sm="45" flex-offset-gt-sm="10">
                         <div id="homeJoin">
                             <p>If you want a strong Democratic Party that doesn't cater to corporate donors and will fight for the average American, join us to take the party back!</p>
-                            <div id="homeJoinForm"></div>
+                            <div id="homeJoinForm">
+                                {# hide as soon as angular loads #}
+                                <div class="loader" ng-hide="true"></div>
+
+                                {{ block('registrationForm') }}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,13 +127,13 @@ LAYOUT
         <div class="shellVerticalPadding">
             <div layout="row" layout-wrap>
                 <div flex="100" flex-gt-sm="45">
-                    <div id="landingContentLeft">
+                    <div id="landingContentLeft" class="fontBody">
                         <div id="introVideo">
                             <div class="iframeVideoWrapper">
                                 <iframe width="548 " height="306" src="https://www.youtube.com/embed/lOTsK_WGNAc" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
-                        <h3>ALL BETS ARE OFF</h3>
+                        <h3 class="fontTertiary">ALL BETS ARE OFF</h3 class="fontTertiary">
 
                         <div class="pullout">The Democratic Party is broken, and the corporate wing of the party is responsible.</div>
 
@@ -129,8 +143,8 @@ LAYOUT
                     </div>
                 </div>
                 <div flex="100" flex-gt-sm="45" flex-offset-gt-sm="10">
-                    <div id="landingContentRight">
-                        <h3>Act Now</h3>
+                    <div id="landingContentRight" class="fontBody">
+                        <h3 class="fontTertiary">Act Now</h3>
                         <div id="homeActionArea">
                             <p>We are recruiting Justice Democrats to run a unified campaign to replace every establishment politician in Congress in 2018. And we need all the help we can get.</p>
 

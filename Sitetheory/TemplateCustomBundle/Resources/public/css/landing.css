@@ -3,6 +3,7 @@
 
 .landingStream h3 {
     padding-bottom: 14px;
+    letter-spacing: 1px;
     border-bottom: 7px solid #373737;
 }
 .landingStream .pullout {
@@ -16,6 +17,9 @@
 
 /* Header */
 
+.headerImageContainer {
+    height: 850px;
+}
 .landingStream #header {
     background: none;
 }
@@ -42,40 +46,29 @@
 /* Land page sign up area */
 #homeJoin {
     padding: 40px;
-    height: 510px;
     text-align: center;
     background: rgba(195,195,195,.8);
 }
 #homeJoin p {
+    margin-bottom: 32px;
     font-size: 20px;
     font-weight: bold;
     color: #FFF;
 }
+/* Home page sign up form styling is in site.css to make it easier to compare site wide styling with specific form styling */
 
-/* Compensate for hidden message fields under input in form */
-#homeJoin .listInline li {
-    margin-bottom: -30px;
-}
-/* Move prompt text high enough to make room for bigger input text */
-#homeJoin md-input-container.md-input-focused label:not(.md-no-float),
-#homeJoin md-input-container.md-input-has-placeholder label:not(.md-no-float),
-#homeJoin md-input-container.md-input-has-value label:not(.md-no-float) {
-    transform: translate3d(2px,4px,0) scale(.65);
-}
-/* Input bottom border and text */
-#homeJoin md-input-container.md-default-theme .md-input,
-#homeJoin md-input-container .md-input {
-    padding-bottom: 16px;
-    font-size: 16px;
-}
-#homeJoin .btn {
-    padding: 15px 40px;
-}
 @media (max-width:959px) {
     #homeJoin {
-        margin-top: 40px;
+        padding: 26px;
+        margin-top: 30px;
+    }
+    #homeJoin p {
+        margin-bottom: 26px;
+        font-size: 18px;
     }
 }
+
+
 
 /* Landing page content area */
 

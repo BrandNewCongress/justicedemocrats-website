@@ -62,6 +62,12 @@ CSS STYLING
 
     {{ parent() }}
 
+    {# TODO: once asset loads custom vhost files, load this way #}
+    {# #
+    {% stylesheets '@SitetheoryTemplateCustomBundle/Resources/public/css/site.css' filter='?uglifycss' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" data-file="site.css">
+    {% endstylesheets %}
+    {# #}
     <link rel="stylesheet" href="{{ asset('bundles/sitetheorytemplatecustom/css/site.css') }}">
 
 
@@ -291,6 +297,11 @@ LAYOUT
             </a>
         </li>
         <li class="siteNavLink" data-level="2">
+            <a href="/call" class="navLevel2 {% if sectionMenuActive == 'callActive' %}active{% endif %}">
+                Join a Call
+            </a>
+        </li>
+        <li class="siteNavLink" data-level="2">
             <a href="https://secure.actblue.com/contribute/page/justicedemocrats?refcode=justicedemocrats.com" target="_blank"
                class="navLevel2 {% if sectionMenuActive == 'contributeActive' %}active{% endif %}">
                 Donate
@@ -345,14 +356,14 @@ LAYOUT
         <ul id="listLevel1" class="listUnstyled">
             <li data-level="1">
                 <div id="sidebarJoin" class="siteNavLink " data-level="1">
-                    <a href="#joinForm" class="navLevel1 fontTertiary">
+                    <a href="/#joinForm" class="navLevel1 fontTertiary">
                         Sign Up
                     </a>
                 </div>
             </li>
             <li data-level="1">
                 <div class="siteNavLink" data-level="1">
-                    <a href="/submit-nominee" class="navLevel1 fontTertiary">
+                    <a href="/nominate" class="navLevel1 fontTertiary">
                         Candidates
                     </a>
                 </div>
@@ -455,6 +466,9 @@ LAYOUT
                             </li>
                             <li>
                                 <a href="/Nominate">Nominate</a>
+                            </li>
+                            <li>
+                                <a href="/call">Join a Call</a>
                             </li>
                             <li>
                                 <a href="https://secure.actblue.com/contribute/page/justicedemocrats?refcode=justicedemocrats.com" target="_blank">Donate</a>
@@ -581,7 +595,7 @@ LAYOUT
 
 {% block candidateReturnLink %}
     <strong>
-        <a class="returnLink divCenter fontBody" href="/submit-nominee">
+        <a class="returnLink divCenter fontBody" href="/nominate">
             <div class="starLeft starPurple">
                 <div class="starRight starPurple">
                     <div class="starText">Return to All Candidates</div>

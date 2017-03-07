@@ -2,63 +2,124 @@ Used to identify corresponding article at a glance.
 
 Archive
 ```
-<p class="bodyLarge">Brand New Congress is a campaign to run 400+ non-politician candidates for Congress in 2018 in one unified campaign behind one plan to rebuild the economy, repair our communities and radically reform our institutions.</p>
-    <br>
-    <p>We believe there are obvious solutions to America's biggest problems that the vast majority of Americans would fight for if they were put on the table in a national election. But we don't hear about those solutions because the current bi-partisan establishment agrees 100% on bad trade deals, massive bank bailouts, and supporting the takeover of our economy by the financial industry. It also agrees on mass incarceration, allowing the ultrawealthy to have undue influence in our politics, and inaction against an out-of-control "justice" system. It uses partisan bickering over taxes and spending to cover up its consensus on those things that really matter and to pretend that Americans are pitted against each other in partisan gridlock.</p>
+<div class="fontSecondary" id="volunteerSkills">
+    <div class="description">
+        <p class="pullout">Tell us all about yourself so we can get you plugged into the best teams.</p>
+        <p>This movement won&rsquo;t be possible without thousands of volunteers helping at every level of organization. Join now to make a difference.</p>
+        <hr>
+    </div>
+    <form class="positionAnchor" id="VolunteerForm" name="Volunteer" ng-class="status" ng-cloak="" ng-cloak-reveal="" ng-controller="CustomApi" ng-sanitize="true" ng-submit="send('Volunteer')" options='{"controller":"/volunteers", "scrollTo":"#VolunteerForm", "scrollToOffset":-100, "response": {"success": "Thank you for submitting information about yourself! We will review and get back to you ASAP."},  "dynamicOptions": {"availability":{"available-0-5":"0-5","available-5-10":"5-10","available-10-20":"10-20","available-20-30":"20-30","available-30":"30+"},"skills":{"skill-programming":"Web Development","skill-web-design":"Web Design","skill-graphic-design":"Graphic Design","skill-video":"Video Production","skill-writing":"Writing/Marketing","skill-press":"Press Connections","skill-nationbuilder":"Nationbuilder Administration","skill-data-entry":"Data Entry","skill-call":"Call Supporters","skill-helpdesk":"Answer Helpdesk Emails","skill-sharing":"Share Social","skill-printing":"Provide Printing Services","skill-travel":"Manage and Book Travel","skill-hr":"Operations and HR","skill-legal":"Legal","skill-manage-communities":"Manage Online Communities","skill-supporter-housing":"Can House Supporters","skill-event-host":"Can Host Events","skill-venue":"Have Access to Free or Low-Cost Venues"}} }'>
+        <input type="hidden" name="utmSource" ng-model="model.data.utmSource">
+        <input type="hidden" name="utmMedium" ng-model="model.data.utmMedium">
+        <input type="hidden" name="utmCampaign" ng-model="model.data.utmCampaign">
 
-    <br>
-    <hr>
+        <p class="message" ng-show="response.length" ng-bind-html="response"></p>
+        <div class="reset" ng-show="status == 'success'">
+            <md-button class="btn" ng-click="reset('Volunteer')">Submit Another</md-button>
+        </div>
+        <div ng-class="{sending: status === 'sending'}" ng-show="status !== 'success'">
+            <div layout="row" layout-wrap="">
+                <div flex="100" flex-gt-sm="40">
+                    <div class="whiteframePadding" md-whiteframe="2">
+                        <h2>About You</h2>
+                        <div layout="column">
+                            <md-input-container>
+                                <label class="noFloat" md-no-float="">Your Name</label>
+                                <input name="volunteerName" type="text" ng-model="model.data.volunteerName" placeholder="" required="">
+                                <div ng-messages="Volunteer.volunteerName.$error" role="alert">
+                                    <div ng-message-exp="['required']">Please enter a name.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container>
+                                <label class="noFloat" md-no-float="">Your Email</label>
+                                <input name="volunteerEmail" type="email" ng-pattern="options.pattern.email" ng-model="model.data.volunteerEmail" placeholder="" required="">
+                                <div ng-messages="Volunteer.volunteerEmail.$error" role="alert">
+                                    <div ng-message-exp="['required', 'pattern']">Please enter a valid email.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container>
+                                <label class="noFloat" md-no-float="">Your Phone</label>
+                                <input name="volunteerPhone" type="tel" ng-model="model.data.volunteerPhone" placeholder="" required="">
+                                <div ng-messages="Volunteer.volunteerPhone.$error" role="alert">
+                                    <div ng-message-exp="['required']">Please enter a valid phone.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container>
+                                <label class="noFloat" md-no-float="">Your Address</label>
+                                <textarea name="volunteerAddress" ng-model="model.data.volunteerAddress" placeholder="" rows="2" required=""></textarea>
+                                <div ng-messages="Volunteer.volunteerAddress.$error" role="alert">
+                                    <div ng-message-exp="['required']">Please enter an address.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container>
+                                <label class="noFloat" md-no-float="">Your City</label>
+                                <input name="volunteerCity" ng-model="model.data.volunteerCity" placeholder="" required="">
+                                <div ng-messages="Volunteer.volunteerCity.$error" role="alert">
+                                    <div ng-message-exp="['required']">Please enter a city.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-input-has-placeholder">
+                                <md-select-label class="noFloat" md-no-float="">Your State <span class="required">*</span></md-select-label>
+                                <md-select aria-label="Your State" md-no-asterisk="" name="volunteerState" ng-model="model.data.volunteerState" required="true">
+                                    <md-option ng-repeat="state in states" ng-value="state.value"> {{ state.text }} </md-option>
+                                </md-select>
+                                <div ng-messages="Volunteer.volunteerState.$error" role="alert">
+                                    <div ng-message-exp="['required']">Please a select a state.</div>
+                                </div>
+                                <div class="md-errors-spacer"></div>
+                            </md-input-container>
+                            <md-input-container>
+                                <label class="noFloat" md-no-float="">Your Zip</label>
+                                <input name="volunteerZip" ng-model="model.data.volunteerZip" placeholder="" required="">
+                                <div ng-messages="Volunteer.volunteerZip.$error" role="alert">
+                                    <div ng-message-exp="['required']">Please enter a Zip.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container>
+                                <label class="noFloat" md-no-float="">Your LinkedIn</label>
+                                <input name="volunteerLinkedIn" ng-model="model.data.volunteerLinkedIn" placeholder="e.g. linkedin.com/in/george-washington"> </md-input-container>
+                        </div>
+                    </div>
+                    <div class="whiteframePadding" md-whiteframe="2">
+                        <md-input-container class="md-input-has-placeholder">
+                            <md-select-label class="noFloat" md-no-float="">How many hours can you contribute per week?<span class="required">*</span></md-select-label>
+                            <md-select aria-label="Your State" md-no-asterisk="" name="volunteerAvailability" ng-model="model.data.volunteerAvailability" required="true">
+                                <md-option ng-repeat="(key, value) in options.dynamicOptions.availability" ng-value="key"> {{ value }} </md-option>
+                            </md-select>
+                            <div ng-messages="Volunteer.volunteerAvailability.$error" role="alert">
+                                <div ng-message-exp="['required']">Please select your availability.</div>
+                            </div>
+                            <div class="md-errors-spacer"></div>
+                        </md-input-container>
+                    </div>
+                </div>
+                <div flex="5"></div>
+                <div flex="100" flex-gt-sm="55">
+                    <div class="whiteframePadding" md-whiteframe="2">
+                        <h2>How Can You Help?</h2>
+                        <div layout="column">
+                            <div ng-repeat="(key, value) in options.dynamicOptions.skills">
+                                <md-checkbox name="volunteerSkills" ng-checked="model.exists('volunteerSkills', key)" ng-click="model.toggle('volunteerSkills', key)">{{ value }}</md-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whiteframePadding" md-whiteframe="2">
+                        <h2>Anything else we should know about you?</h2>
+                        <div layout="column">
+                            <md-input-container>
+                                <textarea name="volunteerProfile" ng-model="model.data.volunteerProfile" placeholder="" rows="4"></textarea>
+                                <p class="hint">Tell us about your work experience or anything else you think you could provide that would help.</p>
+                            </md-input-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="submitArea textCenter">
+                <button class="btn btnBig formSubmit" type="submit">Let Me Help!</button>
+            </div>
+        </div>
+    </form>
+</div>
 
-    <h2>WHAT DOES BNC WANT?</h2>
-
-    <p class="bodyLarge">1. Good jobs for everyone, prosperity for every community</p>
-    <p>The BNC's plan calls for a mobilization on the scale of World War II – one in which every American is called upon to rebuild and repair our communities and our nation.</p>
-
-    <p>If the government can spend trillions of dollars to subsidize the failures of Wall Street and perpetual war, it can spend that kind of money on Main Street, investing in our communities and our future.</p>
-
-    <p>The Brand New Congress plan will:</p>
-
-    <br>
-    <ul>
-        <li><strong>Invest trillions of dollars in new industries</strong> that will provide millions of high wage jobs – just like all successful industrialized countries are doing right now.</li>
-        <li><strong>Invest trillions of dollars to rebuild and repair towns</strong>, cities and rural areas that politicians have allowed to disintegrate for half a century.</li>
-        <li><strong>Spend exactly what it will take to repair our nation’s broken infrastructure</strong> – which is $3.6 trillion according to the American Society of Civil Engineers.</li>
-        <li><strong>Build the inevitable cheap, renewable energy economy now</strong>, creating tens of millions of good high-tech jobs and saving people many trillions of dollars – because energy from the wind and sun is much cheaper in the long run.</li>
-        <li><strong>Overhaul the IRS and the tax code so that small businesses</strong> are on the same playing field as big business and so that multi-billionaires and large corporations can no longer evade paying the billions in taxes they should owe.</li>
-        <li><strong>Solve the healthcare mess once and for all by making Medicare available to anyone who wants it</strong>, and letting insurance companies fend for themselves in a truly free market.</li>
-        <li><strong>Provide free college education and technical training so that Americans have access to the training</strong> they need to get the job they want in this new economy.</li>
-    </ul>
-    <p><a href="https://docs.google.com/document/d/1sCFs5hqitbXBBqXxU6NULDyvydXqm-ALOqW21dv9P9k/edit">Read more about BNC's plan to rebuild the economy here.</a></p>
-
-    <br>
-    <p class="bodyLarge">2. Liberty and justice for all</p>
-
-    <ul>
-        <li><strong>We will get money out of politics once and for all:</strong> This means getting rid of the revolving door between Wall Street and our government. It means repealing Citizens United. It means moving to a publicly financed, transparent system of campaign financing that amplifies small donations. And it means all BNC candidates pledging to never lobby Congress after they're out of office.</li>
-        <li><strong>We will support the demands for justice from all groups that have been targeted by government:</strong> Today just about everyone in America feels targeted by government at some level. What stops us from undoing this is that they also feel pitted against each other. It's time for the American people to make common cause and see that the cries for justice by all Americans are heard. And we mean everyone: Black people, small business owners, Native Americans, low income people, rural people, immigrants, disabled people, foster children, Latinos, manufacturers who want to build in America, small towns, and we could go on and on with this list!</li>
-        <li><strong>We will reform our electoral system to create a more perfect democracy:</strong> This will include removing the electoral college, implementing ranked choice voting, creating a holiday on election day, improving the actual mechanics of voting to make it easy to vote and make electoral fraud impossible.</li>
-        <li><strong>We will refocus our criminal justice system on reducing the number incarcerated:</strong> Our current system simply can't work. Too many people leaving the prison system get no fair shot at getting back into society, so they wind up back in jail. We want to end the school-to-prison pipeline, provide training, education and jobs to prevent repeat offenders, and reduce our total prison population drastically.</li>
-        <li><strong>We will say no to wars of choice:</strong> Let's stop destabilizing other countries and focus on fixing our own.</li>
-        <li><strong>We will give every government body new marching orders:</strong> "Your job is to serve the people -- no longer to target, abuse, surveil, micromanage, nickle and dime and belittle the people you were hired to serve." We will back that up by removing government bureaucrats who can't understand or won't comply with their new orders. And we will back it up by cutting out blatant and obvious waste, while providing generous funding and training to the agencies and staff that do the real work and that have been starved of support for decades.</li>
-    </ul>
-
-    <br>
-    <hr>
-    <h2>THE BRAND NEW CONGRESS STRATEGY</h2>
-
-    <h3>How can a campaign this big succeed?</h3>
-    <br>
-    <p class="bodyLarge">Our goal is to gain a majority in Congress in order to radically rebuild this country's economy, completely recreate our criminal justice system, get to 100% renewable energy in 10 years, lift millions out of poverty, and protect the least protected in our society.</p>
-    <br>
-    <p>Basically, we want to do what we have to do as a country and remove 'politically impossible' as a reason not to do it. It will take at least until 2020 to achieve all of that, but the first step is to achieve a majority in the House and win as many of the 33 seats up for re-election in the Senate as possible in 2018.</p>
-
-    <p>Our plan to accomplish this is to recruit over 400 extraordinary ordinary Americans to challenge both Democrats and Republicans in congressional primary races across the country in order to replace almost all of Congress in one fell swoop. These will be people who have track records of integrity and service in their communities and who are not all career politicians -- we're looking for nurses, teachers, engineers, scientists, factory workers, and so on. They will represent not just all the various professions in our country (unlike our current Congress which represents mostly lawyers), but also be representative of our population's demographics -- more than half of them will be women and we will have just representation for people of color. Every candidate we recruit, regardless of party, will be a firm believer in the Brand New Congress platform and pledge to work to enact it once elected to office.</p>
-
-    <p>Once we recruit these candidates, we plan to run this campaign just like a Presidential campaign -- with a single campaign body coordinating and running all 400+ campaigns across America. This will not only let us capitalize on various economies of scale and use our knowledge from race to race to be as efficient as possible, it will also allow the massive grassroots volunteer and donor bases across America to work together towards a single focused goal, letting us all pool our resources together to actually overcome the substantial opposing resources of corporate interests. This also means that our candidates won't have to deal with the actual logistics of campaigns like how to contact voters or, very importantly, fundraising -- they will be free to do exactly what candidates should be doing: talking to their constituents and holding rallies to voice their ideas.</p>
-
-    <p>We believe we can win if we can inspire millions more Americans to regain faith in American democracy and turn out to vote in 2018. We think this will be possible by presenting a bold plan for change and an ambitious but practical way to actually get that change. Basically, we believe people will vote when they think their vote will actually make a difference.</p>
-
-    <p>Once we have a majority, Brand New Congress will govern like America has never seen in peacetime before: by actually getting stuff done! There will be no debating or horse trading -- because the BNC candidates will all enter Congress already having agreed on the plan. We'll have all the legislation written and published for review by the people BEFORE the 2018 election! It's what the American people will have elected us to pass -- and we will pass it on day one.</p>
-
-    <p>It will take at least until the end of 2017 to work out all the details of the legislation. Right now, BNC’s Working Group is responsible for leading this process, and in the coming months, we’ll be working with policy wonks, advocates and leaders in many fields to craft the actual legislation that a Brand New Congress would pass on day one to put the plan into action. That way, people will know exactly what they're going to get with a Brand New Congress.</p>
 ```

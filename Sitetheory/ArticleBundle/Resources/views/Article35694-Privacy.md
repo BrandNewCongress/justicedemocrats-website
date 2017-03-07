@@ -2,63 +2,43 @@ Used to identify corresponding article at a glance.
 
 Archive
 ```
-<p class="bodyLarge">Brand New Congress is a campaign to run 400+ non-politician candidates for Congress in 2018 in one unified campaign behind one plan to rebuild the economy, repair our communities and radically reform our institutions.</p>
-    <br>
-    <p>We believe there are obvious solutions to America's biggest problems that the vast majority of Americans would fight for if they were put on the table in a national election. But we don't hear about those solutions because the current bi-partisan establishment agrees 100% on bad trade deals, massive bank bailouts, and supporting the takeover of our economy by the financial industry. It also agrees on mass incarceration, allowing the ultrawealthy to have undue influence in our politics, and inaction against an out-of-control "justice" system. It uses partisan bickering over taxes and spending to cover up its consensus on those things that really matter and to pretend that Americans are pitted against each other in partisan gridlock.</p>
+<p><strong> This Privacy Policy applies to the website www.justicedemocrats.com  (the &quot;Site&quot;) owned and operated by Justice Democrats, a political  action committee registered with the Federal Election Commission. </strong></p>
+<p>Justice Democrats has created this privacy policy to explain how we use information that you may provide while visiting this Site and to demonstrate our firm commitment to Internet privacy. Justice Democrats may modify this policy from time to time so we encourage you to check this page when revisiting this Site. By using this Site, you agree to the terms of this Privacy Policy.</p>
+<h2>How We Use Your Information</h2>
+<p>When you register, contribute, sign up to volunteer, or take any other action on our Site, we may ask you to give us contact information, including your name, address, telephone number, mobile telephone number and/or e-mail address. We may obtain information about you from outside sources and add it to or combine it with the information we collect through this Site.</p>
+<p>We use this information to operate this Site, send you news and information about Justice Democrats&#39; activities, solicit your participation in Justice Democrats&#39; activities, and related uses. We use your e-mail address to send such information by e-mail, and may use your telephone number to call you or send you a text message or phone call for these purposes.</p>
+<p>Additionally, we may share your information as follows, or as otherwise described in this Privacy Policy:</p>
+<ul>
+    <li>To companies that assist us in maintaining this Site or with the Justice Democrats activities, but only for purposes of providing services to Justice Democrats and with the strict requirement that any such company will never itself have the right to contact you for any reason;</li>
+    <li>To comply with applicable law or legal requirements (for example, a lawful subpoena), to protect our rights or property, or to protect our supporters from fraudulent, abusive, or unlawful conduct, or if we reasonably believe that an emergency involving immediate danger of death or serious physical injury to any person requires disclosure of communications or justifies disclosure of records;</li>
+    <li>With candidates, organizations, committees, or groups that we believe share the same political or social viewpoints or objectives as Justice Democrats; or</li>
+    <li>To other groups with your consent.</li>
+</ul>
+<p>Submitting your personal information (including e-mail address) on this page will sign you up to receive e-mails from Justice Democrats. We may also use your first name to indicate the latest actions taken on this site.</p>
+<h2>Children</h2>
+<p>Justice Democrats complies with the Children&#39;s Online Privacy Protection Act. Justice Democrats does not solicit and does not accept personally identifying information from any person under 13 years of age.</p>
+<p>Visitors to this Site who are under 13 years of age should not use this Site except under the supervision and with the assistance of their parent or legal guardian, and should never submit any personally identifying information to the Site. For example, visitors under 13 years of age should not register, purchase or use services or take any actions on or through this Site.</p>
+<h2>Credit Card Information; Protection of Personal Information</h2>
+<p>When you purchase services through this Site, we collect credit card information from you. That information is used solely for processing your contribution; is not maintained by Justice Democrats; and is never disclosed to anyone, for any other purpose other than for processing your contribution, under any circumstances.</p>
+<p>Justice Democrats uses industry standard security measures to protect against the loss, misuse or alteration of all of the personally identifiable information that you provide to us. Our server is located in a locked, secure environment. All supplied credit card information is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our payment processing provider&#39;s database.</p>
+<p>Permission to access your personally identifiable information is granted only to you and Justice Democrats employees or contractors who need to know that information to provide services to you and who are required to keep the information confidential. Although we make good faith efforts to store information collected by this Site in a secure operating environment, we cannot guarantee complete security.</p>
+<h2>Contributions to Justice Democrats - Public Information</h2>
+<p>Justice Democrats is required to file regular reports with the Federal Election Commission that publicly disclose the name, address, occupation and employer of persons who contribute over $200 during an election cycle, along with the amount and date of the contribution. State and local election laws may also require us to disclose this information at a lower itemization threshold, depending on the committee&#39;s activity.</p>
+<h2>Cookies and Data Tracking</h2>
+<p>A cookie is a piece of data stored on the user&#39;s hard drive containing information about the user. Some parts of this Site may be password-protected. We may use a cookie (cookies reside on your computer and are under the control of your browser) to help us remember and process items that you purchase through this Site; and/or to compile aggregate data about visitors to the Site and their interaction with the Site for the purposes of improving the operation of the Site and/or offering better Site experiences and tools in the future.</p>
+<p>We may also use cookies to enable you to return to password-protected areas of the Site without having to re-enter your password. If you wish to disable these cookies, the help portion of the tool bar on most browsers can assist. If you set your browser to disable cookies, however, you may not be able to access certain parts of this Site.</p>
+<p>We may also use third-party services such as Google Analytics. This helps us understand traffic patterns and know if there are problems with our Site. We may also use embedded images in emails to track open rates for our mailings, so that we can tell which mailings appeal most to Justice Democrats supporters.</p>
+<p>Please note that third party vendors, including Google, may show Justice Democrats-sponsored ads on the Internet. Those third party vendors (including Google) use cookies to serve ads based on a user&#39;s prior visits to our website. Users may opt out of Google&#39;s use of cookies by visiting http://www.google.com/privacy/ads/</p>
+<h2>Advertising</h2>
+<p>We may place online advertising with third-party vendors, including Google, which will be shown on other Sites on the internet. In some cases, those third-party vendors may decide which ads to show you based on your prior visits to the Site. At no time will you be personally identified to those third-party vendors, nor will any of the information you share with us be shared with those third-party vendors. If you prefer to opt out of the use of these third-party cookies on the Site, you can do so by visiting the <a href="http://www.networkadvertising.org/managing/opt_out.asp" rel="noopener noreferrer" target="_blank"> Network Advertising Initiative opt out page</a> .</p>
+<p>Justice Democrats does not use cookies to track what specific pages an individual site visitor views. Please note, however, that third party vendors, including Google, may show Justice Democrats-sponsored ads on the Internet. Those third party vendors (including Google) use cookies to serve ads based on a user&#39;s prior visits to our website. Users may opt out of Google&#39;s use of cookies by visiting <a href="http://www.google.com/privacy/ads/" rel="noopener noreferrer" target="_blank"> http://www.google.com/privacy/ads/</a>.</p>
+<h2>Links to Other Sites</h2>
+<p>The privacy policies and practices contained in this Privacy Policy do not apply to ANY external links. This Privacy Policy only applies to our Site or any future Sites that we may develop. It does not cover Sites that are linked to by this Site or Sites for which we are not responsible (&quot;linked-Sites&quot;). These linked-Sites will have their own policies and practices that may be different from ours. We encourage you to familiarize yourself with the policies and practices of the linked-Sites, especially if you provide personal information to them.</p>
+<h2>California Online Privacy Protection Act Compliance</h2>
+<p>Justice Democrats complies with the California Online Privacy Protection Act. As part of that Act, all registered users of our Site may make any changes to their information at any time by logging into their Control Panel and going to the &quot;Edit Profile&quot; page. Changes to billing and/or credit card information must be made through Justice Democrats staff and may be initiated by contacting us@justicedemocrats.com</p>
+<h2>Amendments and Consent to This Privacy Policy</h2>
+<p>We retain the right to amend or otherwise update this Privacy Policy at any time. By using our Site, you consent to the collection and use of the information as we have described. If we change our policies and practices, we will post the changes in our Privacy Policy so that you are always aware of them. With this knowledge, you can make an informed decision about whether you wish to provide personal information to us.</p>
+<h2>How to Contact Us</h2>
+<p>If you have any questions about this Privacy Policy, you may contact us by sending an e-mail to <a href="mailto:us@justicedemocrats.com">us@justicedemocrats.com</a>.</p>
 
-    <br>
-    <hr>
-
-    <h2>WHAT DOES BNC WANT?</h2>
-
-    <p class="bodyLarge">1. Good jobs for everyone, prosperity for every community</p>
-    <p>The BNC's plan calls for a mobilization on the scale of World War II – one in which every American is called upon to rebuild and repair our communities and our nation.</p>
-
-    <p>If the government can spend trillions of dollars to subsidize the failures of Wall Street and perpetual war, it can spend that kind of money on Main Street, investing in our communities and our future.</p>
-
-    <p>The Brand New Congress plan will:</p>
-
-    <br>
-    <ul>
-        <li><strong>Invest trillions of dollars in new industries</strong> that will provide millions of high wage jobs – just like all successful industrialized countries are doing right now.</li>
-        <li><strong>Invest trillions of dollars to rebuild and repair towns</strong>, cities and rural areas that politicians have allowed to disintegrate for half a century.</li>
-        <li><strong>Spend exactly what it will take to repair our nation’s broken infrastructure</strong> – which is $3.6 trillion according to the American Society of Civil Engineers.</li>
-        <li><strong>Build the inevitable cheap, renewable energy economy now</strong>, creating tens of millions of good high-tech jobs and saving people many trillions of dollars – because energy from the wind and sun is much cheaper in the long run.</li>
-        <li><strong>Overhaul the IRS and the tax code so that small businesses</strong> are on the same playing field as big business and so that multi-billionaires and large corporations can no longer evade paying the billions in taxes they should owe.</li>
-        <li><strong>Solve the healthcare mess once and for all by making Medicare available to anyone who wants it</strong>, and letting insurance companies fend for themselves in a truly free market.</li>
-        <li><strong>Provide free college education and technical training so that Americans have access to the training</strong> they need to get the job they want in this new economy.</li>
-    </ul>
-    <p><a href="https://docs.google.com/document/d/1sCFs5hqitbXBBqXxU6NULDyvydXqm-ALOqW21dv9P9k/edit">Read more about BNC's plan to rebuild the economy here.</a></p>
-
-    <br>
-    <p class="bodyLarge">2. Liberty and justice for all</p>
-
-    <ul>
-        <li><strong>We will get money out of politics once and for all:</strong> This means getting rid of the revolving door between Wall Street and our government. It means repealing Citizens United. It means moving to a publicly financed, transparent system of campaign financing that amplifies small donations. And it means all BNC candidates pledging to never lobby Congress after they're out of office.</li>
-        <li><strong>We will support the demands for justice from all groups that have been targeted by government:</strong> Today just about everyone in America feels targeted by government at some level. What stops us from undoing this is that they also feel pitted against each other. It's time for the American people to make common cause and see that the cries for justice by all Americans are heard. And we mean everyone: Black people, small business owners, Native Americans, low income people, rural people, immigrants, disabled people, foster children, Latinos, manufacturers who want to build in America, small towns, and we could go on and on with this list!</li>
-        <li><strong>We will reform our electoral system to create a more perfect democracy:</strong> This will include removing the electoral college, implementing ranked choice voting, creating a holiday on election day, improving the actual mechanics of voting to make it easy to vote and make electoral fraud impossible.</li>
-        <li><strong>We will refocus our criminal justice system on reducing the number incarcerated:</strong> Our current system simply can't work. Too many people leaving the prison system get no fair shot at getting back into society, so they wind up back in jail. We want to end the school-to-prison pipeline, provide training, education and jobs to prevent repeat offenders, and reduce our total prison population drastically.</li>
-        <li><strong>We will say no to wars of choice:</strong> Let's stop destabilizing other countries and focus on fixing our own.</li>
-        <li><strong>We will give every government body new marching orders:</strong> "Your job is to serve the people -- no longer to target, abuse, surveil, micromanage, nickle and dime and belittle the people you were hired to serve." We will back that up by removing government bureaucrats who can't understand or won't comply with their new orders. And we will back it up by cutting out blatant and obvious waste, while providing generous funding and training to the agencies and staff that do the real work and that have been starved of support for decades.</li>
-    </ul>
-
-    <br>
-    <hr>
-    <h2>THE BRAND NEW CONGRESS STRATEGY</h2>
-
-    <h3>How can a campaign this big succeed?</h3>
-    <br>
-    <p class="bodyLarge">Our goal is to gain a majority in Congress in order to radically rebuild this country's economy, completely recreate our criminal justice system, get to 100% renewable energy in 10 years, lift millions out of poverty, and protect the least protected in our society.</p>
-    <br>
-    <p>Basically, we want to do what we have to do as a country and remove 'politically impossible' as a reason not to do it. It will take at least until 2020 to achieve all of that, but the first step is to achieve a majority in the House and win as many of the 33 seats up for re-election in the Senate as possible in 2018.</p>
-
-    <p>Our plan to accomplish this is to recruit over 400 extraordinary ordinary Americans to challenge both Democrats and Republicans in congressional primary races across the country in order to replace almost all of Congress in one fell swoop. These will be people who have track records of integrity and service in their communities and who are not all career politicians -- we're looking for nurses, teachers, engineers, scientists, factory workers, and so on. They will represent not just all the various professions in our country (unlike our current Congress which represents mostly lawyers), but also be representative of our population's demographics -- more than half of them will be women and we will have just representation for people of color. Every candidate we recruit, regardless of party, will be a firm believer in the Brand New Congress platform and pledge to work to enact it once elected to office.</p>
-
-    <p>Once we recruit these candidates, we plan to run this campaign just like a Presidential campaign -- with a single campaign body coordinating and running all 400+ campaigns across America. This will not only let us capitalize on various economies of scale and use our knowledge from race to race to be as efficient as possible, it will also allow the massive grassroots volunteer and donor bases across America to work together towards a single focused goal, letting us all pool our resources together to actually overcome the substantial opposing resources of corporate interests. This also means that our candidates won't have to deal with the actual logistics of campaigns like how to contact voters or, very importantly, fundraising -- they will be free to do exactly what candidates should be doing: talking to their constituents and holding rallies to voice their ideas.</p>
-
-    <p>We believe we can win if we can inspire millions more Americans to regain faith in American democracy and turn out to vote in 2018. We think this will be possible by presenting a bold plan for change and an ambitious but practical way to actually get that change. Basically, we believe people will vote when they think their vote will actually make a difference.</p>
-
-    <p>Once we have a majority, Brand New Congress will govern like America has never seen in peacetime before: by actually getting stuff done! There will be no debating or horse trading -- because the BNC candidates will all enter Congress already having agreed on the plan. We'll have all the legislation written and published for review by the people BEFORE the 2018 election! It's what the American people will have elected us to pass -- and we will pass it on day one.</p>
-
-    <p>It will take at least until the end of 2017 to work out all the details of the legislation. Right now, BNC’s Working Group is responsible for leading this process, and in the coming months, we’ll be working with policy wonks, advocates and leaders in many fields to craft the actual legislation that a Brand New Congress would pass on day one to put the plan into action. That way, people will know exactly what they're going to get with a Brand New Congress.</p>
 ```

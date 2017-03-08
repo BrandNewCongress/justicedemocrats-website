@@ -45,8 +45,13 @@ a:hover {
 }
 .btn[disabled="disabled"],
 .btn[disabled="disabled"]:hover {
-    color: #666;
-    background: rgba(0,0,0,.1);
+    color: #999;
+    background-color: #5B919F;
+}
+.btn.btnYellow[disabled="disabled"],
+.btn.btnYellow[disabled="disabled"]:hover {
+    color: #999;
+    background-color: #FFFE00;
 }
 
 /* TITLES & HEADERS */

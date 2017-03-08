@@ -21,6 +21,7 @@
     height: 850px;
 }
 .landingStream #header {
+    min-height: 700px;
     background: none;
 }
 .landingStream .headerImageFixed {
@@ -75,6 +76,9 @@
 
 /* Landing page content area */
 
+#landingContentLeft p {
+    line-height: 1.8;
+}
 #introVideo {
     margin-bottom: 55px;
 }
@@ -82,8 +86,11 @@
     padding: 30px 8%;
     background: #F4F4F4;
 }
+#homeActionArea p {
+    font-size: 16px;
+}
 #homeActionBtns {
-    margin: 40px 0;
+    margin: 22px 0 7px;
     text-align: center;
 }
 #homeActionBtns .btn {
@@ -91,12 +98,15 @@
     margin: 0 3px 15px;
 }
 #homeActionArea ul {
-    margin-top: 30px;
+    margin-top: 22px;
 }
 #homeActionArea ul li {
     position: relative;
-    padding: 0 0 12px 16px;
+    padding: 0 0 6px 18px;
     font-weight: bold;
+}
+#homeActionArea ul li:last-child {
+    padding-bottom: 0;
 }
 #homeActionArea ul li::before {
     content: '';
@@ -109,7 +119,12 @@
     border-radius: 50%;
     background: #222;
 }
-
+#homeSocial {
+    margin-top: 40px;
+}
+.landingStream #homeSocial h3 {
+    color: #3b94d9;
+}
 @media (max-width:959px) {
     #landingContentRight {
         margin-top: 35px;

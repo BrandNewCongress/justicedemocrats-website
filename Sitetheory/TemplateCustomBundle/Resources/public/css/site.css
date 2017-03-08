@@ -348,9 +348,11 @@ body.preview .headerImageContainer {
     position: relative;
     z-index: 5;
     padding: 30px 0 24px;
+    background: #2a5058;
 }
 .hasHeaderImage #header {
     height: 350px;
+    background: none;
 }
 .siteLogo {
     margin-left: 40px;

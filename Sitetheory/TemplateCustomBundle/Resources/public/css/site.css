@@ -358,6 +358,9 @@ body.preview .headerImageContainer {
     margin-left: 40px;
     max-width: 256px;
 }
+.siteLogo img {
+    max-width: 256px;
+}
 .siteLogo a {
     display: inline-block;
 }
@@ -406,6 +409,9 @@ body.preview .headerImageContainer {
         margin-top: 6px;
         max-width: 200px;
     }
+    .siteLogo img {
+        max-width: 200px;
+    }
 }
 @media (max-width: 768px) {
     .hasHeaderImage #header {
@@ -420,7 +426,8 @@ body.preview .headerImageContainer {
     padding: 18px 0 2px 0;
     background: rgba(255,255,255,.9);
 }
-#headerRetracting .siteLogo {
+#headerRetracting .siteLogo,
+#headerRetracting .siteLogo img {
     max-width: 210px;
 }
 #headerRetracting #navHeader {
@@ -431,7 +438,8 @@ body.preview .headerImageContainer {
     #headerRetracting {
         padding: 14px 0 0 0;
     }
-    #headerRetracting .siteLogo {
+    #headerRetracting .siteLogo,
+    #headerRetracting .siteLogo img {
         max-width: 170px;
     }
 }

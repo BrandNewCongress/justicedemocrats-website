@@ -436,13 +436,13 @@ LAYOUT
 
     <div id="siteMapBackground">
 
-        <div ng-cloak id="siteMapContainer" class="siteMaxWidth siteSidePadding fontSecondary dark">
+        <div id="siteMapContainer" class="siteMaxWidth siteSidePadding fontSecondary dark">
 
-            <div id="siteMapNew" layout="row" layout-wrap class="hide-xs hide-sm">
-                <div flex="20">
+            <div hide-xs hide-sm id="siteMapNew" class="clearfix">
+                <div class="stGrid column20">
                     <a id="btnJoin" class="btn btnYellow" href="/#homeJoin">Sign Up</a>
                 </div>
-                <div flex="20">
+                <div class="stGrid column20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
@@ -454,7 +454,7 @@ LAYOUT
                         </ul>
                     </div>
                 </div>
-                <div flex="20">
+                <div class="stGrid column20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
@@ -478,7 +478,7 @@ LAYOUT
                         </ul>
                     </div>
                 </div>
-                <div flex="20">
+                <div class="stGrid column20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
@@ -496,7 +496,7 @@ LAYOUT
                         </ul>
                     </div>
                 </div>
-                <div flex="20">
+                <div class="stGrid column20">
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
@@ -551,7 +551,7 @@ LAYOUT
 
     {% block footerImage %}
 
-        <div ng-cloak class="footerImageFixed" style="background-image: url('{{ asset('bundles/sitetheorytemplatecustom/images/headerImageHome.jpg') }}');">
+        <div class="footerImageFixed" style="background-image: url('{{ asset('bundles/sitetheorytemplatecustom/images/headerImageHome.jpg') }}');">
         </div>
 
     {% endblock footerImage %}

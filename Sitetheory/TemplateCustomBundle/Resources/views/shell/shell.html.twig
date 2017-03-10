@@ -325,11 +325,13 @@ LAYOUT
                 Platform
             </a>
         </li>
+        {#
         <li class="siteNavLink" data-level="2">
             <a href="/FAQ" class="navLevel2 {% if sectionMenuActive == 'faqActive' %}active{% endif %}">
                 FAQ
             </a>
         </li>
+        #}
     </ul>
 {% endblock menuSection3 %}
 
@@ -458,7 +460,7 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="/Overview">Get Involved</a>
+                                <a class="fontTertiary" href="/Volunteer">Get Involved</a>
                             </li>
                             <li>
                                 <a href="/Volunteer">Volunteer</a>
@@ -482,14 +484,16 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="/plan">About</a>
+                                <a class="fontTertiary" href="/Platform">About</a>
                             </li>
                             <li>
                                 <a href="/Platform">Platform</a>
                             </li>
+                            {#
                             <li>
                                 <a href="/FAQ">FAQ</a>
                             </li>
+                            #}
                             <li>
                                 <a href="/Privacy-Policy">Privacy Policy</a>
                             </li>
@@ -503,7 +507,10 @@ LAYOUT
                                 <a class="fontTertiary" href="mailto:us@justicedemocrats.com">Contact</a>
                             </li>
                             <li>
-                                <a href="mailto:us@justicedemocrats.com">Contact Us</a>
+                                <a href="mailto:press@justicedemocrats.com">Press Contact</a>
+                            </li>
+                            <li>
+                                <a href="mailto:us@justicedemocrats.com">General Contact</a>
                             </li>
                             <li>
                                 {# Social Media #}

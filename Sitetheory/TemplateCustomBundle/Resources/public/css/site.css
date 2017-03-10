@@ -2,6 +2,20 @@
 @import '//fonts.googleapis.com/css?family=Alfa+Slab+One|Roboto+Condensed:700|Roboto:300,400,700';
 
 
+
+/* TEMPORARY CLASSES - REMOVE AFTER SITETHEORY REPO IS PUSHED TO THE LIVE SERVER AND THESE CLASSES IN THE COMMON.LESS ARE WORKING */
+
+.column5 {
+    width: 5%;
+}
+.column10 {
+    width: 10%;
+}
+
+/* END TEMPORARY CLASSES */
+
+
+
 /* BODY */
 
 body {

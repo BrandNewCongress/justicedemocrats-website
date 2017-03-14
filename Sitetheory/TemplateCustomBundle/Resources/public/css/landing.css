@@ -1,6 +1,12 @@
 
 /* LANDING PAGE */
 
+#shellContentBackground {
+    background: none;
+}
+.landingBackground {
+    background: #FFF;
+}
 .landingStream h3 {
     padding-bottom: 14px;
     letter-spacing: 1px;
@@ -76,6 +82,17 @@
 
 /* Landing page content area */
 
+
+.homeActionBtns {
+    margin: 22px 0 7px;
+    text-align: center;
+}
+.homeActionBtns .btn {
+    display: inline-block;
+    margin: 0 3px 15px;
+}
+
+
 #landingContentLeft p {
     line-height: 1.8;
 }
@@ -88,14 +105,6 @@
 }
 #homeActionArea p {
     font-size: 17px;
-}
-#homeActionBtns {
-    margin: 22px 0 7px;
-    text-align: center;
-}
-#homeActionBtns .btn {
-    display: inline-block;
-    margin: 0 3px 15px;
 }
 #homeActionArea ul {
     margin-top: 22px;
@@ -134,19 +143,26 @@
 
 /* CANDIDATES SECTION */
 
+#homeCandidates img {
+    display: block;
+}
+#homeCandidates .borderThick {
+    padding-top: 18px;
+    margin-top: 6px;
+}
 
 /* Intro paragraph */
 
 #homeCandidates h1 {
-    margin-bottom: 50px;
-}
-#homeCandidates h4 {
-    margin-top: 30px;
+    margin: 0;
+    padding: 120px 0;
+    color: #FFF;
+    background: rgba(51,51,51,.3);
 }
 #homeCandidates p.intro {
-    margin: 20px 0 40px;
+    margin: 20px auto 30px;
+    max-width: 860px;
     padding: 0;
-    font-size: 15px;
 }
 #homeCandidates p.intro a {
     color: #333;
@@ -156,11 +172,26 @@
     color: #7932AC;
     text-decoration: none;
 }
-
+#homeCandidates p.pullout {
+    margin: 50px auto 80px;
+    padding: 20px;
+    max-width: 860px;
+    font-size: 26px;
+}
 
 /* Candidate Grid */
 
+#homeCandidates .candidateGrid {
+    margin: 0 auto;
+    padding-top: 30px;
+    max-width: 1150px;
+}
+#homeCandidates .candidateGrid .gridAdjust {
+    margin: 0 -1.25% 0 -.25%;
+}
 .candidateColumn {
+    float: left;
+    width: 33%;
     transition: all 400ms ease-out 50ms;
 }
 .candidateContainer {
@@ -190,10 +221,11 @@
     color: #FFF;
 }
 .candidateInfo .name {
-    font-size: 12px;
+    font-size: 16px;
+    letter-spacing: .02em;
 }
 .candidateInfo .title {
-    font-size: 9px;
+    font-size: 10px;
 }
 /* image */
 .candidateImage {
@@ -204,11 +236,18 @@
 }
 
 /* district info below photo */
+
+.candidateColumn .borderDashed {
+    margin-bottom: 30px;
+    padding: 9px 0;
+    background-position: left bottom;
+}
 .candidateDistrict p {
-    margin-bottom: 4px;
-    padding: 0 20px;
+    padding: 0 30px;
     font-size: 18px;
-    letter-spacing: .08em;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #2C2C2C;
 }
 
 /* hover reveals bio */
@@ -236,7 +275,17 @@
     opacity: 1;
 }
 
-
+@media (max-width: 959px) {
+    .candidateColumn {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .candidateColumn {
+        float: none;
+        width: 100%;
+    }
+}
 @media (min-width: 600px) and (max-width:1100px) {
     .candidateInfo .name {
         font-size: 11px;
@@ -254,12 +303,15 @@
 
 /* Temporary nominate area to fill empty candidate slot */
 
+.tempCandidateAsk .candidateImage {
+    background: #43717B;
+}
 .tempCandidateAsk .candidateImage img {
     transition: all .2s ease-out;
     opacity: .34;
 }
 .tempCandidateAsk a:hover .candidateImage img {
-    opacity: .15;
+    opacity: .1;
 }
 .tempCandidateAsk .candidateInfo,
 .tempCandidateAsk:hover .candidateInfo {
@@ -273,9 +325,9 @@
     margin: 0 0 4px 0;
     padding: 0 22%;
     text-transform: none;
-    font-size: 16px;
+    font-size: 22px;
     letter-spacing: 0;
-    font-weight: 400;
+    font-weight: 300;
 }
 /*
 .tempCandidateAsk a:hover .candidateInfo .adText {
@@ -323,98 +375,5 @@
     }
     .tempCandidateAsk .candidateInfo .title p {
         font-size: 10px;
-    }
-}
-
-
-#candidatesAction {
-    padding: 45px 0;
-}
-#candidatesAction .btn {
-    margin-top: 22px;
-}
-
-
-
-/* SPECIFICS IMAGE LINKS */
-
-
-#homeImageLinks {
-    margin: 0 -1.333%;
-}
-#homeImageLinks a {
-    display: block;
-    margin: 0 4%;
-    width: 92%;
-    line-height: .5;
-}
-#homeImageLinks a:hover img {
-    opacity: .8;
-}
-@media (max-width:600px) {
-    #homeImageLinks a {
-        margin: 0 0 8px 0;
-        width: 100%;
-    }
-}
-
-
-/* CURRENT MEDIA AND FACEBOOK FEED */
-
-
-#homeCurrent .mediaHeader {
-    padding-bottom: 3px;
-    border-bottom: 1px solid #999;
-}
-#homeCurrent h1 {
-    padding: 10px 0;
-    font-size: 30px;
-}
-
-
-#currentMedia {
-    margin-right: 5%;
-}
-#currentMedia h1 {
-    padding-left: 55px;
-    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/mediaTitleIcon.png') no-repeat left center;
-    background-size: 40px;
-}
-#currentMedia .borderDashedBold {
-    padding-top: 28px;
-}
-#currentMedia h2 {
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: 300;
-}
-#currentMedia .date {
-    margin-top: 12px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-.mediaHeader {
-    margin-bottom: 18px;
-}
-
-
-#currentSocial {
-    margin-left: 5%;
-}
-#FB-feedParent h1 {
-    padding-left: 55px;
-    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/facebookTitleIcon.png') no-repeat left center;
-    background-size: 40px;
-}
-#facebookPageContainer {
-    padding-top: 55px;
-}
-@media (max-width:600px) {
-    #currentMedia {
-        margin-right: 0;
-    }
-    #currentSocial {
-        margin-left: 0;
     }
 }

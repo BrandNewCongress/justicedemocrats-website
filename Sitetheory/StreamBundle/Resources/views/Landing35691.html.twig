@@ -29,8 +29,8 @@ SETTINGS
 {% block pageTitle %}
 {% endblock pageTitle %}
 
-{# Remove shell vertical content padding class to replace with stream padding #}
-{% set shellContentStructure = 'siteMaxWidth siteSidePadding' %}
+{# Remove max-width and site padding #}
+{% set shellContentStructure = '' %}
 
 
 
@@ -122,10 +122,10 @@ LAYOUT
 
 {% block contentType %}
 
-    {# Home Landing Layout #}
-    <div id="landingContent1">
+    {# Home Main Layout #}
+    <div id="landingContent1" class="landingBackground">
 
-        <div class="shellVerticalPadding">
+        <div class="siteSidePadding siteMaxWidth shellVerticalPadding">
             <div class="clearfix">
                 <div class="stGrid column45">
                     <div id="landingContentLeft" class="fontBody">
@@ -150,7 +150,7 @@ LAYOUT
                         <div id="homeActionArea">
                             <p>We are recruiting Justice Democrats to run a unified campaign to replace every establishment politician in Congress in 2018. And we need all the help we can get.</p>
 
-                            <div id="homeActionBtns">
+                            <div class="homeActionBtns">
                              <a class="btn" href="/Nominate">NOMINATE A CANDIDATE</a> <a class="btn" href="https://secure.actblue.com/contribute/page/justicedemocrats?refcode=justicedemocrats.com" target="_blank">DONATE</a>
                             </div>
 
@@ -177,6 +177,191 @@ LAYOUT
             </div>
         </div>
 
+    </div>
+
+
+    {# Home Candidates #}
+
+    <div id="landingContent2">
+        <a name="homeCandidates"></a>
+        <div id="homeCandidates">
+            <div class="textCenter">
+                <h1>Candidates</h1>
+            </div>
+
+            <div class="landingBackground">
+            <div class="siteSidePadding siteMaxWidth shellVerticalPadding">
+                <p class="intro fontSecondary textCenter">Meet our first draftees! These are exceptional leaders that you nominated: public servants, entrepreneurs, local leaders, and national figures. If they are going to set aside their important work to run for congress, they need to know we have the momentum to get them there. So:</p>
+
+                <div class="homeActionBtns">
+                    <a class="btn" href="/Nominate">Sign Up</a>
+                    <a class="btn" href="https://shop.justicedemocrats.com" target="_blank">Wear your JD Shirts</a>
+                    <a class="btn" href="/Volunteer">Volunteer</a>
+                </div>
+
+                <p class="yellow pullout textCenter">These draftees have not agreed to run yet. Help us convince them.
+                </p>
+
+
+                <div class="candidateGrid borderThick">
+                    <div class="clearfix gridAdjust">
+
+                        {# Candidate 2 #}
+                        <div class="candidateColumn">
+
+                            {# Candidate 1 #}
+                            <div class="candidateContainer">
+                                <div class="candidateImage positionAnchor">
+                                    <div class="imageGradientBottom"></div>
+                                    <a href="/candidates">
+                                        <div class="candidateInfo">
+                                            <p class="name fontSecondary">Linda Wayman</p>
+                                            <p class="title fontSecondary">Educator</p>
+                                            <div class="candidateBio fontBody">
+                                                Decades-long educator in North Philadelphia who who became a superintendent, but stepped down to become principal of a chronically failing high school, turning the school around.
+                                            </div>
+                                        </div>
+                                        <div class="candidateImageCover positionAll"></div>
+                                        <img data-src="lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/LindaWayman-xs.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="borderDashed">
+                                    <div class="candidateDistrict fontPrimary starLeft starBlue divCenter">
+                                        <p class="starRight starBlue">
+                                            Pennsylvania 1st
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {# Candidate 2 #}
+                        <div class="candidateColumn">
+                            <div class="candidateContainer">
+                                <div class="candidateImage positionAnchor">
+                                    <div class="imageGradientBottom"></div>
+                                    <a href="/candidates">
+                                        <div class="candidateInfo">
+                                            <p class="name fontSecondary">Jordyn Lexton</p>
+                                            <p class="title fontSecondary">Fellowship Founder</p>
+                                            <div class="candidateBio fontBody">
+                                                Former teacher at Rikers Island prison; while campaigning to stop convicting children as adults, created Drive Change, a 1-year fellowship program in the food truck industry to help young people returning home from prison get jobs and education.
+                                            </div>
+                                        </div>
+                                        <div class="candidateImageCover positionAll"></div>
+                                        <img data-src="lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/JordynLexton-xs.jpg') }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="borderDashed">
+                                    <div class="candidateDistrict fontPrimary starLeft starBlue divCenter">
+                                        <p class="starRight starBlue">
+                                            New York 12th
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {# Candidate 3 #}
+                        <div class="candidateColumn">
+                            <div class="candidateContainer">
+                                <div class="candidateImage positionAnchor">
+                                    <div class="imageGradientBottom"></div>
+                                    <a href="/candidates">
+                                        <div class="candidateInfo">
+                                            <p class="name fontSecondary">Kurt Rietema</p>
+                                            <p class="title fontSecondary">Youth Pastor</p>
+                                            <div class="candidateBio fontBody">
+                                                Youth pastor for over a decade with YouthFront; started “Neighbor to Neighbor” to help immigrants and marginalized people become homeowners by creating fair, low-interest lending partnerships between churches and families that can’t access traditional home mortgages.
+                                            </div>
+                                        </div>
+                                        <div class="candidateImageCover positionAll"></div>
+                                        <img  data-src="lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/KurtRietema-xs.jpg') }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="borderDashed">
+                                    <div class="candidateDistrict fontPrimary starLeft starBlue divCenter">
+                                        <p class="starRight starBlue">
+                                            Kansas 3rd
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {# Candidate 4 #}
+                        <div class="candidateColumn">
+                            <div class="candidateContainer">
+                                <div class="candidateImage positionAnchor">
+                                    <div class="imageGradientBottom"></div>
+                                    <a href="/candidates">
+                                        <div class="candidateInfo">
+                                            <p class="name fontSecondary">Chardo Richardson</p>
+                                            <p class="title fontSecondary">Civil Rights Lawyer</p>
+                                            <div class="candidateBio fontBody">
+                                                Air Force veteran with five tours of duty in Iraq and Afghanistan; now President of Central Florida ACLU chapter, fighter for workers’ rights with Working America, and founded Think LegalEase, a series of YouTube videos to make the law accessible.
+                                            </div>
+                                        </div>
+                                        <div class="candidateImageCover positionAll"></div>
+                                        <img data-src="lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/ChardoRichardson-xs.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="borderDashed">
+                                    <div class="candidateDistrict fontPrimary starLeft starBlue divCenter">
+                                        <p class="starRight starBlue">
+                                            Florida 9th
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {# Candidate 5 #}
+                        <div class="candidateColumn">
+                            <div class="candidateContainer">
+                                <div class="candidateImage positionAnchor">
+                                    <div class="imageGradientBottom"></div>
+                                    <a href="/candidates">
+                                        <div class="candidateInfo">
+                                            <p class="name fontSecondary">Tynisha Tyson</p>
+                                            <p class="title fontSecondary">Social Worker</p>
+                                            <div class="candidateBio fontBody">
+                                                Social worker at Milner Elementary; works with children who suffer from abuse, neglect, and extreme poverty to be an anchor in their lives. Has actively continued working as a social worker to help kids most in need despite opportunities to “move up.”
+                                            </div>
+                                        </div>
+                                        <div class="candidateImageCover positionAll"></div>
+                                        <img data-src="lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/TynishaTyson-xs.jpg') }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="borderDashed">
+                                    <div class="candidateDistrict fontPrimary starLeft starBlue divCenter">
+                                        <p class="starRight starBlue">
+                                            Connecticut 1st
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div hide-xs hide-sm class="candidateColumn">
+                        <div class="candidateContainer tempCandidateAsk">
+                            <a href="/nominate">
+                                <div class="candidateImage positionAnchor">
+                                    <div class="candidateInfo">
+                                        <p class="adText fontSecondary">Do you have a leader in your community who would be a great representative?</p>
+                                        <div class="title fontTertiary starLeft starBlue">
+                                            <p class="starRight starBlue">Nominate</p>
+                                            <div class="animatedUnderline"></div>
+                                        </div>
+                                    </div>
+                                    <img src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/candidateAsk.jpg') }}" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 
 {% endblock contentType %}

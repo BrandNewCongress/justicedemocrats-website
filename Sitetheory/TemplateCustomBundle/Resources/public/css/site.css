@@ -222,7 +222,9 @@ hr {
     background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/borderDashed.png') repeat-x;
     background-size: 6px;
 }
-
+.borderThick {
+    border-top: 7px solid #222;
+}
 
 /* COLORS (In order of most to least commonly used) */
 
@@ -257,6 +259,29 @@ hr {
 .yellowText {
     color: #FFF600;
 }
+
+
+/* STARS */
+
+.starLeft,
+.starRight {
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starBlack.png') no-repeat left 8px;
+    background-size: 9px;
+}
+.starRight {
+    background-position: right 8px;
+}
+.starText {
+    padding: 0 26px;
+}
+.starWhite {
+    background-image: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starWhite.png');
+}
+.starBlue {
+    background-image: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starBlue.png');
+}
+
+
 
 /* LOADER */
 @keyframes pulse {
@@ -327,11 +352,11 @@ body.preview .headerImageContainer {
 }
 .footerImageFixed {
     position: fixed;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1;
-    height: 950px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

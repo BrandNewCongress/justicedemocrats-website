@@ -15,24 +15,20 @@
 {% set sectionMenuActive = 'drafteesActive' %}
 
 
-{% block pageTitle %}
-    <div class="siteMaxWidth siteSidePadding">
-        <h1 class="pageTitle">
-            <span class="starLeft">
-                <span class="starRight">Draftees</span>
-            </span>
-        </h1>
-    </div>
-{% endblock pageTitle %}
+
 
 {% block contentHeader %}
-    <div class="contentHeader profileDetails clearfix">
+    {% if view.viewVersion.description is not empty %}
+        <div class="contentHeader profileDetails clearfix">
 
-        <p class="pullout">{% block contentHeaderText %}We are drafting Linda Wayman as a candidate to help lead BNC’s movement to fix our schools and make American education excellent for all students. Watch <a href="https://www.ted.com/talks/linda_cliatt_wayman_how_to_fix_a_broken_school_lead_fearlessly_love_hard" target="_blank">Linda’s TED talk: How to fix a broken school? Lead fearlessly, love hard.</a>{% endblock contentHeaderText %}</p>
+            <p class="pullout">
+                {% block contentHeaderText %}
+                    {{ view.viewVersion.description|raw }}
+                {% endblock contentHeaderText %}
+            </p>
 
-        <div class="borderDashedBold">&nbsp;</div>
-
-    </div>
+        </div>
+    {% endif %}
 {% endblock contentHeader %}
 
 
@@ -47,18 +43,19 @@
 
                 <div class="profileImage primary-image">
                     {% block profileImage %}
-                    <img src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/LindaWayman.jpg') }}" alt="">
+                        {% set image = view.viewVersion.images|first %}
+                        <img src="{{ image is not empty ? image.url : asset('bundles/sitetheoryprofile/images/profilePlaceholder.png') }}" alt="">
                     {% endblock profileImage %}
                 </div>
 
 
                 <div class="profileLocation positionLeftBottom">
-                    <div class="salmon colorBox clearfix">
+                    <div class="blue colorBox clearfix">
                         <p class="fontPrimary">
                         <span class="starLeft starWhite">
                             <span class="starRight starWhite">
                                 {% block profileLocation %}
-                                Pennsylvania 1st
+                                    {{ view.viewVersion.subtitle }}
                                 {% endblock profileLocation %}
                             </span>
                         </span>
@@ -68,23 +65,23 @@
 
 
             </div>
-
+            {#
             {% if view.viewVersion.title is not empty %}
-                <h1>{{ view.viewVersion.title }}</h1>
+                <h2>{{ view.viewVersion.title }}</h2>
             {% endif %}
-
+#}
             <h4 class="profilePosition">
                 {% block profilePosition %}
-                    Educator
+                    Profession: {{ view.viewVersion.meta.position }}
                 {% endblock profilePosition %}
             </h4>
 
 
-            <h3 class="profileDescriptionHeader fontSecondary salmonText">
+            <h2 class="profileDescriptionHeader">
                 {% block profileDescriptionHeader %}
-                    Linda's Story
+                    About {{ view.viewVersion.title | split(' ')[0] }}
                 {% endblock profileDescriptionHeader %}
-            </h3>
+            </h2>
 
 
             {#
@@ -104,25 +101,25 @@
 
         </div>
 
-        <div class="borderDashedBold">&nbsp;</div>
+        <div class="borderThick">&nbsp;</div>
 
-        <div class="clearfix">
+        <div id="profileActionArea" class="clearfix">
             <div class="stGrid column50">
                 <div class="candidateDetailsJoin joinForm">
-                    <h3 class="fontSecondary salmonText">Sign Up!</h3>
-                    <p>If you’d like to see Linda run for Congress.
+                    <h2 class="lightBlueText">Sign Up!</h2>
+                    <p>If you’d like to see {{ view.viewVersion.title | split(' ')[0] }} run for Congress.
                     </p>
                     {{ block('registrationForm') }}
                 </div>
             </div>
             <div class="stGrid column50">
                 <div class="candidateCallToAction">
-                    <h3 class="fontSecondary salmonText">Already Signed Up?</h3>
+                    <h2 class="lightBlueText">Already Signed Up?</h2>
                     <p>It will take millions of dollars and thousands of volunteers to elect a Brand New Congress. Your dollars and your minutes matter!
                     </p>
                     <div class="candidateActionBtns">
-                        <a class="btn btnSalmon" href="/volunteer">Volunteer</a>
-                        <a class="btn" href="https://secure.actblue.com/contribute/page/brandnewcongress" target="_blank">Donate</a>
+                        <a class="btn" href="/volunteer">Volunteer</a>
+                        <a class="btn btnPeriwinkle" href="https://secure.actblue.com/contribute/page/brandnewcongress" target="_blank">Donate</a>
                     </div>
                 </div>
             </div>

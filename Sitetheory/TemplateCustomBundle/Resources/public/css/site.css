@@ -57,6 +57,18 @@ a:hover {
     color: #FFF;
     background: #111;
 }
+.btn.btnBlack{
+    background: #111;
+}
+.btn.btnBlack:hover {
+    background: #5B919F;
+}
+.btn.btnPeriwinkle {
+    background: #6259FC;
+}
+.btn.btnPeriwinkle:hover {
+    background: #111;
+}
 .btn[disabled="disabled"],
 .btn[disabled="disabled"]:hover {
     color: #999;
@@ -96,7 +108,7 @@ h4 {
     font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: .25em;
+    letter-spacing: .18em;
 }
 @media (max-width:768px) {
     h1 {

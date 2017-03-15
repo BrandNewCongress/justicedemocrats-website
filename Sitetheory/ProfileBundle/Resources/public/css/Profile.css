@@ -10,18 +10,21 @@ stratus-search {
     display: none;
 }
 
+/* Temporary until we can get my excerpt stream twig settings to override the core stream twig */
+
+h1.pageTitle {
+    margin-top: 80px;
+}
 
 /* General profile styling */
 
-.profileList h1,
 .profileDetails h1 {
     margin: 0 0 26px;
     text-align: center;
     font-size: 35px;
 }
 .profileList .pullout {
-    margin: 30px auto 60px;
-    max-width: 920px;
+    margin: 30px 0 60px;
 }
 .profileDetails .pullout {
     margin-bottom: 60px;
@@ -33,9 +36,11 @@ stratus-search {
 
 /* Profile List */
 
+
+
 #profileList {
     margin: 0 -2%;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 .profileContainer {
     position: relative;
@@ -44,19 +49,29 @@ stratus-search {
     margin: 0 4%;
     padding-bottom: 120px;
 }
+.profileList .profileImage {
+    background: #111;
+}
+.profileList .profileImage a {
+    transition: all .2s ease-out;
+}
+.profileList .profileImage a:hover {
+    opacity: .8;
+}
 @media (min-width: 959px) {
     .profileList .profileImage {
         float: left;
         width: 50%;
-        margin: 0 5% 16px 0;
+        margin: 0 5% 8px 0;
     }
 }
 .profileList .profileImage img {
+    display: block;
     width: 100%;
 }
-.profileList h2 {
+.profileContainer h2 {
     margin: 0 0 12px;
-    font-size: 18px;
+    font-size: 20px;
 }
 .profileList h4 {
     margin-bottom: 26px;
@@ -77,7 +92,8 @@ stratus-search {
     color: #FFF;
 }
 .profileExtra .starText {
-    font-size: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
     color: #FFF;
     letter-spacing: .08em;
 }
@@ -161,11 +177,7 @@ stratus-search {
     margin-top: 20px;
 }
 .contentHeader.profileDetails p {
-    margin: 0;
-}
-.profileDetails .borderDashedBold {
-    margin: 60px 0;
-    background-position: left center;
+    margin: 0 0 20px;
 }
 .profileDetails p a {
     color: #FF7A65;
@@ -177,16 +189,14 @@ stratus-search {
     margin: -4px 0 12px;
     text-align: left;
 }
-.profileDetails h3 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    letter-spacing: .05em;
-}
 .profileDetails h4 {
-    font-size: 11px;
+    font-size: 12px;
 }
 .profileDetails h4.profilePosition {
-    margin-bottom: 40px;
+    margin: 0 0 20px;
+}
+.profileDetails .profileDescription p {
+    font-size: 16px;
 }
 .profileDetails .profileImageContainer {
     float: left;
@@ -220,6 +230,9 @@ stratus-search {
 
 /* Call to Action Area */
 
+#profileActionArea {
+    margin-top: 30px;
+}
 .profileDetails .candidateDetailsJoin,
 .profileDetails .candidateCallToAction {
     text-align: center;
@@ -236,9 +249,9 @@ stratus-search {
 }
 .profileDetails .candidateDetailsJoin p,
 .profileDetails .candidateCallToAction p {
-    margin: 20px auto 30px;
+    margin: 50px auto 30px;
     max-width: 380px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     color: #000;
 }
@@ -252,8 +265,8 @@ stratus-search {
     padding: 16px 0;
     width: 285px;
 }
-.profileDetails .candidateCallToAction .btn.btnSalmon {
-    margin-bottom: 30px;
+.profileDetails .candidateCallToAction .btn.btnPeriwinkle {
+    margin-top: 14px;
 }
 .joinForm md-input-container {
     width: 280px;

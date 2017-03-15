@@ -96,6 +96,47 @@
 #landingContentLeft p {
     line-height: 1.8;
 }
+#homeNews {
+    margin-bottom: 40px;
+    padding: 12px;
+    background: #3C3C3C;
+}
+#homeNews #newsLabelArea {
+    float: left;
+    margin-right: 18px;
+}
+#homeNews .newsLabel {
+    padding: 6px;
+    font-size: 17px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #FFF;
+    line-height: 1;
+}
+#homeNews .date {
+    margin: 6px 0;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #979797;
+    letter-spacing: 1px;
+}
+#homeNews p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #FFF;
+    line-height: 1.25;
+}
+#homeNewsLink #homeNews {
+    transition: all .2s ease-out;
+}
+#homeNewsLink:hover #homeNews {
+    background: #000;
+}
+
+
+
 #introVideo {
     margin-bottom: 55px;
 }

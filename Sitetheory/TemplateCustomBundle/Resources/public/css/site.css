@@ -367,11 +367,6 @@ body.preview .headerImageContainer {
         height: 280px;
     }
 }
-@media (max-width: 959px) {
-    .footerImageFixed {
-        display: none;
-    }
-}
 @media (max-width: 768px) {
     .headerImageContainer {
         /* Needs to match .hasHeaderImage #header height at all repsonsive sizes */

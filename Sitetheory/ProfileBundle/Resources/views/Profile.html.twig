@@ -1,0 +1,137 @@
+{% extends 'SitetheoryProfileBundle::Profile.html.twig' %}
+
+
+{% block link %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('bundles/sitetheoryprofile/css/Profile.css') }}">
+
+{% endblock link %}
+
+
+{# TODO: make CMS manage menu #}
+{% set sectionNameHardCoded = 'Candidates' %}
+{% set sectionMenuHardCoded = '1' %}
+{% set sectionMenuActive = 'drafteesActive' %}
+
+
+{% block pageTitle %}
+    <div class="siteMaxWidth siteSidePadding">
+        <h1 class="pageTitle">
+            <span class="starLeft">
+                <span class="starRight">Draftees</span>
+            </span>
+        </h1>
+    </div>
+{% endblock pageTitle %}
+
+{% block contentHeader %}
+    <div class="contentHeader profileDetails clearfix">
+
+        <p class="pullout">{% block contentHeaderText %}We are drafting Linda Wayman as a candidate to help lead BNC’s movement to fix our schools and make American education excellent for all students. Watch <a href="https://www.ted.com/talks/linda_cliatt_wayman_how_to_fix_a_broken_school_lead_fearlessly_love_hard" target="_blank">Linda’s TED talk: How to fix a broken school? Lead fearlessly, love hard.</a>{% endblock contentHeaderText %}</p>
+
+        <div class="borderDashedBold">&nbsp;</div>
+
+    </div>
+{% endblock contentHeader %}
+
+
+{% block contentType %}
+
+    <div id="contentProfile-{{ view.id }}" class="contentProfile profileDetails">
+
+        <div class="clearfix">
+
+            <div class="profileImageContainer positionAnchor">
+
+
+                <div class="profileImage primary-image">
+                    {% block profileImage %}
+                    <img src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/LindaWayman.jpg') }}" alt="">
+                    {% endblock profileImage %}
+                </div>
+
+
+                <div class="profileLocation positionLeftBottom">
+                    <div class="salmon colorBox clearfix">
+                        <p class="fontPrimary">
+                        <span class="starLeft starWhite">
+                            <span class="starRight starWhite">
+                                {% block profileLocation %}
+                                Pennsylvania 1st
+                                {% endblock profileLocation %}
+                            </span>
+                        </span>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            {% if view.viewVersion.title is not empty %}
+                <h1>{{ view.viewVersion.title }}</h1>
+            {% endif %}
+
+            <h4 class="profilePosition">
+                {% block profilePosition %}
+                    Educator
+                {% endblock profilePosition %}
+            </h4>
+
+
+            <h3 class="profileDescriptionHeader fontSecondary salmonText">
+                {% block profileDescriptionHeader %}
+                    Linda's Story
+                {% endblock profileDescriptionHeader %}
+            </h3>
+
+
+            {#
+            {% if view.viewVersion.meta.position is not empty %}
+
+                <h4 class="position" data-type="text"
+                    data-property="viewVersion.meta.position" {{ block('editableViewAttributes') }}>{{ view.viewVersion.meta.position }}</h4>
+
+            {% endif %}
+            #}
+
+            <div class="content profileDescription" data-type="editor" data-property="viewVersion.text" {{ block('editableViewAttributes') }}>
+                {% autoescape false %}
+                    {{ view.viewVersion.text }}
+                {% endautoescape %}
+            </div>
+
+        </div>
+
+        <div class="borderDashedBold">&nbsp;</div>
+
+        <div class="clearfix">
+            <div class="stGrid column50">
+                <div class="candidateDetailsJoin joinForm">
+                    <h3 class="fontSecondary salmonText">Sign Up!</h3>
+                    <p>If you’d like to see Linda run for Congress.
+                    </p>
+                    {{ block('registrationForm') }}
+                </div>
+            </div>
+            <div class="stGrid column50">
+                <div class="candidateCallToAction">
+                    <h3 class="fontSecondary salmonText">Already Signed Up?</h3>
+                    <p>It will take millions of dollars and thousands of volunteers to elect a Brand New Congress. Your dollars and your minutes matter!
+                    </p>
+                    <div class="candidateActionBtns">
+                        <a class="btn btnSalmon" href="/volunteer">Volunteer</a>
+                        <a class="btn" href="https://secure.actblue.com/contribute/page/brandnewcongress" target="_blank">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock contentType %}
+
+
+{# Hide footer signup form #}
+{% block footerJoin %}
+{% endblock footerJoin %}

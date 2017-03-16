@@ -546,6 +546,18 @@ h2.sectionName {
 .siteNavLink a.navLevel2.active:hover {
     color: #5B919F;
 }
+.siteNavLink[data-level="3"] {
+    padding: 5px 0 5px 20px;
+}
+.siteNavLink a.navLevel3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #111;
+}
+.siteNavLink a.navLevel3:hover {
+    color: #999;
+}
 #sidebarSocial {
     margin-top: 25px;
 }

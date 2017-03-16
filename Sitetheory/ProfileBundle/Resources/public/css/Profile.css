@@ -12,7 +12,7 @@ stratus-search {
 
 /* Temporary until we can get my excerpt stream twig settings to override the core stream twig */
 
-h1.pageTitle {
+.landingStream h1.pageTitle {
     margin-top: 80px;
 }
 

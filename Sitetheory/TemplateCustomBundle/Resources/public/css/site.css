@@ -378,6 +378,9 @@ body.preview .headerImageContainer {
         /* Needs to match #header height at all repsonsive sizes */
         height: 280px;
     }
+    .footerImageFixed {
+        display: none;
+    }
 }
 @media (max-width: 768px) {
     .headerImageContainer {
@@ -496,6 +499,7 @@ body.preview .headerImageContainer {
 #shellContentBackground {
     position: relative;
     z-index: 10;
+    min-height: 800px;
     background: #FFF;
 }
 
@@ -955,8 +959,10 @@ md-progress-circular path {
     font-size: 13px;
     letter-spacing: .07em;
 }
-#faqMain {
-    margin-right: 12%;
+@media (min-width: 960px) {
+    #faqMain {
+        margin-right: 12%;
+    }
 }
 #faqMain h2 {
     margin: 0 0 50px;
@@ -995,6 +1001,9 @@ md-progress-circular path {
     line-height: 1.2;
     color: #2A5058;
 }
+.faqAnswer p {
+    font-size: 16px;
+}
 
 
 /* Quick Links */
@@ -1003,9 +1012,12 @@ md-progress-circular path {
     background: #F6F6F6;
 }
 #faqQuickLinks h3 {
+    display: table;
     margin: 0 0 22px;
+    padding: 3px;
     font-size: 15px;
-    color: #6259FC;
+    color: #FFF;
+    background-color: #6259FC;
     line-height: 1.1;
 }
 #faqQuickLinks a {

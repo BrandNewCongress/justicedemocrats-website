@@ -184,6 +184,7 @@
 
 /* CANDIDATES SECTION */
 
+
 #homeCandidates img {
     display: block;
 }
@@ -317,6 +318,10 @@
 }
 
 @media (max-width: 959px) {
+    /* Footer image shows behind candidate title */
+    .footerImageFixed {
+        display: block;
+    }
     .candidateColumn {
         width: 50%;
     }

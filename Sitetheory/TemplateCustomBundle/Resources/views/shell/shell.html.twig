@@ -237,13 +237,19 @@ LAYOUT
             </li>
             <li id="navNominate" class="navMainLink">
                 <a href="/Nominate">
-                    Nominate
+                    Candidates
                     <div class="animatedBorder"></div>
                 </a>
             </li>
-            <li id="navPlatform" class="navMainLink">
+            <li id="navAction" class="navMainLink">
+                <a href="/Volunteer">
+                    Action
+                    <div class="animatedBorder"></div>
+                </a>
+            </li>
+            <li id="navAbout" class="navMainLink">
                 <a href="/Platform">
-                    Platform
+                    About
                     <div class="animatedBorder"></div>
                 </a>
             </li>
@@ -277,6 +283,7 @@ LAYOUT
                 Nominate
             </a>
         </li>
+        {#
         <li class="siteNavLink" data-level="2">
             <a href="/candidates" class="navLevel2 {% if sectionMenuActive == 'drafteesActive' %}active{% endif %}">
                 Candidate Draftees
@@ -308,7 +315,7 @@ LAYOUT
                         Brad Watkins
                     </a>
                 </li>
-                {#
+
                     <li class="siteNavLink" data-level="3">
                         <a href="/Ronald-E-Stubblefield" class="navLevel3">
                             Ronald E. Stubblefield
@@ -404,10 +411,10 @@ LAYOUT
                             Patricia Neale
                         </a>
                     </li>
-                    #}
             </ul>
 
         </li>
+         #}
     </ul>
 {% endblock menuSection1 %}
 
@@ -417,13 +424,13 @@ LAYOUT
     <!-- Level 2 Links -->
     <ul id="listLevel2" class="listUnstyled {{ navLevel2Font|default('fontSecondary') }}">
         <li class="siteNavLink" data-level="2">
-            <a href="/Nominate" class="navLevel2 {% if sectionMenuActive == 'nominateActive' %}active{% endif %}">
-                Nominate
+            <a href="/Volunteer" class="navLevel2 {% if sectionMenuActive == 'volunteerSkillsActive' %}active{% endif %}">
+                Volunteer
             </a>
         </li>
         <li class="siteNavLink" data-level="2">
-            <a href="/Volunteer" class="navLevel2 {% if sectionMenuActive == 'volunteerSkillsActive' %}active{% endif %}">
-                Volunteer
+            <a href="/Nominate" class="navLevel2 {% if sectionMenuActive == 'nominateActive' %}active{% endif %}">
+                Nominate
             </a>
         </li>
         <li class="siteNavLink" data-level="2">
@@ -456,14 +463,13 @@ LAYOUT
                 Platform
             </a>
         </li>
-        {#
         <li class="siteNavLink" data-level="2">
             <a href="/FAQ" class="navLevel2 {% if sectionMenuActive == 'faqActive' %}active{% endif %}">
                 FAQ
             </a>
         </li>
-        #}
     </ul>
+
 {% endblock menuSection3 %}
 
 
@@ -495,7 +501,7 @@ LAYOUT
             </li>
             <li data-level="1">
                 <div class="siteNavLink" data-level="1">
-                    <a href="/nominate" class="navLevel1 fontTertiary">
+                    <a href="/Nominate" class="navLevel1 fontTertiary">
                         Candidates
                     </a>
                 </div>
@@ -503,15 +509,15 @@ LAYOUT
             </li>
             <li data-level="1">
                 <div class="siteNavLink" data-level="1">
-                    <a href="/support" class="navLevel1 fontTertiary">
-                        Get Involved
+                    <a href="/Volunteer" class="navLevel1 fontTertiary">
+                        Action
                     </a>
                 </div>
                 {{ block('menuSection2') }}
             </li>
             <li data-level="1">
                 <div class="siteNavLink" data-level="1">
-                    <a href="/plan" class="navLevel1 fontTertiary">
+                    <a href="/Platform" class="navLevel1 fontTertiary">
                         About
                     </a>
                 </div>
@@ -545,8 +551,8 @@ LAYOUT
 {# Add social media & border to bottom of sidebar #}
 {% block sidebarContent %}
     {{ parent() }}
-    <div hide-gt-sm class="sidebarBorder"></div>
-    <div hide-gt-sm id="sidebarSocial" class="clearfix">
+    <div hide-gt-sm ng-cloak class="sidebarBorder"></div>
+    <div hide-gt-sm ng-cloak id="sidebarSocial" class="clearfix">
         {{ block('socialMedia') }}
     </div>
     {#
@@ -584,9 +590,11 @@ LAYOUT
                             <li>
                                 <a href="/Nominate">Nominate</a>
                             </li>
+                            {#
                             <li>
                                 <a href="/Candidates">Candidates</a>
                             </li>
+                            #}
                         </ul>
                     </div>
                 </div>
@@ -594,7 +602,7 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="/Volunteer">Get Involved</a>
+                                <a class="fontTertiary" href="/Volunteer">Action</a>
                             </li>
                             <li>
                                 <a href="/Volunteer">Volunteer</a>
@@ -623,11 +631,9 @@ LAYOUT
                             <li>
                                 <a href="/Platform">Platform</a>
                             </li>
-                            {#
                             <li>
                                 <a href="/FAQ">FAQ</a>
                             </li>
-                            #}
                             <li>
                                 <a href="/Privacy-Policy">Privacy Policy</a>
                             </li>

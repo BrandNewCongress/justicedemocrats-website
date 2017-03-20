@@ -13,7 +13,7 @@
             <p class="faqQuestion">Why “Democrats”? Why not just start a new party?</p>
             <div class="faqAnswer">
                 <p>The two-party paradigm is the model for our country’s current political system. While we agree with and often champion many third-party candidates and movements, the reality is that right now it is next to impossible for a third-party candidate to win a national election.</p>
-
+    
                 <p>We want our democracy to work for Americans again as soon as possible. The best way to do this is by working to change the Democratic party from the inside out. In the future, when we’ve established a progressive congress, Justice Democrats and Brand New Congress intend to work to change the two-party system and our election system as a whole.</p>
             </div>
 
@@ -174,7 +174,7 @@
 
         </div>
     </div>
-    <div hide-xs hide-sm class="stGrid column30">
+    <div class="stGrid column30">
         <h4 class="fontTertiary">Quick Links</h4>
         <br>
         <div class="fontBody" id="faqQuickLinks">

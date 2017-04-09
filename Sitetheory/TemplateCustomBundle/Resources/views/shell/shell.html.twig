@@ -81,9 +81,12 @@ JAVASCRIPT
 #}
 
 {% block script %}
+
+    {# MUST LOAD BEFORE CORE CONFIG #}
+    <script src="{{ asset('bundles/bnccore/js/controllers/config' ~ minified ~'.js') }}"></script>
+
     {{ parent() }}
 
-    <script src="{{ asset('bundles/bnccore/js/controllers/api' ~ minified ~'.js') }}"></script>
 
     <!-- Google Analytics -->
     <script>

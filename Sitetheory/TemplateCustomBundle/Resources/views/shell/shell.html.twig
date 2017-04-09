@@ -83,7 +83,7 @@ JAVASCRIPT
 {% block script %}
 
     {# MUST LOAD BEFORE CORE CONFIG #}
-    <script src="{{ asset('bundles/bnccore/js/controllers/config' ~ minified ~'.js') }}"></script>
+    <script src="{{ asset('bundles/bnccore/js/boot/config' ~ minified ~'.js') }}"></script>
 
     {{ parent() }}
 

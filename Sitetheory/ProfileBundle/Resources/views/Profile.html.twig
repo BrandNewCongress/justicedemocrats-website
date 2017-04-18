@@ -18,12 +18,12 @@
 
 
 {% block contentHeader %}
-    {% if view.viewVersion.description is not empty %}
+    {% if content.version.description is not empty %}
         <div class="contentHeader profileDetails clearfix">
 
             <p class="pullout">
                 {% block contentHeaderText %}
-                    {{ view.viewVersion.description|raw }}
+                    {{ content.version.description|raw }}
                 {% endblock contentHeaderText %}
             </p>
 
@@ -34,7 +34,7 @@
 
 {% block contentType %}
 
-    <div id="contentProfile-{{ view.id }}" class="contentProfile profileDetails">
+    <div id="contentProfile-{{ content.id }}" class="contentProfile profileDetails">
 
         <div class="clearfix">
 
@@ -43,7 +43,7 @@
 
                 <div class="profileImage primary-image">
                     {% block profileImage %}
-                        {% set image = view.viewVersion.images|first %}
+                        {% set image = content.version.images|first %}
                         <img src="{{ image is not empty ? image.url : asset('bundles/sitetheoryprofile/images/profilePlaceholder.png') }}" alt="">
                     {% endblock profileImage %}
                 </div>
@@ -55,7 +55,7 @@
                         <span class="starLeft starWhite">
                             <span class="starRight starWhite">
                                 {% block profileLocation %}
-                                    {{ view.viewVersion.subtitle }}
+                                    {{ content.version.subtitle }}
                                 {% endblock profileLocation %}
                             </span>
                         </span>
@@ -66,36 +66,36 @@
 
             </div>
             {#
-            {% if view.viewVersion.title is not empty %}
-                <h2>{{ view.viewVersion.title }}</h2>
+            {% if content.version.title is not empty %}
+                <h2>{{ content.version.title }}</h2>
             {% endif %}
 #}
             <h4 class="profilePosition">
                 {% block profilePosition %}
-                    Profession: {{ view.viewVersion.meta.position }}
+                    Profession: {{ content.version.meta.position }}
                 {% endblock profilePosition %}
             </h4>
 
 
             <h2 class="profileDescriptionHeader">
                 {% block profileDescriptionHeader %}
-                    About {{ view.viewVersion.title | split(' ')[0] }}
+                    About {{ content.version.title | split(' ')[0] }}
                 {% endblock profileDescriptionHeader %}
             </h2>
 
 
             {#
-            {% if view.viewVersion.meta.position is not empty %}
+            {% if content.version.meta.position is not empty %}
 
                 <h4 class="position" data-type="text"
-                    data-property="viewVersion.meta.position" {{ block('editableViewAttributes') }}>{{ view.viewVersion.meta.position }}</h4>
+                    data-property="version.meta.position" {{ block('editableContentAttributes') }}>{{ content.version.meta.position }}</h4>
 
             {% endif %}
             #}
 
-            <div class="content profileDescription" data-type="editor" data-property="viewVersion.text" {{ block('editableViewAttributes') }}>
+            <div class="content profileDescription" data-type="editor" data-property="version.text" {{ block('editableContentAttributes') }}>
                 {% autoescape false %}
-                    {{ view.viewVersion.text }}
+                    {{ content.version.text }}
                 {% endautoescape %}
             </div>
 
@@ -107,7 +107,7 @@
             <div class="stGrid column50">
                 <div class="candidateDetailsJoin joinForm">
                     <h2 class="lightBlueText">Sign Up!</h2>
-                    <p>If you’d like to see {{ view.viewVersion.title | split(' ')[0] }} run for Congress.
+                    <p>If you’d like to see {{ content.version.title | split(' ')[0] }} run for Congress.
                     </p>
                     {{ block('registrationForm') }}
                 </div>

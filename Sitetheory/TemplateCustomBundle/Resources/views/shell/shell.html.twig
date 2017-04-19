@@ -62,6 +62,9 @@ CSS STYLING
 
     {{ parent() }}
 
+    {# Load Angular Material manually so that it is available for the site loads (and doesn't wait to be auto-loaded by JS #}
+    <link rel="stylesheet" satisfies="angular-material.css" href="{{ asset('bundles/sitetheorystratus/stratus/bower_components/angular-material/angular-material' ~ minified ~ '.css') }}">
+
     {# TODO: once asset loads custom vhost files, load this way #}
     {# #
     {% stylesheets '@SitetheoryTemplateCustomBundle/Resources/public/css/site.css' filter='?uglifycss' filter='cssrewrite' %}

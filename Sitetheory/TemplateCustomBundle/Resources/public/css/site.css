@@ -720,102 +720,71 @@ md-input-container.md-input-has-placeholder md-select-label.noFloat {
     margin-bottom: 26px;
 }
 
-.joinForm .listInline li {
-    margin: 0 8px;
-    vertical-align: top;
-}
-/* Make input containers wider */
-.joinForm md-input-container {
-    width: 260px;
-}
-/* Position circular progress bar in the middle of form */
-.joinForm md-progress-circular {
-    transform: translate(-50%,-50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-}
-/* Make progress bar blue */
-md-progress-circular path {
-    stroke: #185661;
-}
-/* Fade in progress bar when form starts sending */
-.joinForm .sending md-progress-circular {
-    animation: itemsFadeIn .2s ease-out forwards;
-    opacity: 1;
-}
-
-/* Fade form out when sending */
-.joinForm .sending .listUnstyled {
-    transition: all .2s ease-out .1s;
-    transform: scale(1);
-    opacity: 1;
-}
-/* Keep form faded on success */
-.joinForm .sending .listUnstyled,
-.joinForm .success .listUnstyled {
-    transform: scale(.5);
-    opacity: 0;
-}
-/* Success message */
-.joinForm form .message {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 300;
-    color: #7932AC;
-}
-@media (max-width:959px) {
-    .joinForm .listUnstyled li {
-        display: block;
-    }
-    .joinForm .btn {
-        display: table;
-        margin: 20px auto 0 auto;
-    }
-}
 
 
-#homeJoinForm {
-    margin: 0 auto;
-    max-width: 290px;
-    text-align: left;
-}
-#homeJoin md-input-container .md-placeholder,
-#homeJoin md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+
+.joinForm md-input-container .md-placeholder,
+.joinForm md-input-container label:not(.md-no-float):not(.md-container-ignore) {
     bottom: 83%;
     padding-left: 10px;
     font-size: 19px;
     color: #FFF;
 }
 
-#homeJoin md-input-container {
+.joinForm md-input-container {
     display: block;
-    margin: 10px 0;
+    margin: 0;
 }
-#homeJoin md-input-container.md-default-theme .md-input,
-#homeJoin md-input-container .md-input {
+.joinForm md-input-container.md-default-theme .md-input,
+.joinForm md-input-container .md-input {
     padding: 8px 8px;
-    height: 55px;
-    line-height: 55px;
+    height: 45px;
+    line-height: 45px;
     font-size: 19px;
     border: 3px solid #FFF;
 }
 
 /* Move prompt text high enough to make room for bigger input text */
-#homeJoin md-input-container.md-input-focused label:not(.md-no-float),
-#homeJoin md-input-container.md-input-has-placeholder label:not(.md-no-float),
-#homeJoin md-input-container.md-input-has-value label:not(.md-no-float) {
+.joinForm md-input-container.md-input-focused label:not(.md-no-float),
+.joinForm md-input-container.md-input-has-placeholder label:not(.md-no-float),
+.joinForm md-input-container.md-input-has-value label:not(.md-no-float) {
     transform: translate3d(-2px,-4px,0) scale(.6);
 }
-#homeJoin .btn {
-    padding: 20px;
+.joinForm li {
+    position: relative;
+}
+.joinForm .fieldInfo {
+    transform: translateX(-34px);
+    -webkit-transform: translateX(-34px);
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+.joinForm .fieldInfo md-icon {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    min-width: 30px;
+}
+.joinForm .fieldInfo md-icon svg g {
+    fill: #FFF;
+}
+.joinForm .fieldInfo:hover md-icon svg g {
+    fill: #EEE;
+}
+.joinForm .btn {
+    padding: 18px;
     display: block;
     width: 100%;
 }
-
-
-
+.joinForm .legalAgreement {
+    margin-top: 8px;
+    font-size: 11px;
+    text-align: center;
+}
+.joinForm .legalAgreement .hasTip {
+    text-decoration: underline;
+}
 
 /* FOOTER  SITE MAP*/
 

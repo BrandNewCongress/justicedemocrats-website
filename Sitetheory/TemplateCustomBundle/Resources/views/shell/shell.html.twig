@@ -141,54 +141,74 @@ SIGNUP FORM
 #}
 
 {% block registrationForm %}
+    <div class="joinForm">
+        <form name="Signup" ng-submit="send('Signup') && customMethods.trackSignup('SignupButton', 'click')" ng-controller="Api"
+              ng-sanitize="true"
+              options='{"url":"https://api.{{ environment.site.domainprimary }}", "controller": "/people", "redirect":{"url":"https://secure.actblue.com/contribute/page/jdsignup", "popup":false}}'
+              ng-class="status" class="positionAnchor" ng-cloak ng-cloak-reveal>
+            <input type="hidden" name="utmSource" ng-value="model.data.utmSource">
+            <input type="hidden" name="utmMedium" ng-value="model.data.utmMedium">
+            <input type="hidden" name="utmCampaign" ng-value="model.data.utmCampaign">
+            <md-progress-circular md-mode="indeterminate" ng-show="status === 'sending'"></md-progress-circular>
+            <p class="message" ng-show="response.length" ng-bind-html="response"></p>
 
-    <form name="Signup" ng-submit="send('Signup') && customMethods.trackSignup('SignupButton', 'click')" ng-controller="Api"
-          ng-sanitize="true"
-          options='{"url":"https://api.{{ environment.site.domainprimary }}", "controller": "/people", "redirect":{"url":"https://secure.actblue.com/contribute/page/jdsignup", "popup":false}}'
-          ng-class="status" class="positionAnchor" ng-cloak ng-cloak-reveal>
-        <input type="hidden" name="utmSource" ng-value="model.data.utmSource">
-        <input type="hidden" name="utmMedium" ng-value="model.data.utmMedium">
-        <input type="hidden" name="utmCampaign" ng-value="model.data.utmCampaign">
-        <md-progress-circular md-mode="indeterminate" ng-show="status === 'sending'"></md-progress-circular>
-        <p class="message" ng-show="response.length" ng-bind-html="response"></p>
+            <ul class="listUnstyled fontPrimary" ng-show="status !== 'success'">
 
-        <ul class="listUnstyled fontPrimary" ng-show="status !== 'success'">
+                {{ registrationFormBefore|default('')|raw }}
 
-            {{ registrationFormBefore|default('')|raw }}
-
-            {% verbatim %}
-        <li>
-            <md-input-container>
-                <label>Email</label>
-                <input name="email" type="email" ng-pattern="options.pattern.email" ng-model="model.data.email" required md-no-asterisk>
-                <div ng-messages="Signup.email.$error" role="alert">
-                    <div ng-message-exp="['required', 'pattern']">
-                        Please enter a valid email.
-                    </div>
-                </div>
-            </md-input-container>
-        </li>
-        <li>
-            <md-input-container>
-                <label>Zip</label>
-                <input name="zip" ng-pattern="options.pattern.zip" ng-model="model.data.zip" required md-no-asterisk>
-                <div ng-messages="Signup.zip.$error" role="alert">
-                    <div ng-message-exp="['required', 'pattern']">
-                        Please enter a valid zip code.
-                    </div>
-                </div>
-            </md-input-container>
-        </li>
-        {% endverbatim %}
+                {% verbatim %}
             <li>
-                <button type="submit" class="btn btnYellow formSubmit"
-                        ng-disabled="Signup.$invalid">{{ textSubmit|default('Sign Me Up') }}</button>
+                <md-input-container>
+                    <label>Email</label>
+                    <input name="email" type="email" ng-pattern="options.pattern.email" ng-model="model.data.email" required md-no-asterisk>
+                    <div ng-messages="Signup.email.$error" role="alert">
+                        <div ng-message-exp="['required', 'pattern']">
+                            Please enter a valid email.
+                        </div>
+                    </div>
+                </md-input-container>
             </li>
+            <li class="hasInfo">
+                <div class="fieldInfo">
+                    <md-tooltip>We will only use this to remind you to vote!</md-tooltip>
+                    <md-icon class="" md-svg-src="/Api/Resource?path=@SitetheoryCoreBundle:images/icons/actionButtons/info.svg"></md-icon>
+                </div>
+                <md-input-container>
+                    <label>Phone</label>
+                    <input name="phone" type="phone" ng-pattern="options.pattern.phone" ng-model="model.data.phone" required md-no-asterisk>
+                    <div ng-messages="Signup.phone.$error" role="alert">
+                        <div ng-message-exp="['required', 'pattern']">
+                            Please enter a valid phone number.
+                        </div>
+                    </div>
+                </md-input-container>
+            </li>
+            <li>
+                <md-input-container>
+                    <label>Zip</label>
+                    <input name="zip" ng-pattern="options.pattern.zip" ng-model="model.data.zip" required md-no-asterisk>
+                    <div ng-messages="Signup.zip.$error" role="alert">
+                        <div ng-message-exp="['required', 'pattern']">
+                            Please enter a valid zip code.
+                        </div>
+                    </div>
+                </md-input-container>
+            </li>
+            {% endverbatim %}
+                <li>
+                    <button type="submit" class="btn btnYellow formSubmit"
+                            ng-disabled="Signup.$invalid">{{ textSubmit|default('Sign Me Up') }}</button>
+                </li>
 
-            {{ registrationFormAfter|default('')|raw }}
+                {{ registrationFormAfter|default('')|raw }}
 
-        </ul>
-    </form>
+            </ul>
+        </form>
+
+        <div ng-cloak class="legalAgreement fontBody">By signing up, I consent to receiving emails from <span class="hasTip"><md-tooltip>Committed to electing a brand new, corruption-free Congress that represents all Americans.</md-tooltip>Brand New Congress</span> and <span class="hasTip"><md-tooltip>Democrats that represent people, not corporations.</md-tooltip>Justice Democrats.</span>
+        </div>
+
+    </div>
 
 {% endblock registrationForm %}
 
@@ -240,12 +260,6 @@ LAYOUT
                     <div class="animatedBorder"></div>
                 </a>
             </li>
-            <li id="navNominate" class="navMainLink">
-                <a href="/Nominate">
-                    Candidates
-                    <div class="animatedBorder"></div>
-                </a>
-            </li>
             <li id="navAction" class="navMainLink">
                 <a href="/Volunteer">
                     Action
@@ -254,7 +268,7 @@ LAYOUT
             </li>
             <li id="navAbout" class="navMainLink">
                 <a href="/Platform">
-                    About
+                    Platform
                     <div class="animatedBorder"></div>
                 </a>
             </li>
@@ -523,7 +537,7 @@ LAYOUT
             <li data-level="1">
                 <div class="siteNavLink" data-level="1">
                     <a href="/Platform" class="navLevel1 fontTertiary">
-                        About
+                        Platform
                     </a>
                 </div>
                 {{ block('menuSection3') }}
@@ -631,16 +645,13 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="/Platform">About</a>
+                                <a class="fontTertiary" href="/Platform">Platform</a>
                             </li>
                             <li>
                                 <a href="/Platform">Platform</a>
                             </li>
                             <li>
                                 <a href="/FAQ">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="/Privacy-Policy">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -649,13 +660,16 @@ LAYOUT
                     <div class="siteMapColumn">
                         <ul class="listUnstyled">
                             <li class="siteMapHeader">
-                                <a class="fontTertiary" href="mailto:us@justicedemocrats.com">Contact</a>
+                                <a class="fontTertiary">Contact</a>
                             </li>
                             <li>
                                 <a href="mailto:press@justicedemocrats.com">Press Contact</a>
                             </li>
                             <li>
                                 <a href="mailto:us@justicedemocrats.com">General Contact</a>
+                            </li>
+                            <li>
+                                <a href="/Privacy-Policy">Privacy Policy</a>
                             </li>
                             <li>
                                 {# Social Media #}

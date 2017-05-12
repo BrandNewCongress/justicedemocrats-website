@@ -111,29 +111,6 @@ JAVASCRIPT
 {% endblock script %}
 
 
-
-{#
-############
-Sharing
-############
-#}
-{% block meta %}
-    {{ parent() }}
-
-    {% block openGraph %}
-    {# TODO: This is just here temporarily until the base.html.twig give the ability to select the preferred image in the admin
-    we may need to reload the page here in order to get the new image https://developers.facebook.com/tools/debug/
-    #}
-    <meta property="og:url" content="https://justicedemocrats.com">
-    <meta property="og:type" content="website">
-    <meta property="og:image"
-          content="/assets/1/0/bundles/sitetheorytemplatecustom/images/JDshareLogo.png">
-    <meta property="og:title" content="{{ content.version.title | default('Justice Democrats') }}">
-    <meta property="og:description"
-          content="{{ content.version.description | default("Building a Democratic party that works for the people, not corporations, by running a unified campaign to replace every establishment politician in Congress in 2018.") }}">
-    {% endblock openGraph %}
-{% endblock meta %}
-
 {#
 ###########
 SIGNUP FORM

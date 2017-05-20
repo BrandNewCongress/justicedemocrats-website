@@ -277,7 +277,7 @@
 }
 .candidateColumn {
     float: left;
-    width: 33%;
+    width: 25%;
     transition: all 400ms ease-out 50ms;
 }
 .candidateContainer {

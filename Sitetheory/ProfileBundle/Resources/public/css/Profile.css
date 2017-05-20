@@ -71,7 +71,8 @@ stratus-search {
 }
 .profileContainer h2 {
     margin: 0 0 12px;
-    font-size: 20px;
+    font-size: 32px;
+    line-height: 1;
 }
 .profileList h4 {
     margin-bottom: 26px;
@@ -126,6 +127,12 @@ stratus-search {
     }
 }
 @media (max-width: 959px) {
+    .profileContainer h2 {
+        font-size: 22px;
+    }
+    .profileList h4 {
+        margin-bottom: 8px;
+    }
     #profileList {
         margin: 0 -5%;
     }
@@ -139,7 +146,7 @@ stratus-search {
         max-width: 100%;
     }
     .profileList .profileBody {
-        font-size: 15px;
+        font-size: 14px;
     }
     .profileExtra {
         right: 10%;
@@ -147,6 +154,9 @@ stratus-search {
     }
 }
 @media (max-width: 600px) {
+    .profileContainer h2 {
+        font-size: 28px;
+    }
     #profileList {
         margin: 0;
     }

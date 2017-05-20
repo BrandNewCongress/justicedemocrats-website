@@ -26,9 +26,11 @@ stratus-search {
 .profileList .pullout {
     margin: 30px 0 60px;
 }
-.profileDetails .pullout {
-    margin-bottom: 60px;
+.profileDetails .profileDescription p.pullout {
+    margin: 40px 0;
     max-width: 920px;
+    font-size: 30px;
+    color: #6259FC;
 }
 .profileImage img {
     width: 100%;
@@ -243,6 +245,19 @@ stratus-search {
 #profileActionArea {
     margin-top: 30px;
 }
+.profileDetails .joinForm ul {
+    display: table;
+    margin: 0 auto;
+}
+.profileDetails .joinForm md-input-container .md-placeholder,
+.profileDetails .joinForm md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+    color: #333;
+}
+.profileDetails .joinForm md-input-container.md-default-theme .md-input,
+.profileDetails .joinForm md-input-container .md-input {
+    border: 3px solid #666;
+}
+
 .profileDetails .candidateDetailsJoin,
 .profileDetails .candidateCallToAction {
     text-align: center;

@@ -256,7 +256,8 @@ LAYOUT
                         </div>
                     </div>
 
-                    {# Robb Ryerse #}
+                    {# Robb Ryerse: should not appear on Justice Democrats #}
+                    {#
                     <div class="candidateColumn">
                         <div class="candidateContainer">
                             <div class="candidateImage positionAnchor">
@@ -270,7 +271,9 @@ LAYOUT
                                         </div>
                                     </div>
                                     <div class="candidateImageCover positionAll"></div>
-                                    <img data-plugin="Lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/robbRyerse-xs.jpg') }}" alt="">
+                                    <!-- TODO: this image doesn't exist in the repo, so I'm temporarily putting in the BNC version -->
+                                    <!-- <img data-plugin="Lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/robbRyerse-xs.jpg') }}" alt="">-->
+                                    <img data-plugin="Lazy" src="{{ asset('//cdn.sitetheory.io/nest001/2051/Robb%20Ryerse%20Profile%20Portrait-xs.jpg') }}" alt="">
                                 </a>
                             </div>
                             <div class="borderDashed">
@@ -282,6 +285,7 @@ LAYOUT
                             </div>
                         </div>
                     </div>
+                    #}
 
                     {# Michael A. Hepburn #}
                     <div class="candidateColumn">
@@ -405,7 +409,11 @@ LAYOUT
                                         </div>
                                     </div>
                                     <div class="candidateImageCover positionAll"></div>
-                                    <img data-plugin="Lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/coriBush-xs.jpg') }}" alt="">
+                                    {# TODO: this image doesn't exist in the repo, so I'm temporarily putting in the BNC version #}
+                                    {# <img data-plugin="Lazy" src="{{ asset('bundles/sitetheorytemplatecustom/images/candidates/coriBush-xs.jpg') }}" alt=""> #}
+                                    <img data-plugin="Lazy" src="{{ asset('//cdn.sitetheory.io/nest001/2038/coriProfile-xs.jpg') }}" alt="">
+
+
                                 </a>
                             </div>
                             <div class="borderDashed">

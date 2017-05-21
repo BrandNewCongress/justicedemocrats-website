@@ -26,9 +26,11 @@ stratus-search {
 .profileList .pullout {
     margin: 30px 0 60px;
 }
-.profileDetails .pullout {
-    margin-bottom: 60px;
+.profileDetails .profileDescription p.pullout {
+    margin: 40px 0;
     max-width: 920px;
+    font-size: 30px;
+    color: #6259FC;
 }
 .profileImage img {
     width: 100%;
@@ -71,7 +73,8 @@ stratus-search {
 }
 .profileContainer h2 {
     margin: 0 0 12px;
-    font-size: 20px;
+    font-size: 32px;
+    line-height: 1;
 }
 .profileList h4 {
     margin-bottom: 26px;
@@ -126,6 +129,12 @@ stratus-search {
     }
 }
 @media (max-width: 959px) {
+    .profileContainer h2 {
+        font-size: 22px;
+    }
+    .profileList h4 {
+        margin-bottom: 8px;
+    }
     #profileList {
         margin: 0 -5%;
     }
@@ -139,7 +148,7 @@ stratus-search {
         max-width: 100%;
     }
     .profileList .profileBody {
-        font-size: 15px;
+        font-size: 14px;
     }
     .profileExtra {
         right: 10%;
@@ -147,6 +156,9 @@ stratus-search {
     }
 }
 @media (max-width: 600px) {
+    .profileContainer h2 {
+        font-size: 28px;
+    }
     #profileList {
         margin: 0;
     }
@@ -233,6 +245,19 @@ stratus-search {
 #profileActionArea {
     margin-top: 30px;
 }
+.profileDetails .joinForm ul {
+    display: table;
+    margin: 0 auto;
+}
+.profileDetails .joinForm md-input-container .md-placeholder,
+.profileDetails .joinForm md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+    color: #333;
+}
+.profileDetails .joinForm md-input-container.md-default-theme .md-input,
+.profileDetails .joinForm md-input-container .md-input {
+    border: 3px solid #666;
+}
+
 .profileDetails .candidateDetailsJoin,
 .profileDetails .candidateCallToAction {
     text-align: center;

@@ -132,6 +132,10 @@
                     <h2 class="lightBlueText">Sign Up!</h2>
                     <p>If you’d like to see {{ content.version.title | split(' ')[0] }} run for Congress.
                     </p>
+                    {# if we want to send signups to the candidates donate page afterwards #}
+                    {#
+                    {% set donateUrl = custom.url ~ '/donate' %}
+                    #}
                     {{ block('registrationForm') }}
                 </div>
             </div>

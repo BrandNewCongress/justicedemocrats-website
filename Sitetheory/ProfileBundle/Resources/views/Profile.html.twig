@@ -14,7 +14,30 @@
 {% set sectionMenuHardCoded = '1' %}
 {% set sectionMenuActive = 'drafteesActive' %}
 
+{% if custom is not defined %}
+    {% set custom = {
+    'candidateSlug': (content.version.title | replace({' ': '-', '.': ''}) | lower),
+    'url': '',
+    'urlDonate': '/donate',
+    'urlStore': 'https://shop.brandnewcongress.org'
+    }
+    %}
+{% endif %}
 
+{# TEMPORARY LOOKUP FOR DONATE URL #}
+{% if custom.candidateSlug == 'cori-bush' %}
+    {% set custom.url = 'https://votecoribush.com' %}
+{% elseif custom.candidateSlug == 'paula-jean' %}
+    {% set custom.url = 'https://paulajean2018.com' %}
+{% elseif custom.candidateSlug == 'adrienne-bell' %}
+    {% set custom.url = 'https://bell2018.com' %}
+{% elseif custom.candidateSlug == 'anthony-clark' %}
+    {% set custom.url = 'https://anthonyclark2018.com' %}
+{% elseif custom.candidateSlug == 'michael-a-hepburn' %}
+    {% set custom.url = 'https://michaelhepburn.com' %}
+{% elseif custom.candidateSlug == 'alexandria-ocasio-cortez' %}
+    {% set custom.url = 'https://ocasio2018.com' %}
+{% endif %}
 
 
 {% block contentHeader %}
@@ -118,8 +141,8 @@
                     <p>It will take millions of dollars and thousands of volunteers to elect a corruption-free Congress. Your dollars and your minutes matter!
                     </p>
                     <div class="candidateActionBtns">
-                        <a class="btn" href="/volunteer">Volunteer</a>
-                        <a class="btn btnPeriwinkle" href="/donate" target="_blank">Donate</a>
+                        <a class="btn" href="/volunteer?candidate={{ custom.candidateSlug}}">Volunteer</a>
+                        <a class="btn btnPeriwinkle" href="{{ custom.url }}/donate" target="_blank">Donate</a>
                     </div>
                 </div>
             </div>

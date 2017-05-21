@@ -142,9 +142,7 @@ https://secure.actblue.com/contribute/page/votecoribush
                     <p>If you’d like to see {{ content.version.title | split(' ')[0] }} run for Congress.
                     </p>
                     {# if we want to send signups to the candidates donate page afterwards #}
-                    {#
                     {% set donateUrl = candidateUrl ~ '/donate' %}
-                    #}
                     {{ block('registrationForm') }}
                 </div>
             </div>

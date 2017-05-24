@@ -27,33 +27,32 @@
 {# TEMPORARY LOOKUP FOR DONATE URL #}
 {% if custom.candidateSlug == 'cori-bush' %}
     {% set candidateUrl = 'https://votecoribush.com' %}
-{% elseif custom.candidateSlug == 'paula-jean' %}
+{% elseif custom.candidateSlug == 'paula-jean' or custom.candidateSlug == 'paula-jean-swearengin' %}
     {% set candidateUrl = 'https://paulajean2018.com' %}
 {% elseif custom.candidateSlug == 'adrienne-bell' %}
     {% set candidateUrl = 'https://bell2018.com' %}
 {% elseif custom.candidateSlug == 'anthony-clark' %}
     {% set candidateUrl = 'https://anthonyclark2018.com' %}
-{% elseif custom.candidateSlug == 'michael-a-hepburn' %}
+{% elseif custom.candidateSlug == 'michael-a-hepburn' or custom.candidateSlug == 'michael-hepburn' %}
     {% set candidateUrl = 'https://michaelhepburn.com' %}
-{% elseif custom.candidateSlug == 'alexandria-ocasio-cortez' %}
+{% elseif custom.candidateSlug == 'alexandria-ocasio-cortez' or custom.candidateSlug == 'alexandria-ocasio' %}
     {% set candidateUrl = 'https://ocasio2018.com' %}
 {% endif %}
 
 
+{#
 {% block contentHeader %}
     {% if content.version.description is not empty %}
         <div class="contentHeader profileDetails clearfix">
-
             <p class="pullout">
                 {% block contentHeaderText %}
                     {{ content.version.description|raw }}
                 {% endblock contentHeaderText %}
             </p>
-
         </div>
     {% endif %}
 {% endblock contentHeader %}
-
+#}
 
 {% block contentType %}
 

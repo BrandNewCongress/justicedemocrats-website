@@ -119,13 +119,11 @@ SIGNUP FORM
 
 {% block registrationForm %}
     <div class="joinForm">
-        <form name="Signup" ng-submit="send('Signup') && customMethods.trackSignup('SignupButton', 'click')" ng-controller="Api"
+        <form name="Signup" ng-submit="send('Signup') && tracking.send('SignupButton', 'click')" ng-controller="Api"
               ng-sanitize="true"
-              options='{"url":"https://api.{{ environment.site.domainprimary }}", "controller": "/people", "redirect":{"url":"{% if donateUrl is defined %}{{ donateUrl }}{% else %}/donate{% endif %}", "popup":false}}'
-              ng-class="status" class="positionAnchor" ng-cloak ng-cloak-reveal>
-            <input type="hidden" name="utmSource" ng-value="model.data.utmSource">
-            <input type="hidden" name="utmMedium" ng-value="model.data.utmMedium">
-            <input type="hidden" name="utmCampaign" ng-value="model.data.utmCampaign">
+              options='{"url":"https://api.{{ environment.site.domainprimary }}", "controller": "/people", "redirect":{"url":"{{ joinRedirectUrl | default('/donate') }}", "popup":false}}'
+              ng-class="status" class="positionAnchor" ng-cloak ng-cloak-reveal
+              ng-init="model.data.subscriptions = '{{ joinSubscriptions | default('') }}'; model.data.candidate = '{{ candidateSlug | default('') }}';">
             <md-progress-circular md-mode="indeterminate" ng-show="status === 'sending'"></md-progress-circular>
             <p class="message" ng-show="response.length" ng-bind-html="response"></p>
 

@@ -995,3 +995,10 @@ md-input-container.md-input-has-placeholder md-select-label.noFloat {
     font-size: 14px;
     font-weight: bold;
 }
+
+
+/* Temporarily hide unworking paginator */
+
+#profileList .listInline.paginator {
+    display: none;
+}

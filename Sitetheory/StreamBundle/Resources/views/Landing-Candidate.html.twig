@@ -1,0 +1,33 @@
+{% extends '@BNCSitetheoryStream/Landing-Candidate.html.twig' %}
+
+{# TODO: customize for JD #}
+{% block TMPcandidateLandingEndorsements %}
+
+    <div ng-cloak="true" id="jdArea">
+        <div class="moduleBody">
+            <div class="mark">
+                <a href="/">
+                    <img src="{{ asset('bundles/sitetheorytemplatecustom/images/JDlogoMarkOnly.png') }}"
+                         alt="Justice Democrats Logo">
+                </a>
+            </div>
+            <h2 class="fontTertiary">About Justice Democrats</h2>
+            <div class="intro">
+                <p>I am joining a team with hundreds of other candidates in a single campaign to rebuild our
+                    country.</p>
+            </div>
+            <div class="planGraphic">
+                <img src="{{ asset('bundles/sitetheorytemplatecustom/images/planGraphicPurple.png') }}"
+                     alt="Justice Democrats Plan">
+            </div>
+            {% verbatim %}
+                        <p class="body">JD candidates like {{ model.data.version.title }} are completely funded by small donations from real Americans. As a {{ model.data.version.custom.officeLabel }}, {{ candidateFirstName }} will be free to serve, rather than fundraise and meet with lobbyists. {{ candidateFirstName }} will work for all Americans without pressure from corporations and special interests.</p>
+                        <p class="body"><strong>It will take millions of dollars and thousands of volunteers to elect a corruption-free Congress, so consider supporting {{ model.data.version.title }} now. Every dollar matters.</strong></p>
+                        <div class="clearfix" id="areaCTA">
+                            <a class="btn btnSalmon btnDonate" ng-href="{{ urlDonate }}" target="_blank">Donate</a>
+                            <a class="btn btnVolunteer" ng-href="/volunteer?candidate={{ candidateSlug }}">Volunteer</a>
+                        </div>
+                        {% endverbatim %}
+        </div>
+    </div>
+{% endblock TMPcandidateLandingEndorsements %}

@@ -4,6 +4,10 @@
 #shellContentBackground {
     background: none;
 }
+#shellContent {
+    padding-bottom: 0;
+}
+
 .landingBackground {
     background: #FFF;
 }
@@ -413,7 +417,7 @@
 .tempCandidateAsk .candidateInfo p {
     transition: all .2s ease-out;
     margin: 0 0 4px 0;
-    padding: 0 22%;
+    padding: 0 18%;
     text-transform: none;
     font-size: 22px;
     letter-spacing: 0;

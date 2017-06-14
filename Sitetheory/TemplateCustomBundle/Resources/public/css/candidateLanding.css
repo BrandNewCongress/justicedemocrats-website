@@ -18,6 +18,7 @@
 .fontTertiary {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
+    letter-spacing: normal;
 }
 .borderDotted {
     border-bottom: 1px dotted #666;

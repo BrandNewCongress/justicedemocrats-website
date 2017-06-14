@@ -1,6 +1,7 @@
 
 
 
+
 /* PROFILES LIST PAGE */
 
 
@@ -10,46 +11,58 @@ stratus-search {
     display: none;
 }
 
-/* Temporary until we can get my excerpt stream twig settings to override the core stream twig */
-
-.landingStream h1.pageTitle {
-    margin-top: 80px;
-}
 
 /* General profile styling */
 
+#candidateListPage {
+    padding-bottom: 120px;
+}
+#candidateListPage .pullout.textCenter {
+    text-align: left;
+    max-width: inherit;
+}
+#candidateListPage .borderDashedBold {
+    padding-top: 60px;
+}
+#profileList {  }
+.profileList h1 {
+    margin: 0 0 26px;
+    text-align: center;
+    font-size: 35px;
+}
 .profileDetails h1 {
     margin: 0 0 26px;
     text-align: center;
     font-size: 35px;
 }
 .profileList .pullout {
-    margin: 30px 0 60px;
-}
-.profileDetails .profileDescription p.pullout {
-    margin: 40px 0;
+    margin: 30px auto 60px;
     max-width: 920px;
-    font-size: 30px;
-    color: #6259FC;
+}
+.profileList .readMore {
+    margin: 0;
+}
+.profileDetails .pullout {
+    margin: 40px 0;
+    color: #7932AC;
 }
 .profileImage img {
     width: 100%;
 }
 
 /* Profile List */
-
-
-
-#profileList {
-    margin: 0 -2%;
-    padding-top: 20px;
+.gridColumn {
+    margin: 0 1%;
+    width: 48%;
+    position: relative;
+    float: left;
+    padding-bottom: 60px;
+    vertical-align: top;
+    text-align: center;
 }
+
 .profileContainer {
     position: relative;
-}
-.profileItem {
-    margin: 0 4%;
-    padding-bottom: 120px;
 }
 .profileList .profileImage {
     background: #111;
@@ -60,122 +73,144 @@ stratus-search {
 .profileList .profileImage a:hover {
     opacity: .8;
 }
-@media (min-width: 959px) {
-    .profileList .profileImage {
-        float: left;
-        width: 50%;
-        margin: 0 5% 8px 0;
-    }
+.profileList .profileImage {
+    width: 100%;
+    margin: 0;
 }
+
 .profileList .profileImage img {
     display: block;
     width: 100%;
 }
-.profileContainer h2 {
-    margin: 0 0 12px;
+.profileList h2 {
+    margin: 12px 0;
+    padding: 18px 0;
     font-size: 32px;
-    line-height: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-bottom: 7px solid #373737;
+}
+.profileList h2 a {
+    color: #222;
+}
+.profileList h2 a:hover {
+    color: #185661;
 }
 .profileList h4 {
-    margin-bottom: 26px;
+    margin: 26px 0;
+    font-size: 11px;
+    letter-spacing: .1em;
 }
-.profileList .profileBody {
-    margin-bottom: 16px;
-    padding-right: 3%;
+.profileList .profileBody .profileBodyText {
+    /* Hard coded height so that the cards don't get snagged on each other when they tile. */
+    height: 80px;
+    overflow: hidden;
+}
+.profileList .profileBody p {
+    font-size: 15px;
+    font-weight: normal;
+}
+.profileItem .profileBodyText,
+.profileItem .profileBodyText p {
+    font-size: 16px;
 }
 .profileItem .readMore {
-    display: block;
+    display: inline;
+}
+.profileList .profileBody h2 {
+    display: none;
 }
 .profileExtra {
-    position: absolute;
-    right: 4%;
-    bottom: 80px;
-    left: 4%;
+    margin-bottom: 20px;
     padding: 5px 12px;
     color: #FFF;
 }
+.profileExtra.backgroundDark {
+    background: #185661;
+}
 .profileExtra .starText {
-    font-size: 14px;
-    text-transform: uppercase;
+    font-size: 18px;
     color: #FFF;
     letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 
-
-@media (max-width: 1200px) {
-    .profileList .profileImage {
-        max-width: 40%;
-    }
-    .profileBody {
-        font-size: 14px;
-    }
-    .profileItem .readMore {
-        display: inline;
-    }
-}
 @media (min-width: 960px) and (max-width: 1000px) {
-    .profileItem {
-        padding-bottom: 112px;
-    }
-    .profileList .profileImage {
-        max-width: 40%;
-    }
     #profileList h4 {
-        margin-bottom: 16px;
+        margin: 16px 0;
     }
-    .profileList .profileBody {
-        font-size: 13px;
+    .profileList .profileBody p {
+        font-size: 14px;
     }
 }
 @media (max-width: 959px) {
-    .profileContainer h2 {
-        font-size: 22px;
-    }
-    .profileList h4 {
-        margin-bottom: 8px;
-    }
+
     #profileList {
         margin: 0 -5%;
     }
-    .profileItem {
-        margin: 0 10%;
-        text-align: center;
+    .profileItem .profileBodyText {
+        display: block;
     }
-    .profileList .profileImage {
-        float: none;
-        margin: 0 0 30px 0;
-        max-width: 100%;
+    .profileItem h2 {
+        font-size: 25px;
     }
-    .profileList .profileBody {
-        font-size: 14px;
+    #profileList h4 {
+        margin: 13px 0;
     }
     .profileExtra {
-        right: 10%;
-        left: 10%;
+        margin-bottom: 16px;
+    }
+}
+@media (max-width: 800px) {
+    .profileList .profileBody .profileBodyText {
+        /* Hard coded height so that the cards don't get snagged on each other when they tile. */
+        height: 100px;
+    }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    .profileItem h2 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 650px) {
+    .profileList .profileBody .profileBodyText {
+        /* Hard coded height so that the cards don't get snagged on each other when they tile. */
+        height: 120px;
+    }
+}
+@media (min-width: 601px) and (max-width: 959px) {
+    .gridColumn {
+        margin: 0 1%;
+        width: 48%;
+        position: relative;
+        float: left;
+        padding-bottom: 60px;
+        vertical-align: top;
+        text-align: center;
+    }
+    .profileList .profileBody p {
+        font-size: 13px;
     }
 }
 @media (max-width: 600px) {
-    .profileContainer h2 {
-        font-size: 28px;
+    .gridColumn {
+        margin: 0 1%;
+        width: 100%;
     }
     #profileList {
         margin: 0;
     }
     .profileItem {
         margin: 0;
-        padding-bottom: 45px;
+    }
+    .profileList .profileBody .profileBodyText {
+        /* Hard coded height so that the cards don't get snagged on each other when they tile. */
+        height: 80px;
     }
     .profileItem .readMore {
         display: block;
         margin-top: 20px;
-    }
-    .profileExtra {
-        position: relative;
-        right: inherit;
-        bottom: inherit;
-        left: inherit;
-        margin-bottom: 16px;
     }
 }
 
@@ -189,7 +224,11 @@ stratus-search {
     margin-top: 20px;
 }
 .contentHeader.profileDetails p {
-    margin: 0 0 20px;
+    margin: 0;
+}
+.profileDetails .borderDashedBold {
+    margin: 60px 0;
+    background-position: left center;
 }
 .profileDetails p a {
     color: #FF7A65;
@@ -199,16 +238,20 @@ stratus-search {
 }
 .profileDetails h1 {
     margin: -4px 0 12px;
+    font-weight: bold;
     text-align: left;
+    letter-spacing: 0;
+}
+.profileDetails h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    letter-spacing: .05em;
 }
 .profileDetails h4 {
-    font-size: 12px;
+    font-size: 11px;
 }
 .profileDetails h4.profilePosition {
-    margin: 0 0 20px;
-}
-.profileDetails .profileDescription p {
-    font-size: 16px;
+    margin-bottom: 40px;
 }
 .profileDetails .profileImageContainer {
     float: left;
@@ -242,22 +285,6 @@ stratus-search {
 
 /* Call to Action Area */
 
-#profileActionArea {
-    margin-top: 30px;
-}
-.profileDetails .joinForm ul {
-    display: table;
-    margin: 0 auto;
-}
-.profileDetails .joinForm md-input-container .md-placeholder,
-.profileDetails .joinForm md-input-container label:not(.md-no-float):not(.md-container-ignore) {
-    color: #333;
-}
-.profileDetails .joinForm md-input-container.md-default-theme .md-input,
-.profileDetails .joinForm md-input-container .md-input {
-    border: 3px solid #666;
-}
-
 .profileDetails .candidateDetailsJoin,
 .profileDetails .candidateCallToAction {
     text-align: center;
@@ -274,9 +301,9 @@ stratus-search {
 }
 .profileDetails .candidateDetailsJoin p,
 .profileDetails .candidateCallToAction p {
-    margin: 50px auto 30px;
+    margin: 20px auto 30px;
     max-width: 380px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     color: #000;
 }
@@ -290,8 +317,8 @@ stratus-search {
     padding: 16px 0;
     width: 285px;
 }
-.profileDetails .candidateCallToAction .btn.btnPeriwinkle {
-    margin-top: 14px;
+.profileDetails .candidateCallToAction .btn.btnSalmon {
+    margin-bottom: 14px;
 }
 .joinForm md-input-container {
     width: 280px;

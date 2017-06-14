@@ -116,9 +116,12 @@
     padding: 8px 16px;
     font-size: 13px;
     text-align: right;
+    color: #FFF;
+    background: #185661;
 }
 #candidateHeaderRight .btn.btnContribute:hover {
-    background: #111;
+    color: #222;
+    background: #FFF600;
 }
 #candidateHeaderBorder {
     margin-bottom: 24px;

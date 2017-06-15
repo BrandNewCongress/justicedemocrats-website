@@ -239,6 +239,8 @@ stratus-search {
 .profileDetails h1 {
     margin: -4px 0 12px;
     font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
     text-align: left;
     letter-spacing: 0;
 }
@@ -264,6 +266,7 @@ stratus-search {
 }
 .profileDetails .profileLocation .colorBox {
     margin: 0 -6px 14px;
+    background: #185661;
 }
 .profileDetails .profileLocation p {
     display: table;
@@ -281,9 +284,35 @@ stratus-search {
     padding: 0 20px;
     background-position: right 5px;
 }
-
+.profileDetails .pullout {
+    color: #6259FC;
+}
 
 /* Call to Action Area */
+
+.borderDashedBold {
+    margin-top: 60px;
+    padding: 0;
+    text-align: center;
+    line-height: 1.8;
+    background: url('/assets/1/0/bundles/sitetheorytemplatecustom/images/starBlue.png') repeat-x;
+    background-size: 12px;
+}
+#profileActionArea {
+    margin-top: 30px;
+}
+.profileDetails .joinForm ul {
+    display: table;
+    margin: 0 auto;
+}
+.profileDetails .joinForm md-input-container .md-placeholder,
+.profileDetails .joinForm md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+    color: #333;
+}
+.profileDetails .joinForm md-input-container.md-default-theme .md-input,
+.profileDetails .joinForm md-input-container .md-input {
+    border: 3px solid #666;
+}
 
 .profileDetails .candidateDetailsJoin,
 .profileDetails .candidateCallToAction {

@@ -1,0 +1,40 @@
+{% extends '@BNCSitetheoryStream/Excerpt-Candidates.html.twig' %}
+
+
+{% block listItem %}
+
+    {{ parent() }}
+
+    {# Ro Khanna must go last so it won't mess up the clearfix on odd items #}
+
+    <div ng-cloak class="gridColumn">
+        <div class="profileContainer">
+            <div class="profileItem" >
+                <div class="clearfix">
+                    <h2 class="fontTertiary"><a href="http://www.rokhanna.com/" target="_blank">Ro Khanna</a></h2>
+                    <div class="profileImage">
+                        <a href="http://www.rokhanna.com/" target="_blank">
+                            <img stratus-src="{{ asset('//cdn.sitetheory.io/nest001/2272-Hero%20Ro%20Khanna-xs.jpg') }}" alt="">
+                        </a>
+                    </div>
+                    <h4></h4>
+                </div>
+                <div class="profileExtra backgroundDark">
+                    <div class="starLeft starWhite">
+                        <div class="starRight starWhite">
+                            <div class="starText fontPrimary textCenter">
+                                California 17th
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="profileBody">
+                    <span class="profileBodyText">As the freshman Congressman representing California's 17th District, Ro is focused on getting special interest and lobbying money out of politics, making college affordable and fighting for renewable energy and the environment.</span>
+                    <a class="readMore fontBody" href="http://www.rokhanna.com/" target="_blank">Read More</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock listItem %}

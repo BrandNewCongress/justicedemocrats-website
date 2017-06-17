@@ -269,6 +269,7 @@ LAYOUT
 {% endblock navMain %}
 
 
+
 {# SIDEBAR #}
 
 {# TODO: Make Dynamic #}
@@ -443,6 +444,26 @@ LAYOUT
     </div>
     #}
 {% endblock sidebarContent %}
+
+
+{% block header %}
+
+    {{ parent() }}
+
+    <div id="newsContainer" class="clearfix">
+        <div class="siteMaxWidth siteSidePadding">
+            <a id="newsBlurbLink" href="https://events.brandnewcongress.org" target="_blank">
+                <div id="newsBlurb" class="clearfix">
+                    <div class="goArrows pullRight"> >></div>
+                    <div id="newsLabelArea">
+                        <span class="newsLabel fontPrimary periwinkle">Coming Up!</span>
+                    </div>
+                    <p>Hit the ground running! Join a June 24 weekend canvassing kickoff event!</p>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock header %}
 
 
 {# FOOTER SITE MAP #}

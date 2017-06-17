@@ -494,6 +494,60 @@ body.preview .headerImageContainer {
 }
 
 
+/* NEWS BLURB */
+
+#newsContainer {
+    position: relative;
+    z-index: 100;
+    padding: 40px 0 0 0;
+    background: #FFF;
+}
+#newsBlurb {
+    padding: 12px;
+    background: #3C3C3C;
+}
+#newsBlurb #newsLabelArea {
+    display: inline-block;
+    margin-right: 18px;
+}
+#newsBlurb .newsLabel {
+    padding: 6px;
+    font-size: 17px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #FFF;
+    line-height: 1;
+}
+#newsBlurb .date {
+    padding: 6px 0 6px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 1px;
+}
+#newsBlurb p {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    color: #FFF;
+    line-height: 1.25;
+}
+#newsBlurbLink #newsBlurb {
+    transition: all .2s ease-out;
+}
+#newsBlurbLink:hover #newsBlurb {
+    background: #000;
+}
+#newsBlurb .goArrows {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+}
+
 /* MAIN */
 
 #shellContentBackground {

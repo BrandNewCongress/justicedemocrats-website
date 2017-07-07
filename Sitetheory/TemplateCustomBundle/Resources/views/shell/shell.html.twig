@@ -601,6 +601,7 @@ LAYOUT
 
     {% endblock footerImage %}
 
+    {% set paidFor = 'Justice Democrats, justicedemocrats.com. Not authorized by any candidate or candidate\'s committee.' %}
     <div id="footerBackground">
         <div id="footer" class="siteMaxWidth siteSidePadding textCenter fontBody dark">
 
@@ -608,7 +609,10 @@ LAYOUT
                 <img src="{{ asset('bundles/sitetheorytemplatecustom/images/JDlogoMark.png') }}" alt="">
             </div>
 
-            <div id="footerContact">Press contact <a href="mailto:us@justicedemocrats.com">press@justicedemocrats.com</a><span hide-xs hide-sm >&nbsp;&nbsp;|&nbsp;&nbsp;</span><br hide-gt-sm >General contact <a href="mailto:us@justicedemocrats.com">us@justicedemocrats.com</a>
+            <div id="footerContact">
+                Press contact <a href="mailto:us@justicedemocrats.com">press@justicedemocrats.com</a>
+                <span hide-xs hide-sm >&nbsp;&nbsp;|&nbsp;&nbsp;</span><br hide-gt-sm >
+                General contact <a href="mailto:us@justicedemocrats.com">us@justicedemocrats.com</a>
             </div>
 
             <div id="footerCredit">
@@ -616,7 +620,8 @@ LAYOUT
                     P. O. Box 621264 Charlotte, NC 28262
                 </div>
                 <div>
-                    &copy;{{  "now"|date("Y") }}  Justice Democrats. All rights reserved. Paid for by Justice Democrats, justicedemocrats.com. Not authorized by any candidate or candidate's committee.
+                    &copy;{{  "now"|date("Y") }}  Justice Democrats. All rights reserved.
+                    Paid for by {{ content.version.custom.paidFor ?? paidFor }}
                 </div>
             </div>
 

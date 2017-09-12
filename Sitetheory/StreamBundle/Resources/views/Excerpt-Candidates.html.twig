@@ -35,16 +35,7 @@
             </div>
         </div>
     </div>
-
-
-{% endblock listItem %}
-
-{% block listItem %}
-
-    {{ parent() }}
-
-    {# Ro Khanna must go last so it won't mess up the clearfix on odd items #}
-
+    
     <div ng-cloak class="gridColumn">
         <div class="profileContainer">
             <div class="profileItem" >
@@ -73,6 +64,5 @@
             </div>
         </div>
     </div>
-
 
 {% endblock listItem %}

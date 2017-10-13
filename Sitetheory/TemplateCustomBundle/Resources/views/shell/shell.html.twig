@@ -143,7 +143,7 @@ SIGNUP FORM
     <div class="joinForm">
         <form name="Signup" ng-submit="send('Signup') && tracking.send('SignupButton', 'click')" ng-controller="Api" ng-sanitize="true" ng-class="status" class="positionAnchor" ng-cloak ng-cloak-reveal
             {% block registrationFormOptions %}
-                options='{"url":"https://api.{{ environment.site.domainprimary }}", "controller": "/people", "redirect":{"url":"{{ joinRedirectUrl | default('/donate') }}", "popup":false}}'
+                options='{"url":"https://api.{{ environment.site.domainprimary }}", "controller": "/people", "redirect":{"url":"{{ joinRedirectUrl | default('/donate?refcode=postsignup') }}", "popup":false}}'
             {% endblock registrationFormOptions %}
 
             {# NOTE: Hidden fields just need to be initialized with ng-init. And utmSource, utmMedium, utmCampaign are set in Api controller. #}

@@ -84,10 +84,6 @@ JAVASCRIPT
 #}
 
 {% block script %}
-
-    {# net neutrality #}
-    <script src="https://widget.battleforthenet.com/widget.js" async></script>
-
     {# MUST LOAD BEFORE CORE CONFIG #}
     <script src="{{ asset('bundles/bnccore/js/boot/config' ~ minified ~'.js') }}"></script>
 
